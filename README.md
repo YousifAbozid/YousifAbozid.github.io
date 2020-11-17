@@ -1,8 +1,8 @@
 ## Hi 🥰
 
-This is a simple Memories App to add your memories and save it to a database build with MERN Stack 💖
+This is my personal website 💖
 
-you can see the app online from [here](https://memories12.herokuapp.com/)
+you can see the app online from [here](https://yousifabozid.github.io/)
 
 ### LICENSE
 
