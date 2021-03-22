@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 5px;
+    margin: 5px;
+    font-family: "Della Respira", serif;
+    /* overflow-y: hidden; Hide vertical scrollbar
+    overflow-x: hidden; Hide horizontal scrollbar */
+}
+
+/* ----------- Customize Scroll Bar -------- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 10px;
+}
+
+/* ----------- Nav Bar -------- */
+.navbar_container {
+    background-color: cornflowerblue;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: initial;
+}
+
+nav button {
+    border: hidden;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10%;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    transition: 0s background-color;
+}
+
+nav button:hover {
+    background-color: #0dd9fd;
+    transition-delay: 100ms;
+}
+
+/* ----------- About ME -------- */
+.about_me p {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+/* ----------- Avatar -------- */
+.avatar {
+    height: 312px;
+    width: 312px;
+    overflow: hidden;
+    position: relative;
+    margin: 15px auto;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.avatar img {
+    /* width: 100%;
+    height: 100%; */
+    display: block;
+    object-fit: cover;
+}
+
+.bio {
+    text-align: center;
+    color: crimson;
+}
+
+.social_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 10px 10px;
+}
+
+.social_buttons span {
+    margin-right: 7px;
+    font-size: 30px;
+}
+
+.social_buttons a {
+    min-width: 25px;
+    border: hidden;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2%;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: cornflowerblue;
+    transition: 0s background-color;
+}
+
+.social_buttons a:hover {
+    background-color: #0d6efd;
+    transition-delay: 100ms;
+}
+
+/* ----------- Skills -------- */
+.skills p {
+    border-bottom: 1px solid crimson;
+}
+
+#last_child {
+    border-bottom: none;
+}
+
+/* ----------- Layout -------- */
+.layout {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 50px; /* height of your footer */
+}
+
+/* ----------- Footer -------- */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    background-color: rgb(61, 71, 76);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer span {
+    font-size: 25px;
+}
+
+footer span i {
+    font-size: 25px;
+}
+
+/* ----------- Projects -------- */
+.many_projects {
+    margin: 10px;
+    font-size: large;
+    font-weight: 700;
+}
+
+.many_projects span {
+    margin-left: 5px;
+}
+
+.many_projects span i {
+    font-size: 25px;
+}
