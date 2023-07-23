@@ -1,48 +1,19 @@
-html, body{
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
   width: 100%;
-  height:100%;
   margin: 0;
   padding: 0;
-  margin: 0;
-font: 400 15px/1.8  'Raleway', sans-serif;
-
-}
-.bg{
-background-image: url("../images/bg.jpg");
-height: 100%;
-position: relative;
-
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  opacity: 0.8;
-  width: 100%;
-  text-align: center;
-  color: #000;
+  background-color: #0d1117;
 }
 
-.caption span.border {
-      display: inline-block;
-  background-color: #111;
+.container {
   color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-.btm{
-  position: absolute;
-    bottom: 5%;
-    width: 100%;
-    text-align: center;
-}
-.btm span{
-  color: white;
-font-size: 1.1em;
-font-weight: bold;
-letter-spacing: 2px;
+  position: relative;
 }
