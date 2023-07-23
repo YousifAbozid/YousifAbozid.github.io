@@ -6,7 +6,7 @@ on:
       - next-app
 
 jobs:
-  formatAndLint:
+  BuildAndDeploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,11 +24,11 @@ jobs:
         run: npm install
 
       - name: Build application
-        run: npm run build
+        run: npm run build && cp README.md ./build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           folder: build # The folder the action should deploy.
-          branch: production
+          branch: production # The branch the action should deployed to.
