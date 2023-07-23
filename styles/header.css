@@ -37,6 +37,10 @@
   font-size: 30px;
   font-weight: 600;
   text-transform: capitalize;
+  flex: 1;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide any overflowing text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
 }
 
 .header .links {
