@@ -1,7 +1,4 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import '@/styles/globals.css'
 
 export const metadata = {
   title: 'Yousif Abozid - Software Engineer',
@@ -11,11 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" />
-      </head>
-
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
