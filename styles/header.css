@@ -20,6 +20,7 @@
   height: 65px;
   top: 5px;
   left: 20px;
+  transition: all 1s ease;
 }
 
 .header .logo img {
@@ -31,6 +32,7 @@
   position: relative;
   height: 75px;
   padding: 0 20px;
+  flex: 1;
 }
 
 .header .text h1 {
@@ -38,9 +40,7 @@
   font-weight: 600;
   text-transform: capitalize;
   flex: 1;
-  white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Hide any overflowing text */
-  text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+  transition: all 1s ease;
 }
 
 .header .links {
@@ -115,6 +115,16 @@
 }
 
 @media screen and (max-width: 700px) {
+  .header .logo {
+    left: 10px;
+  }
+  .header .text h1 {
+    padding: 0 30px;
+    font-size: 22px;
+    /* transform: translateY(50%); */
+    transition: all 1s ease;
+  }
+
   .links {
     display: none;
   }
@@ -146,6 +156,7 @@
     display: block;
     color: #fff;
     width: 100%;
+    font-size: 14px;
     border-radius: 0;
   }
 
