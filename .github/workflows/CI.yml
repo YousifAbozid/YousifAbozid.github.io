@@ -24,11 +24,11 @@ jobs:
         run: npm install
 
       - name: Build application
-        run: npm run build && cp README.md ./build
+        run: npm run build && cp README.md ./out
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          folder: build # The folder the action should deploy.
+          folder: out # The folder the action should deploy.
           branch: production # The branch the action should deployed to.
