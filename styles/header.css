@@ -117,6 +117,7 @@
 @media screen and (max-width: 700px) {
   .header .logo {
     left: 10px;
+    transition: all 1s ease;
   }
   .header .text h1 {
     padding: 0 30px;
