@@ -31,15 +31,17 @@
 .header .text {
   position: relative;
   height: 75px;
-  padding: 0 20px;
-  flex: 1;
+  padding: 0 0 0 0;
+  /* flex: 1; */
+  /* border: 1px solid #fff; */
 }
 
 .header .text h1 {
   font-size: 30px;
   font-weight: 600;
   text-transform: capitalize;
-  flex: 1;
+  /* flex: 1; */
+  transform: translateX(-10%);
   transition: all 1s ease;
 }
 
@@ -114,7 +116,7 @@
   margin: 5px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .header .logo {
     left: 10px;
     width: 60px;
