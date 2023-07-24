@@ -16,10 +16,11 @@ body {
 }
 
 .container {
-  padding-top: 75px;
+  padding: 75px 0 100px 0;
   color: #fff;
   position: relative;
 }
 
 @import url('./header.css');
 @import url('./bio.css');
+@import url('./footer.css');
