@@ -95,19 +95,22 @@
 }
 
 .footer .scroll img {
-  background-color: #0d1117;
+  background-color: inherit;
   width: 80%;
   height: 80%;
   border-radius: 50%;
   cursor: pointer;
-  border: #000;
-  transition: all 1s ease;
+  border: 3px solid #0d1117;
+}
+
+.footer .scroll img:hover {
+  background-color: #0d1117;
 }
 
 .footer .scroll img:active {
   background-color: yellow;
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 90%;
   transition: all 0.3s ease;
 }
 
@@ -122,7 +125,7 @@
   .footer .middle {
     font-size: 14px;
     padding-right: 0;
-    margin: 10px 30px 50px 40px;
+    margin: 20px 30px 30px 40px;
     /* border: 1px solid #fff; */
     flex-direction: column;
     transition: all 1s ease;
@@ -145,8 +148,8 @@
   .footer .scroll {
     right: 10px;
     top: calc((100% - 50px) / 2 - 10px);
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     transition: all 1s ease;
   }
 }
