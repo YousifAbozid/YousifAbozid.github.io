@@ -5,7 +5,8 @@ const Bio = () => {
         <img src="bg.jpg"></img>
       </div>
       <div className="bio">
-        <h2>Yousif Abozid - Full Stack Software Engineer | Novelist | Entrepreneur</h2>
+        <h2>Yousif Abozid</h2>
+        <h3>Full Stack Software Engineer | Novelist | Entrepreneur</h3>
         <p>
           Greetings! I take pride in being a skilled and dedicated Full Stack Software Engineer, driven by my enthusiasm
           for crafting cutting-edge and intuitive web applications. My expertise spans across both Front-end and
