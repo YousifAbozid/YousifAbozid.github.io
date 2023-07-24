@@ -10,10 +10,10 @@ const Footer = () => {
       </div>
       <div className="middle">
         <div className="text">
-          Made with ♥️ by <Link href="https://github.com/YousifAbozid">Me</Link> Source Code on
+          Made with ♥️ by <Link href="">Me</Link> Source Code on
         </div>
         <div className="github">
-          <Link href="https://github.com/YousifAbozid/YousifAbozid.github.io">
+          <Link href="">
             <img src="github.svg" alt="GitHub" />
           </Link>
         </div>

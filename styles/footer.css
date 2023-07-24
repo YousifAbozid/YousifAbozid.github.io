@@ -74,6 +74,7 @@
 .footer .middle .github img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .footer .middle .github img:active {
@@ -108,4 +109,44 @@
   width: 50%;
   height: 50%;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .logo {
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    transition: all 1s ease;
+  }
+
+  .footer .middle {
+    font-size: 14px;
+    padding-right: 0;
+    margin: 10px 30px 50px 40px;
+    /* border: 1px solid #fff; */
+    flex-direction: column;
+    transition: all 1s ease;
+  }
+
+  .footer .middle .text {
+    width: 100%;
+    margin-bottom: 15px;
+    transition: all 1s ease;
+  }
+
+  .footer .middle .text a {
+    font-size: 14px;
+  }
+
+  .footer .middle .github {
+    padding: 1px;
+  }
+
+  .footer .scroll {
+    right: 10px;
+    top: calc((100% - 50px) / 2 - 10px);
+    width: 50px;
+    height: 50px;
+    transition: all 1s ease;
+  }
 }
