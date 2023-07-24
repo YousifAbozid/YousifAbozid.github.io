@@ -12,9 +12,11 @@ body {
   padding: 0;
   background-color: #0d1117;
   overflow-x: hidden;
+  position: relative;
 }
 
 .container {
+  padding-top: 75px;
   color: #fff;
   position: relative;
 }
