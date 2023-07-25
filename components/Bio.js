@@ -2,7 +2,7 @@ const Bio = () => {
   return (
     <div className="bio-container">
       <div className="avatar">
-        <img src="bg.jpg"></img>
+        <img src="me.jpg"></img>
       </div>
       <div className="bio">
         <h2>Yousif Abozid</h2>
