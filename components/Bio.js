@@ -14,8 +14,8 @@ const Bio = () => {
         </p>
         <p>
           I specialize in developing robust and scalable solutions that deliver seamless user experiences. My core
-          expertise lies in leveraging the power of javascript through it's libraries and frameworks like react.js and
-          specially next.js which allowing me to create dynamic and responsive web applications.
+          expertise lies in leveraging the power of javascript through its libraries and frameworks like React.js and
+          specially Next.js which allowing me to create dynamic and responsive web applications.
         </p>
         <p>
           In addition to my technical prowess, I am also an accomplished Novelist, capable of weaving captivating
@@ -26,6 +26,12 @@ const Bio = () => {
           I'm constantly seeking opportunities to push boundaries and create meaningful impact through my work. Whether
           it's writing code or crafting narratives, I strive for excellence, making a positive difference in the world
           around me.
+        </p>
+        <p>
+          In conclusion, I'm excited about the opportunity to bring my skills, experience, and passion to a dynamic
+          team. If you believe my expertise aligns with your company's goals, I would love to connect further. Please
+          feel free to reach out to me through the contact information provided in my resume. Thank you for considering
+          my application, and I look forward to the possibility of working together.
         </p>
       </div>
     </div>
