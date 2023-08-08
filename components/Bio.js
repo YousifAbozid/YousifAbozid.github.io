@@ -1,8 +1,10 @@
+import Image from 'next/image'
+
 const Bio = () => {
   return (
     <div className="bio-container">
       <div className="avatar">
-        <img src="me.jpg"></img>
+        <Image alt="Yousif Abozid" width={0} height={0} priority={true} src="me.jpg"></Image>
       </div>
       <div className="bio">
         <h2>Yousif Abozid</h2>
