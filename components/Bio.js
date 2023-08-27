@@ -9,7 +9,7 @@ const Bio = () => {
           width={0}
           height={0}
           priority={true}
-          src={'https://res.cloudinary.com/fswd/image/upload/v1691559964/Khalifa_446_kgwbfe.jpg'}></Image>
+          src={'https://res.cloudinary.com/fswd/image/upload/v1693155786/Khalifa_446_-min_wavfue.jpg'}></Image>
       </div>
       <div className="bio">
         <h2>Yousif Abozid</h2>

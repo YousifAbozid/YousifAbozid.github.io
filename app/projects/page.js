@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ProjectsArray from '@/components/Projects'
+import Footer from '@/components/Footer'
 
 export default function Projects() {
   return (
@@ -25,6 +26,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   )
 }
