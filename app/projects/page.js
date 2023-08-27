@@ -18,11 +18,17 @@ export default function Projects() {
             </div>
             {project.live ? (
               <>
-                <Link href={project.live}>Live Version</Link>
-                <Link href={project.source}>Source Code</Link>
+                <Link href={project.live} target="_blank">
+                  Live Version
+                </Link>
+                <Link href={project.source} target="_blank">
+                  Source Code
+                </Link>
               </>
             ) : (
-              <Link href={project.source}>Source Code</Link>
+              <Link href={project.source} target="_blank">
+                Source Code
+              </Link>
             )}
           </div>
         ))}

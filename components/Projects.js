@@ -193,9 +193,23 @@ const ProjectsArray = [
     tools: ['JavaScript', 'HTML', 'CSS'],
   },
   {
+    name: 'README',
+    description: 'My public README.md works as resume.',
+    source: 'https://github.com/YousifAbozid/YousifAbozid',
+    live: 'https://yousif.tech/YousifAbozid',
+    tools: ['JavaScript', 'HTML', 'CSS'],
+  },
+  {
     name: 'printf',
     description: 'C Custom Printf Function.',
     source: 'https://github.com/YousifAbozid/printf',
+    live: '',
+    tools: ['C', 'ALX Africa'],
+  },
+  {
+    name: 'Simple Shell',
+    description: 'Custom Linux Shell.',
+    source: 'https://github.com/YousifAbozid/simple_shell',
     live: '',
     tools: ['C', 'ALX Africa'],
   },
