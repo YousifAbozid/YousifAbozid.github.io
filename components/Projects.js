@@ -155,6 +155,41 @@ const ProjectsArray = [
       'axios',
     ],
   },
+  {
+    name: 'Hack GitHub Contributions Graph',
+    description: 'A Program To Hack GitHub Contributions Graph And Fill The Empty Days.',
+    source: 'https://github.com/YousifAbozid/Hack-GitHub-Contributions-Graph',
+    live: '',
+    tools: ['Node.js', 'jsonfile', 'simple-git'],
+  },
+  {
+    name: 'Photoshop',
+    description: 'A simple app to edit your photos.',
+    source: 'https://github.com/YousifAbozid/PhotoShop',
+    live: '',
+    tools: ['React.js', 'CSS'],
+  },
+  {
+    name: 'Google Maps',
+    description: 'A simple google maps app.',
+    source: 'https://github.com/YousifAbozid/GoogleMaps',
+    live: '',
+    tools: ['JavaScript', 'HTML', 'Mapbox'],
+  },
+  {
+    name: 'CodePen',
+    description: 'A simple codepen editor.',
+    source: 'https://github.com/YousifAbozid/CodePen',
+    live: '',
+    tools: ['React.js', 'CSS'],
+  },
+  {
+    name: 'Clock',
+    description: 'A simple analog clock.',
+    source: 'https://github.com/YousifAbozid/Clock',
+    live: 'https://yousif.tech/Clock',
+    tools: ['JavaScript', 'HTML', 'CSS'],
+  },
 ]
 
 export default ProjectsArray
