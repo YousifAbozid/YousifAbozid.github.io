@@ -108,7 +108,7 @@ const ProjectsArray = [
     description: 'A project to get your pictuers in specific width and height.',
     source: 'https://github.com/YousifAbozid/image-processing-api',
     live: '',
-    tools: ['Node.js', 'Express.js', 'TypeScript', 'Jasmine', 'sharp', 'lint', 'prettier'],
+    tools: ['Node.js', 'Express.js', 'TypeScript', 'Jasmine', 'sharp', 'lint', 'prettier', 'Udacity'],
   },
   {
     name: 'Storefront Backend',
@@ -127,6 +127,7 @@ const ProjectsArray = [
       'JWT',
       'lint',
       'prettier',
+      'Udacity',
     ],
   },
   {
@@ -134,7 +135,7 @@ const ProjectsArray = [
     description: 'This is simple application with a pipeline.',
     source: 'https://github.com/YousifAbozid/pipeline-with-udacity',
     live: '',
-    tools: ['CI/CD', 'CircleCI'],
+    tools: ['CI/CD', 'CircleCI', 'Udacity'],
   },
   {
     name: 'Products List',
@@ -153,6 +154,7 @@ const ProjectsArray = [
       'dotenv',
       'cors',
       'axios',
+      'Udacity',
     ],
   },
   {
@@ -189,6 +191,13 @@ const ProjectsArray = [
     source: 'https://github.com/YousifAbozid/Clock',
     live: 'https://yousif.tech/Clock',
     tools: ['JavaScript', 'HTML', 'CSS'],
+  },
+  {
+    name: 'printf',
+    description: 'C Custom Printf Function.',
+    source: 'https://github.com/YousifAbozid/printf',
+    live: '',
+    tools: ['C', 'ALX Africa'],
   },
 ]
 
