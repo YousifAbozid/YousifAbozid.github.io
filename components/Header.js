@@ -16,21 +16,21 @@ const Header = () => {
       <div className="text">
         <h1>Hi, I'm Yousif Abozid</h1>
       </div>
-      {/* <div className={`links ${showMenu ? 'show' : ''}`}>
+      <div className={`links ${showMenu ? 'show' : ''}`}>
         <ul>
           <li>
             <Link href="/projects">Projects</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/about">About</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className={`menu-button ${showMenu ? 'show' : ''}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
-      </div> */}
+      </div>
     </div>
   )
 }
