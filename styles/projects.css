@@ -1,0 +1,87 @@
+.projects_container {
+  padding: 75px 0 100px 0;
+  color: #fff;
+  position: relative;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  border: crimson solid 1px;
+  border-radius: 5px;
+  background-color: rgb(22, 27, 34);
+  box-shadow: 2px 2px 2px crimson, -2px -2px 2px crimson;
+}
+
+.project h1 {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: coral;
+  font-size: 30px;
+}
+
+.project p {
+  margin: 0;
+  padding: 10px;
+  text-align: flex-start;
+  color: cyan;
+  font-size: 18px;
+}
+
+.project .tools {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 5px;
+}
+
+.project .tools div {
+  /* border: crimson solid 1px; */
+  border-radius: 5px;
+  color: #000;
+  background-color: coral;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 20px;
+  text-align: center;
+}
+
+.project a {
+  color: coral;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 5px;
+  border: coral solid 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project a:hover {
+  background-color: coral;
+  color: #000;
+  transition: all 0.3s ease;
+}
