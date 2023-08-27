@@ -2,9 +2,19 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 
+/**
+ * Renders the header component.
+ *
+ * @return {JSX.Element} The header component.
+ */
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
 
+  /**
+   * Toggles the menu display.
+   *
+   * @return {void} - No return value
+   */
   const toggleMenu = () => {
     setShowMenu((prevState) => !prevState)
   }

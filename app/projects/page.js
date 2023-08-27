@@ -2,6 +2,11 @@ import Link from 'next/link'
 import ProjectsArray from '@/components/Projects'
 import Footer from '@/components/Footer'
 
+/**
+ * Renders a list of projects.
+ *
+ * @return {JSX.Element} - The JSX element representing the list of projects.
+ */
 export default function Projects() {
   return (
     <div className="projects_container">

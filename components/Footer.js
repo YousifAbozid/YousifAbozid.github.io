@@ -2,6 +2,11 @@
 import Link from 'next/link'
 import React from 'react'
 
+/**
+ * Renders the Footer component.
+ *
+ * @return {JSX.Element} The Footer component.
+ */
 const Footer = () => {
   return (
     <div className="footer">

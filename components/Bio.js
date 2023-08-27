@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+/**
+ * Renders the bio section of the website.
+ *
+ * @return {JSX.Element} The JSX element representing the bio section.
+ */
 const Bio = () => {
   return (
     <div className="bio-container">
