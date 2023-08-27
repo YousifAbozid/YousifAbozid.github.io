@@ -6,6 +6,7 @@ export default function Projects() {
   return (
     <div className="projects_container">
       <div className="projects">
+        <h1>My Projects: Total of {ProjectsArray.length} projects</h1>
         {ProjectsArray.map((project) => (
           <div className="project" key={project.name}>
             <h1>{project.name}</h1>

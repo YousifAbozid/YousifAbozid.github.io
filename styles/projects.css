@@ -14,6 +14,15 @@
   gap: 20px;
 }
 
+.projects h1 {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: crimson;
+  font-size: 30px;
+}
+
 .project {
   display: flex;
   justify-content: center;
