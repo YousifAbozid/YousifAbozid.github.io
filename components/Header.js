@@ -10,9 +10,9 @@ const Header = () => {
   }
   return (
     <div className="header">
-      <div className="logo">
+      <Link href="/" className="logo">
         <img src="logo.png"></img>
-      </div>
+      </Link>
       <div className="text">
         <h1>Hi, I'm Yousif Abozid</h1>
       </div>
