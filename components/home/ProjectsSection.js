@@ -14,7 +14,7 @@ const ProjectsSection = () => {
           <p>{project.description}</p>
           <div className="tools_section">
             {project.tools.map((tool) => (
-              <div>{tool}</div>
+              <div key={tool}>{tool}</div>
             ))}
           </div>
           {project.live ? (

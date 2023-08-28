@@ -5,7 +5,7 @@ import Image from 'next/image'
  *
  * @return {JSX.Element} The JSX element representing the bio section.
  */
-const Bio = () => {
+const BioSection = () => {
   return (
     <div className="bio-container">
       <div className="avatar">
@@ -42,4 +42,4 @@ const Bio = () => {
   )
 }
 
-export default Bio
+export default BioSection

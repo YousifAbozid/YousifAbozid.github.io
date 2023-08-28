@@ -22,8 +22,8 @@ body {
 }
 
 @import url('./header.css');
-@import url('./bio.css');
 @import url('./footer.css');
+@import url('./home/bioSection.css');
+@import url('./home/projectsSection.css');
+@import url('./home/skillsSection.css');
 @import url('./projects.css');
-@import url('./projectsSection.css');
-@import url('./skills.css');

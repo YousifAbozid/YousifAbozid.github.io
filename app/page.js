@@ -1,7 +1,7 @@
-import Bio from '@/components/Bio'
+import BioSection from '@/components/home/BioSection'
+import ProjectsSection from '@/components/home/ProjectsSection'
+import SkillsSection from '@/components/home/SkillsSection'
 import Footer from '@/components/Footer'
-import ProjectsSection from '@/components/ProjectsSection'
-import Skills from '@/components/Skills'
 
 /**
  * Renders the Home component.
@@ -11,9 +11,9 @@ import Skills from '@/components/Skills'
 export default function Home() {
   return (
     <div className="container">
-      <Bio />
+      <BioSection />
+      <SkillsSection />
       <ProjectsSection />
-      <Skills />
       <Footer />
     </div>
   )

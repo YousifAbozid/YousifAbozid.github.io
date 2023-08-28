@@ -71,7 +71,6 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
   margin: 5px;
 }
 
@@ -80,6 +79,7 @@
   color: #000;
   background-color: coral;
   padding: 5px;
+  margin: 5px;
   text-transform: capitalize;
   font-size: 18px;
   text-align: center;

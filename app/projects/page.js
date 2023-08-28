@@ -18,7 +18,7 @@ export default function Projects() {
             <p>{project.description}</p>
             <div className="tools">
               {project.tools.map((tool) => (
-                <div>{tool}</div>
+                <div key={tool}>{tool}</div>
               ))}
             </div>
             {project.live ? (
