@@ -23,7 +23,7 @@
   height: 100px;
   top: calc((100% - 100px) / 2);
   left: 20px;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .footer .logo img {
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .footer .middle .text a {
@@ -49,14 +49,13 @@
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #0d1117;
-  /* transition: all 1s ease; */
 }
 
 .footer .middle .text a:hover {
   background-color: #fff;
   color: #1b1818;
   border: 1px solid #000;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .footer .middle .text a:active {
@@ -91,7 +90,7 @@
   justify-content: center;
   width: 70px;
   height: 70px;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .footer .scroll img {
@@ -119,22 +118,21 @@
     left: 10px;
     width: 80px;
     height: 80px;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .footer .middle {
     font-size: 14px;
     padding-right: 0;
     margin: 20px 30px 30px 40px;
-    /* border: 1px solid #fff; */
     flex-direction: column;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .footer .middle .text {
     width: 100%;
     margin-bottom: 15px;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .footer .middle .text a {
@@ -150,6 +148,6 @@
     top: calc((100% - 50px) / 2 - 10px);
     width: 60px;
     height: 60px;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 }
