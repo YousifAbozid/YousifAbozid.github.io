@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   border-bottom: 20px solid rgb(22, 27, 34);
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .bio-container .avatar {
@@ -18,7 +18,7 @@
   margin: 100px auto;
   border: none;
   border-radius: 50%;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .bio-container .avatar img {
@@ -27,7 +27,7 @@
   height: 100%;
   object-fit: cover;
   transform: scale(1.5) translate(1%, -5%);
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .bio-container .bio {
@@ -38,21 +38,21 @@
   font-size: 20px;
   height: 100%;
   width: 70%;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .bio-container .bio h2,
 h3 {
   margin: 20px;
   text-align: center;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .bio-container .bio p {
   text-align: justify;
   margin: 20px;
-  line-height: 1.4;
-  transition: all 1s ease;
+  line-height: 1.3;
+  transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 720px) {
@@ -60,7 +60,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .bio-container .avatar {
@@ -68,24 +68,24 @@ h3 {
     width: 290px; */
     margin: 30px auto;
     z-index: -1;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .bio-container .bio {
     font-size: 18px;
     width: 100%;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .bio-container .bio h2,
   h3 {
     margin: 10px;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .bio-container .bio p {
     margin: 20px;
     line-height: 1.2;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 }

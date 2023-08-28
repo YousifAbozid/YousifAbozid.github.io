@@ -31,9 +31,9 @@ const Header = () => {
           <li>
             <Link href="/projects">Projects</Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/about">About</Link>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className={`menu-button ${showMenu ? 'show' : ''}`} onClick={toggleMenu}>

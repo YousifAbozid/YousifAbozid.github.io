@@ -23,7 +23,7 @@
   height: 65px;
   top: 5px;
   left: 20px;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .header .logo img {
@@ -45,7 +45,7 @@
   text-transform: capitalize;
   /* flex: 1; */
   transform: translateX(-10%);
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .header .links {
@@ -124,13 +124,13 @@
     left: 10px;
     width: 60px;
     height: 60px;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
   .header .text h1 {
     padding: 0 30px 0 10px;
     font-size: 22px;
     transform: translateY(50%);
-    transition: all 1s ease;
+    transition: all 0.2s ease;
   }
 
   .links {
