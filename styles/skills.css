@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .skills_container .skills div {
@@ -43,6 +43,7 @@
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+  margin: 5px;
 }
 
 .skills_container .skills:last-child {
