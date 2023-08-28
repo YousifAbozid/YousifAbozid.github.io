@@ -1,4 +1,4 @@
-const ProjectsArray = [
+const projectsArray = [
   {
     name: 'Portfolio',
     description: 'This is my portfolio app.',
@@ -215,4 +215,4 @@ const ProjectsArray = [
   },
 ]
 
-export default ProjectsArray
+export default projectsArray
