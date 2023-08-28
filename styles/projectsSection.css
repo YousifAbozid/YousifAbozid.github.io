@@ -16,6 +16,7 @@
   color: crimson;
   font-size: 22px;
   text-align: center;
+  transition: all 0.2s ease;
 }
 
 .projects_section p a {
@@ -44,6 +45,7 @@
   border-radius: 10px;
   background-color: #0d1117;
   box-shadow: 2px 2px 2px crimson, -2px -2px 2px crimson;
+  transition: all 0.2s ease;
 }
 
 .projects_section .project_section h1 {
@@ -117,9 +119,11 @@
 
   .projects_section .project_section a {
     width: 50%;
+    transition: all 0.2s ease;
   }
 
   .projects_section p {
     line-height: 2;
+    transition: all 0.2s ease;
   }
 }
