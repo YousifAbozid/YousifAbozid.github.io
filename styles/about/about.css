@@ -13,11 +13,28 @@
   height: 350px;
   width: 350px;
   overflow: hidden;
+  cursor: pointer;
   position: relative;
   margin-top: 20px;
-  border: none;
+  border: 2px solid transparent; /* Start with a transparent border */
   border-radius: 10px;
-  transition: all 0.2s ease;
+  /* perspective: 1000px; Perspective for 3D effect */
+  animation: pulsate 1.5s infinite; /* Apply the pulsate animation */
+}
+
+@keyframes pulsate {
+  0% {
+    border-color: transparent; /* Initially transparent */
+    box-shadow: none; /* No box shadow */
+  }
+  50% {
+    border-color: crimson; /* Color at midpoint of animation */
+    box-shadow: 0 0 24px crimson; /* Pulsating glow effect */
+  }
+  100% {
+    border-color: transparent; /* Back to transparent */
+    box-shadow: none; /* No box shadow */
+  }
 }
 
 .about_container .avatar img {
@@ -26,7 +43,11 @@
   height: 100%;
   object-fit: cover;
   transform: scale(1.4) translateY(-7%);
-  transition: all 0.2s ease;
+  transition: all 0.8s ease;
+}
+
+.about_container .avatar:hover img {
+  transform: scale(1.4) translateY(-7%) rotate(360deg);
 }
 
 .about_container .bio {
