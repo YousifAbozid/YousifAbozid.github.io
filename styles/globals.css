@@ -26,4 +26,4 @@ body {
 @import url('./home/bioSection.css');
 @import url('./home/projectsSection.css');
 @import url('./home/skillsSection.css');
-@import url('./projects.css');
+@import url('./projects/projects.css');
