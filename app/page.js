@@ -1,7 +1,6 @@
 import BioSection from '@/components/home/BioSection'
 import ProjectsSection from '@/components/home/ProjectsSection'
 import SkillsSection from '@/components/home/SkillsSection'
-import Footer from '@/components/Footer'
 
 /**
  * Renders the Home component.
@@ -14,7 +13,6 @@ export default function Home() {
       <BioSection />
       <SkillsSection />
       <ProjectsSection />
-      <Footer />
     </div>
   )
 }
