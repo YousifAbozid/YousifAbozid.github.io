@@ -1,5 +1,5 @@
 import React from 'react'
-import skillsArray from '@/skillsArray'
+import skillsArray from '@/data/skillsArray'
 
 /**
  * Renders the Skills component.

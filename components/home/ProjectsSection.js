@@ -1,5 +1,5 @@
-import projectsArray from '@/projectsArray'
 import Link from 'next/link'
+import projectsArray from '@/data/projectsArray'
 
 const ProjectsSection = () => {
   return (

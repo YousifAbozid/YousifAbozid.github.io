@@ -1,4 +1,4 @@
-import projectsArray from '@/projectsArray'
+import projectsArray from '@/data/projectsArray'
 import Link from 'next/link'
 
 const AllProjects = () => {
