@@ -5,8 +5,8 @@ const ProjectsSection = () => {
   return (
     <div className="projects_section">
       <p>
-        My total projects is {projectsArray.length} projects, explore all of them at{' '}
-        <Link href="/projects">Projects</Link> page.
+        My total projects is {projectsArray.length} projects, explore all of
+        them at <Link href="/projects">Projects</Link> page.
       </p>
       {projectsArray.slice(0, 4).map((project) => (
         <div className="project_section" key={project.name}>

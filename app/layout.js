@@ -9,7 +9,8 @@ export const metadata = {
   url: 'https://yousif.tech',
   type: 'website',
   themeColor: 'dark',
-  image: 'https://res.cloudinary.com/fswd/image/upload/v1693155786/Khalifa_446_-min_wavfue.jpg',
+  image:
+    'https://res.cloudinary.com/fswd/image/upload/v1693155786/Khalifa_446_-min_wavfue.jpg',
   creator: 'Yousif Abozid',
   publisher: 'Yousif Abozid',
   keywords: [

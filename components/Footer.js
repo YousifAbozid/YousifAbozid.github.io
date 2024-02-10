@@ -15,7 +15,8 @@ const Footer = () => {
       </div>
       <div className="middle">
         <div className="text">
-          Made with ♥️ by <Link href="https://github.com/YousifAbozid">Me</Link> Source Code on
+          Made with ♥️ by <Link href="https://github.com/YousifAbozid">Me</Link>{' '}
+          Source Code on
         </div>
         <div className="github">
           <Link href="https://github.com/YousifAbozid/YousifAbozid.github.io">
@@ -24,7 +25,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="scroll">
-        <img src="up.svg" alt="Go Up" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+        <img
+          src="up.svg"
+          alt="Go Up"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        />
       </div>
     </div>
   )

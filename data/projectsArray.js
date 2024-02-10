@@ -2,13 +2,21 @@ const projectsArray = [
   {
     name: 'Portfolio',
     description: 'This is my portfolio app.',
-    tools: ['React.js', 'Next.js', 'Node.js', 'CSS', 'Github Pages', 'Github Actions'],
-    live: 'https://yousif.tech',
+    tools: [
+      'React.js',
+      'Next.js',
+      'Node.js',
+      'CSS',
+      'Github Pages',
+      'Github Actions',
+    ],
+    live: 'https://YousifAbozid.github.io',
     source: 'https://github.com/YousifAbozid/YousifAbozid.github.io',
   },
   {
     name: 'Asgard Market',
-    description: 'Asgard Market is an E-Commerce App for selling your products or buying products.',
+    description:
+      'Asgard Market is an E-Commerce App for selling your products or buying products.',
     tools: [
       'React.js',
       'Next.js',
@@ -37,14 +45,31 @@ const projectsArray = [
     description: 'E-Commerce Backend handles all the business logic and data.',
     source: 'https://github.com/YousifAbozid/E-Commerce-backend',
     live: '',
-    tools: ['Node.js', 'Express.js', 'MongoDB', 'mongoose', 'JWT', 'bcrypt', 'dotenv', 'cors'],
+    tools: [
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'mongoose',
+      'JWT',
+      'bcrypt',
+      'dotenv',
+      'cors',
+    ],
   },
   {
     name: 'Url Shrinker',
     description: 'Url Shrinker is a URL Shortener App for your links.',
     source: 'https://github.com/YousifAbozid/UrlShrinker',
     live: '',
-    tools: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'mongoose', 'Bootstrap', 'Axios'],
+    tools: [
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'mongoose',
+      'Bootstrap',
+      'Axios',
+    ],
   },
   {
     name: 'Memories',
@@ -66,7 +91,8 @@ const projectsArray = [
   },
   {
     name: 'GraphQL Playlist',
-    description: 'GraphQL Playlist App to save your favourite books to the cloud.',
+    description:
+      'GraphQL Playlist App to save your favourite books to the cloud.',
     source: 'https://github.com/YousifAbozid/GraphQlPlaylist',
     live: '',
     tools: [
@@ -91,7 +117,8 @@ const projectsArray = [
   },
   {
     name: 'CSS Animation Projects',
-    description: 'Mastering Creative Advanced CSS Animations With More Than 100 Project.',
+    description:
+      'Mastering Creative Advanced CSS Animations With More Than 100 Project.',
     source: 'https://github.com/YousifAbozid/CSS-Animation-Projects',
     live: '',
     tools: ['HTML', 'CSS', 'flexbox', 'animation', 'keyframes'],
@@ -100,15 +127,32 @@ const projectsArray = [
     name: '50 Projects In 50 Days',
     description: '50 Projects In 50 Days.',
     source: 'https://github.com/YousifAbozid/50-Projects-In-50-Days',
-    live: 'https://yousif.tech/50-Projects-In-50-Days',
-    tools: ['HTML', 'CSS', 'JavaScript', 'flexbox', 'grid', 'animation', 'keyframes'],
+    live: 'https://YousifAbozid.github.io/50-Projects-In-50-Days',
+    tools: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'flexbox',
+      'grid',
+      'animation',
+      'keyframes',
+    ],
   },
   {
     name: 'Image Processing API',
     description: 'A project to get your pictuers in specific width and height.',
     source: 'https://github.com/YousifAbozid/image-processing-api',
     live: '',
-    tools: ['Node.js', 'Express.js', 'TypeScript', 'Jasmine', 'sharp', 'lint', 'prettier', 'Udacity'],
+    tools: [
+      'Node.js',
+      'Express.js',
+      'TypeScript',
+      'Jasmine',
+      'sharp',
+      'lint',
+      'prettier',
+      'Udacity',
+    ],
   },
   {
     name: 'Storefront Backend',
@@ -159,7 +203,8 @@ const projectsArray = [
   },
   {
     name: 'Hack GitHub Contributions Graph',
-    description: 'A Program To Hack GitHub Contributions Graph And Fill The Empty Days.',
+    description:
+      'A Program To Hack GitHub Contributions Graph And Fill The Empty Days.',
     source: 'https://github.com/YousifAbozid/Hack-GitHub-Contributions-Graph',
     live: '',
     tools: ['Node.js', 'jsonfile', 'simple-git'],
@@ -189,14 +234,14 @@ const projectsArray = [
     name: 'Clock',
     description: 'A simple analog clock.',
     source: 'https://github.com/YousifAbozid/Clock',
-    live: 'https://yousif.tech/Clock',
+    live: 'https://YousifAbozid.github.io/Clock',
     tools: ['JavaScript', 'HTML', 'CSS'],
   },
   {
     name: 'README',
     description: 'My public README.md works as resume.',
     source: 'https://github.com/YousifAbozid/YousifAbozid',
-    live: 'https://yousif.tech/YousifAbozid',
+    live: 'https://YousifAbozid.github.io/YousifAbozid',
     tools: ['JavaScript', 'HTML', 'CSS'],
   },
   {

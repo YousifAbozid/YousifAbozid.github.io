@@ -36,7 +36,9 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className={`menu-button ${showMenu ? 'show' : ''}`} onClick={toggleMenu}>
+      <div
+        className={`menu-button ${showMenu ? 'show' : ''}`}
+        onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
