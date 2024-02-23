@@ -11,24 +11,24 @@
   flex-direction: column;
   width: 50%;
   margin: 20px auto;
-  gap: 20px;
 }
 
 .projects h1 {
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 0;
   text-align: center;
   text-transform: capitalize;
   color: crimson;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .project {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   padding: 10px;
+  margin: 10px;
   width: 100%;
   border: crimson solid 1px;
   border-radius: 5px;
@@ -42,13 +42,13 @@
   text-align: center;
   text-transform: capitalize;
   color: coral;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .project p {
   margin: 0;
   padding: 10px;
-  text-align: flex-start;
+  text-align: center;
   text-transform: capitalize;
   color: cyan;
   font-size: 18px;
@@ -59,7 +59,6 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
   margin: 5px;
 }
 
@@ -69,8 +68,9 @@
   color: #000;
   background-color: coral;
   padding: 10px;
+  margin: 5px;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -79,7 +79,7 @@
   padding: 10px;
   margin-top: 10px;
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
   text-transform: capitalize;
@@ -94,4 +94,21 @@
   background-color: coral;
   color: #000;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 720px) {
+  .projects {
+    width: 90%;
+    transition: all 0.2s ease;
+  }
+
+  .project a {
+    width: 50%;
+    transition: all 0.2s ease;
+  }
+
+  .project p {
+    line-height: 2;
+    transition: all 0.2s ease;
+  }
 }
