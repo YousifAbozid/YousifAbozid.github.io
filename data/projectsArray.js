@@ -1,5 +1,12 @@
 const projectsArray = [
   {
+    name: 'Tvflix',
+    description: 'Tvflix is a web applications to show the latest movies.',
+    tools: ['HTML', 'CSS', 'JavaScript', 'Github Pages'],
+    live: 'https://YousifAbozid.github.io/Tvflix',
+    source: 'https://github.com/YousifAbozid/Tvflix',
+  },
+  {
     name: 'Portfolio',
     description: 'This is my portfolio app.',
     tools: [
