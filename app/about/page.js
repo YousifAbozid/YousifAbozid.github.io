@@ -15,7 +15,7 @@ export default function About() {
           height={0}
           priority={true}
           src={
-            'https://res.cloudinary.com/fswd/image/upload/v1693155786/Khalifa_446_-min_wavfue.jpg'
+            'https://res.cloudinary.com/octopus-labs/image/upload/v1693155786/yousif-mini.jpg'
           }></Image>
       </div>
       <div className="bio">
