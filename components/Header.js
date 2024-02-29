@@ -17,7 +17,10 @@ const Header = () => {
 		setShowMenu(false) // Close menu when a link is clicked
 	}
 
-	const toggleMenu = () => {
+	const toggleMenu = (event) => {
+		// Prevent default behavior of the touch event
+		event.preventDefault()
+
 		setShowMenu((prevState) => !prevState)
 	}
 
