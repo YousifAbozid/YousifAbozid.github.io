@@ -12,48 +12,31 @@ import links from '@/data/linksArray'
 const Header = () => {
 	const [showMenu, setShowMenu] = useState(false)
 	const menuRef = useRef(null)
-	const menuButtonRef = useRef(null)
-	const isTogglingRef = useRef(false)
 
 	const handleLinkClick = () => {
 		setShowMenu(false) // Close menu when a link is clicked
 	}
 
 	const toggleMenu = () => {
-		if (!isTogglingRef.current) {
-			isTogglingRef.current = true
-			setShowMenu((prevState) => !prevState)
-			setTimeout(() => {
-				isTogglingRef.current = false
-			}, 500) // Adjust the delay as needed
-		}
+		setShowMenu((prevState) => !prevState)
 	}
 
 	useEffect(() => {
+		// Function to close menu when clicking outside of it
 		const handleClickOutside = (event) => {
 			if (menuRef.current && !menuRef.current.contains(event.target)) {
 				setShowMenu(false)
 			}
 		}
 
+		// Add event listener when component mounts
 		document.addEventListener('mousedown', handleClickOutside)
-		document.addEventListener('touchstart', handleClickOutside)
+		document.addEventListener('touchstart', handleClickOutside) // Listen for touch events as well
 
+		// Remove event listener when component unmounts
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside)
 			document.removeEventListener('touchstart', handleClickOutside)
-		}
-	}, [])
-
-	useEffect(() => {
-		const handleMenuButtonClick = () => {
-			toggleMenu()
-		}
-
-		menuButtonRef.current.addEventListener('click', handleMenuButtonClick)
-
-		return () => {
-			menuButtonRef.current.removeEventListener('click', handleMenuButtonClick)
 		}
 	}, [])
 
@@ -74,9 +57,10 @@ const Header = () => {
 					))}
 				</ul>
 			</div>
+
 			<div
 				className={`menu-button ${showMenu ? 'show' : ''}`}
-				ref={menuButtonRef}>
+				onClick={toggleMenu}>
 				<span></span>
 				<span></span>
 				<span></span>
@@ -84,5 +68,4 @@ const Header = () => {
 		</div>
 	)
 }
-
 export default Header
