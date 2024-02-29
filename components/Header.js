@@ -19,7 +19,7 @@ const Header = () => {
 
 	const toggleMenu = () => {
 		setShowMenu((prevState) => !prevState)
-		document.removeEventListener('touchstart', handleClickOutside)
+		return document.removeEventListener('touchstart', handleClickOutside)
 	}
 
 	useEffect(() => {
