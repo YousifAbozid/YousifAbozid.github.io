@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 /**
  * Renders the About component.
@@ -6,6 +9,25 @@ import Image from 'next/image'
  * @return {JSX.Element} A div container with the class name "about_container".
  */
 export default function About() {
+	useEffect(() => {
+		const handleTouchStart = () => {
+			document.querySelector('.avatar').classList.add('touched')
+		}
+
+		const handleTouchEnd = () => {
+			document.querySelector('.avatar').classList.remove('touched')
+		}
+
+		const avatar = document.querySelector('.avatar')
+		avatar.addEventListener('touchstart', handleTouchStart)
+		avatar.addEventListener('touchend', handleTouchEnd)
+
+		return () => {
+			avatar.removeEventListener('touchstart', handleTouchStart)
+			avatar.removeEventListener('touchend', handleTouchEnd)
+		}
+	}, [])
+
 	return (
 		<div className='about_container'>
 			<div className='avatar'>
