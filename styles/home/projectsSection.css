@@ -1,129 +1,129 @@
 .projects_section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  margin: 20px 0 0 0;
-  border-bottom: 20px solid rgb(22, 27, 34);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin: 20px 0 0 0;
+	border-bottom: 20px solid rgb(22, 27, 34);
 }
 
 .projects_section p {
-  margin: 0;
-  padding: 10px;
-  text-transform: capitalize;
-  color: crimson;
-  font-size: 22px;
-  text-align: center;
-  transition: all 0.2s ease;
+	margin: 0;
+	padding: 10px;
+	text-transform: capitalize;
+	color: crimson;
+	font-size: 22px;
+	text-align: center;
+	transition: all 0.2s ease;
 }
 
 .projects_section p a {
-  text-decoration: none;
-  cursor: pointer;
-  color: coral;
-  font-weight: 500;
-  border: #fff solid 1px;
-  border-radius: 5px;
-  padding: 10px;
-  transition: all 0.3s ease;
+	text-decoration: none;
+	cursor: pointer;
+	color: coral;
+	font-weight: 500;
+	border: #fff solid 1px;
+	border-radius: 5px;
+	padding: 10px;
+	transition: all 0.3s ease;
 }
 
 .projects_section p a:hover {
-  background-color: coral;
-  color: #000;
+	background-color: coral;
+	color: #000;
 }
 
 .projects_section .project_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin: 10px;
-  width: 50%;
-  border-radius: 10px;
-  background-color: #0d1117;
-  box-shadow: 2px 2px 2px crimson, -2px -2px 2px crimson;
-  transition: all 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	margin: 10px;
+	width: 50%;
+	border-radius: 10px;
+	background-color: #0d1117;
+	box-shadow: 2px 2px 2px crimson, -2px -2px 2px crimson;
+	transition: all 0.2s ease;
 }
 
 .projects_section .project_section h1 {
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  text-transform: capitalize;
-  color: coral;
-  font-size: 25px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	text-transform: capitalize;
+	color: coral;
+	font-size: 25px;
 }
 
 .projects_section .project_section p {
-  margin: 0;
-  padding: 10px;
-  text-align: flex-start;
-  text-transform: capitalize;
-  color: cyan;
-  font-size: 18px;
+	margin: 0;
+	padding: 10px;
+	text-align: flex-start;
+	text-transform: capitalize;
+	color: cyan;
+	font-size: 18px;
 }
 
 .projects_section .project_section .tools_section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 5px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 5px;
 }
 
 .projects_section .project_section .tools_section div {
-  border-radius: 5px;
-  color: #000;
-  background-color: coral;
-  padding: 5px;
-  margin: 5px;
-  text-transform: capitalize;
-  font-size: 18px;
-  text-align: center;
+	border-radius: 5px;
+	color: #000;
+	background-color: coral;
+	padding: 5px;
+	margin: 5px;
+	text-transform: capitalize;
+	font-size: 18px;
+	text-align: center;
 }
 
 .projects_section .project_section a {
-  color: coral;
-  padding: 10px;
-  margin-top: 10px;
-  width: 30%;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  text-transform: capitalize;
-  cursor: pointer;
-  border-radius: 5px;
-  border: coral solid 1px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+	color: coral;
+	padding: 10px;
+	margin-top: 10px;
+	width: 30%;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: capitalize;
+	cursor: pointer;
+	border-radius: 5px;
+	border: coral solid 1px;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
 .projects_section .project_section a:hover {
-  background-color: coral;
-  color: #000;
-  transition: all 0.3s ease;
+	background-color: coral;
+	color: #000;
+	transition: all 0.3s ease;
 }
 
 .projects_section .project_section:last-child {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 @media screen and (max-width: 720px) {
-  .projects_section .project_section {
-    width: 90%;
-    transition: all 0.2s ease;
-  }
+	.projects_section .project_section {
+		width: 90%;
+		transition: all 0.2s ease;
+	}
 
-  .projects_section .project_section a {
-    width: 50%;
-    transition: all 0.2s ease;
-  }
+	.projects_section .project_section a {
+		width: 50%;
+		transition: all 0.2s ease;
+	}
 
-  .projects_section p {
-    line-height: 2;
-    transition: all 0.2s ease;
-  }
+	.projects_section p {
+		line-height: 2;
+		transition: all 0.2s ease;
+	}
 }
