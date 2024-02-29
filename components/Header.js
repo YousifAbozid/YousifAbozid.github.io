@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import links from '@/data/linksArray'
 
@@ -11,26 +11,46 @@ import links from '@/data/linksArray'
  */
 const Header = () => {
 	const [showMenu, setShowMenu] = useState(false)
+	const menuRef = useRef(null)
 
-	/**
-	 * Toggles the menu display.
-	 *
-	 * @return {void} - No return value
-	 */
+	const handleLinkClick = () => {
+		setShowMenu(false) // Close menu when a link is clicked
+	}
+
 	const toggleMenu = () => {
 		setShowMenu((prevState) => !prevState)
 	}
+
+	useEffect(() => {
+		// Function to close menu when clicking outside of it
+		const handleClickOutside = (event) => {
+			if (menuRef.current && !menuRef.current.contains(event.target)) {
+				setShowMenu(false)
+			}
+		}
+
+		// Add event listener when component mounts
+		document.addEventListener('mousedown', handleClickOutside)
+
+		// Remove event listener when component unmounts
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside)
+		}
+	}, [])
+
 	return (
 		<div className='header'>
 			<Link href='/' className='logo'>
 				<img src='logo.png'></img>
 			</Link>
 
-			<div className={`links ${showMenu ? 'show' : ''}`}>
+			<div className={`links ${showMenu ? 'show' : ''}`} ref={menuRef}>
 				<ul>
 					{links.map((link, index) => (
 						<li key={index}>
-							<Link href={link.href}>{link.label}</Link>
+							<Link href={link.href} onClick={handleLinkClick}>
+								{link.label}
+							</Link>
 						</li>
 					))}
 				</ul>
