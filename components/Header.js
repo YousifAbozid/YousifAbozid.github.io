@@ -31,10 +31,12 @@ const Header = () => {
 
 		// Add event listener when component mounts
 		document.addEventListener('mousedown', handleClickOutside)
+		document.addEventListener('touchstart', handleClickOutside) // Listen for touch events as well
 
 		// Remove event listener when component unmounts
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside)
+			document.removeEventListener('touchstart', handleClickOutside)
 		}
 	}, [])
 
