@@ -105,9 +105,19 @@
 		transition: all 0.2s ease;
 	}
 
-	.bio-container .bio h2,
-	h3 {
-		margin: 10px;
+	.bio .name {
+		height: 70px;
+		width: 240px;
+		margin: 0 auto;
+		padding: 0;
+		transition: all 0.2s ease;
+	}
+
+	.bio .typing-svg {
+		height: 60px;
+		width: 340px;
+		margin: 0 auto;
+		padding: 0;
 		transition: all 0.2s ease;
 	}
 
