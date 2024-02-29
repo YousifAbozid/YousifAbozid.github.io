@@ -11,7 +11,6 @@ import links from '@/data/linksArray'
  */
 const Header = () => {
 	const [showMenu, setShowMenu] = useState(false)
-	const [isToggling, setIsToggling] = useState(false)
 	const menuRef = useRef(null)
 
 	const handleLinkClick = () => {
@@ -19,14 +18,8 @@ const Header = () => {
 	}
 
 	const toggleMenu = () => {
-		if (!isToggling) {
-			setIsToggling(true)
-			setShowMenu((prevState) => !prevState)
-
-			setTimeout(() => {
-				setIsToggling(false)
-			}, 500)
-		}
+		setShowMenu((prevState) => !prevState)
+		document.removeEventListener('touchstart', handleClickOutside)
 	}
 
 	useEffect(() => {
