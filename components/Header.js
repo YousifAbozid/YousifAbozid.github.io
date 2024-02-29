@@ -1,6 +1,8 @@
 'use client'
-import Link from 'next/link'
+
 import React, { useState } from 'react'
+import Link from 'next/link'
+import links from '@/data/linksArray'
 
 /**
  * Renders the header component.
@@ -23,20 +25,14 @@ const Header = () => {
 			<Link href='/' className='logo'>
 				<img src='logo.png'></img>
 			</Link>
-			{/* <div className="text">
-        <h1>Hi, I'm Yousif Abozid</h1>
-      </div> */}
+
 			<div className={`links ${showMenu ? 'show' : ''}`}>
 				<ul>
-					<li>
-						<Link href='/projects'>Projects</Link>
-					</li>
-					<li>
-						<Link href='/about'>About</Link>
-					</li>
-					<li>
-						<Link href='/contact'>Contact</Link>
-					</li>
+					{links.map((link, index) => (
+						<li key={index}>
+							<Link href={link.href}>{link.label}</Link>
+						</li>
+					))}
 				</ul>
 			</div>
 			<div
