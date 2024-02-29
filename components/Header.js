@@ -11,17 +11,22 @@ import links from '@/data/linksArray'
  */
 const Header = () => {
 	const [showMenu, setShowMenu] = useState(false)
+	const [isToggling, setIsToggling] = useState(false)
 	const menuRef = useRef(null)
 
 	const handleLinkClick = () => {
 		setShowMenu(false) // Close menu when a link is clicked
 	}
 
-	const toggleMenu = (event) => {
-		// Prevent default behavior of the touch event
-		event.preventDefault()
+	const toggleMenu = () => {
+		if (!isToggling) {
+			setIsToggling(true)
+			setShowMenu((prevState) => !prevState)
 
-		setShowMenu((prevState) => !prevState)
+			setTimeout(() => {
+				setIsToggling(false)
+			}, 500)
+		}
 	}
 
 	useEffect(() => {
