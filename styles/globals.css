@@ -1,36 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 :root {
-  --paragraph-color-1: #ff5733; /* Reddish Orange */
-  --paragraph-color-2: #43a047; /* Green */
-  --paragraph-color-3: #039be5; /* Blue */
-  --paragraph-color-4: #fbc02d; /* Yellow */
-  --paragraph-color-5: #8e24aa; /* Purple */
-  --paragraph-color-6: #ec407a; /* Pink */
-  --paragraph-color-7: #ffb300; /* Amber */
-  --paragraph-color-8: #03a9f4; /* Light Blue */
-  --paragraph-color-9: #7b1fa2; /* Dark Purple */
+	--paragraph-color-1: #ff5733; /* Reddish Orange */
+	--paragraph-color-2: #43a047; /* Green */
+	--paragraph-color-3: #039be5; /* Blue */
+	--paragraph-color-4: #fbc02d; /* Yellow */
+	--paragraph-color-5: #8e24aa; /* Purple */
+	--paragraph-color-6: #ec407a; /* Pink */
+	--paragraph-color-7: #ffb300; /* Amber */
+	--paragraph-color-8: #03a9f4; /* Light Blue */
+	--paragraph-color-9: #7b1fa2; /* Dark Purple */
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #0d1117;
-  overflow-x: hidden;
-  position: relative;
+	font-family: 'Raleway', sans-serif;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #0d1117;
+	overflow-x: hidden;
+	position: relative;
 }
 
 .container {
-  padding: 75px 0 0 0;
-  color: #fff;
-  position: relative;
+	padding: 75px 0 0 0;
+	color: #fff;
+	position: relative;
 }
 
 @import url('./header.css');
@@ -40,3 +40,4 @@ body {
 @import url('./home/skillsSection.css');
 @import url('./projects/projects.css');
 @import url('./about/about.css');
+@import url('./home/socialIconsSection.css');

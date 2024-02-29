@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import SocialIconsSection from './SocialIconsSection'
 
 /**
  * Renders the bio section of the website.
@@ -17,8 +18,10 @@ const BioSection = () => {
 					priority={true}
 					src={
 						'https://res.cloudinary.com/octopus-labs/image/upload/v1693155786/yousif-mini.jpg'
-					}></Image>
+					}
+				/>
 			</div>
+
 			<div className='bio'>
 				<div className='name'>
 					<Link href='https://github.com/YousifAbozid' target='_blank'>
@@ -57,6 +60,8 @@ const BioSection = () => {
 					joy of problem-solving. Let's join forces and embark on a journey to
 					build something truly remarkable together! 💫👨‍💻
 				</p>
+
+				<SocialIconsSection />
 			</div>
 		</div>
 	)
