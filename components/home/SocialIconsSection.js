@@ -4,7 +4,6 @@ const SocialIconsSection = () => {
 	return (
 		<div className='social-icons'>
 			<p>
-				&#8287;&#8287;&#8287;&#8287;&#8287;
 				<a href='https://www.linkedin.com/in/yousifabozid/'>
 					<img
 						width='32px'
@@ -40,6 +39,7 @@ const SocialIconsSection = () => {
 						src='https://res.cloudinary.com/octopus-labs/image/upload/v1709055639/yahoo.png'
 					/>
 				</a>
+				&#8287;&#8287;&#8287;&#8287;&#8287;
 			</p>
 		</div>
 	)
