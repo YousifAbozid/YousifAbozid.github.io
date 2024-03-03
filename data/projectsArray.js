@@ -1,5 +1,20 @@
 const projectsArray = [
 	{
+		name: 'Brainwave',
+		description:
+			'Brainwave is a modern website with sleek parallax effects and bento box layouts, it covers everything from stylish UI design to mobile-first principles, built with React.js and Tailwind CSS.',
+		tools: [
+			'React.js',
+			'Vite.js',
+			'Tailwind CSS',
+			'React-router-dom',
+			'Scroll-lock',
+			'Vercel'
+		],
+		live: 'https://ai-brainwave.vercel.app',
+		source: 'https://github.com/YousifAbozid/brainwave'
+	},
+	{
 		name: 'Mirage Master',
 		description:
 			'Mirage Master is an AI image SaaS platform that excels in image processing capabilities, integrates a secure payment infrastructure, offers advanced image search functionalities, and supports multiple AI features, including image restoration, recoloring, object removal, generative filling, and background removal.',
