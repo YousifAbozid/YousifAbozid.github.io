@@ -185,7 +185,7 @@ export default function Footer() {
               <button
                 onClick={scrollToTop}
                 className={cn(
-                  'p-2 rounded-lg transition-colors',
+                  'p-2 rounded-lg transition-colors cursor-pointer',
                   'bg-l-bg-2 dark:bg-d-bg-2',
                   'hover:bg-l-bg-3 dark:hover:bg-d-bg-3',
                   'text-l-text-2 dark:text-d-text-2 hover:text-primary'
