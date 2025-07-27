@@ -5,27 +5,36 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+	/* Font families */
+	--font-family-heading: 'JetBrains Mono', monospace;
+	--font-family-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+	/* Primary Colors */
+	--color-primary: hsl(217.2 91.2% 59.8%);
+	--color-primary-dark: hsl(217.2 91.2% 54.8%);
+	--color-primary-light: hsl(217.2 91.2% 64.8%);
+
 	/* Light Mode - Background Colors */
 	--color-l-bg-1: #ffffff;
 	/* Primary background */
-	--color-l-bg-2: #f6f8fa;
+	--color-l-bg-2: #f8fafc;
 	/* Secondary background */
-	--color-l-bg-3: #ebedf0;
+	--color-l-bg-3: #f1f5f9;
 	/* Tertiary background */
-	--color-l-bg-hover: #f3f4f6;
+	--color-l-bg-hover: #e2e8f0;
 	/* Hover state background */
 
 	/* Light Mode - Text Colors */
-	--color-l-text-1: #24292f;
+	--color-l-text-1: #0f172a;
 	/* Primary text */
-	--color-l-text-2: #57606a;
+	--color-l-text-2: #475569;
 	/* Secondary text */
-	--color-l-text-3: #6e7781;
+	--color-l-text-3: #64748b;
 	/* Tertiary/muted text */
 	--color-l-text-inv: #ffffff;
 	/* Inverted text (on dark backgrounds) */
 
-	/* Dark Mode - Background Colors */
+	/* Dark Mode - Background Colors (GitHub inspired) */
 	--color-d-bg-1: #0d1117;
 	/* Primary background */
 	--color-d-bg-2: #161b22;
@@ -45,39 +54,40 @@
 	--color-d-text-inv: #0d1117;
 	/* Inverted text (on light backgrounds) */
 
-	/* Accent Colors - Mode Independent */
-	--color-accent-1: #58a6ff;
-	/* Primary accent */
-	--color-accent-2: #1f6feb;
-	/* Secondary accent */
-	--color-accent-success: #3fb950;
+	/* Accent Colors */
+	--color-accent-success: #22c55e;
 	/* Success state */
-	--color-accent-warning: #d29922;
+	--color-accent-warning: #f59e0b;
 	/* Warning state */
-	--color-accent-danger: #f85149;
+	--color-accent-danger: #ef4444;
 	/* Danger/error state */
+	--color-accent-info: #3b82f6;
+	/* Info state */
 
 	/* Border Colors */
-	--color-border-l: #d0d7de;
+	--color-border-l: #e2e8f0;
 	/* Light mode border */
 	--color-border-d: #30363d;
 	/* Dark mode border */
 
-	/* Shadow Colors (for box-shadow) */
-	--color-shadow-l: rgba(31, 35, 40, 0.1);
+	/* Shadow Colors */
+	--color-shadow-l: rgba(15, 23, 42, 0.1);
 	/* Light mode shadow */
 	--color-shadow-d: rgba(0, 0, 0, 0.3);
 	/* Dark mode shadow */
+
+	/* Animation delays */
+	--delay-100: 100ms;
+	--delay-200: 200ms;
+	--delay-300: 300ms;
+	--delay-400: 400ms;
+	--delay-500: 500ms;
+	--delay-600: 600ms;
+	--delay-700: 700ms;
+	--delay-800: 800ms;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+/* Base styles */
 @layer base {
 
 	*,
@@ -85,6 +95,236 @@
 	::before,
 	::backdrop,
 	::file-selector-button {
-		border-color: var(--color-gray-200, currentColor);
+		border-color: var(--color-border-l);
 	}
+
+	.dark *,
+	.dark ::after,
+	.dark ::before,
+	.dark ::backdrop,
+	.dark ::file-selector-button {
+		border-color: var(--color-border-d);
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-family-body);
+		overflow-x: hidden;
+	}
+
+	/* Heading font */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-family-heading);
+		font-weight: 600;
+	}
+}
+
+/* Custom utility classes */
+@layer utilities {
+	.text-gradient {
+		background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.bg-gradient-primary {
+		background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+	}
+
+	.bg-gradient-blur {
+		background: linear-gradient(135deg,
+				hsla(217.2, 91.2%, 59.8%, 0.1),
+				hsla(217.2, 91.2%, 64.8%, 0.1));
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+	}
+
+	/* Animation delays */
+	.delay-100 {
+		animation-delay: var(--delay-100);
+	}
+
+	.delay-200 {
+		animation-delay: var(--delay-200);
+	}
+
+	.delay-300 {
+		animation-delay: var(--delay-300);
+	}
+
+	.delay-400 {
+		animation-delay: var(--delay-400);
+	}
+
+	.delay-500 {
+		animation-delay: var(--delay-500);
+	}
+
+	.delay-600 {
+		animation-delay: var(--delay-600);
+	}
+
+	.delay-700 {
+		animation-delay: var(--delay-700);
+	}
+
+	.delay-800 {
+		animation-delay: var(--delay-800);
+	}
+
+	/* Scroll animations */
+	[data-animate] {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	[data-animate].animate-in {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	[data-animate="fade"] {
+		transform: none;
+	}
+
+	[data-animate="slide-left"] {
+		transform: translateX(-30px);
+	}
+
+	[data-animate="slide-left"].animate-in {
+		transform: translateX(0);
+	}
+
+	[data-animate="slide-right"] {
+		transform: translateX(30px);
+	}
+
+	[data-animate="slide-right"].animate-in {
+		transform: translateX(0);
+	}
+
+	[data-animate="scale"] {
+		transform: scale(0.95);
+	}
+
+	[data-animate="scale"].animate-in {
+		transform: scale(1);
+	}
+}
+
+/* Keyframe animations */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes blink {
+
+	0%,
+	50% {
+		border-color: transparent;
+	}
+
+	51%,
+	100% {
+		border-color: var(--color-primary);
+	}
+}
+
+@keyframes float {
+
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes gradient-shift {
+
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+@keyframes pulse-glow {
+
+	0%,
+	100% {
+		box-shadow: 0 0 20px hsla(217.2, 91.2%, 59.8%, 0.4);
+	}
+
+	50% {
+		box-shadow: 0 0 40px hsla(217.2, 91.2%, 59.8%, 0.6);
+	}
+}
+
+/* Animation classes */
+.animate-typing {
+	overflow: hidden;
+	border-right: 2px solid var(--color-primary);
+	white-space: nowrap;
+	animation: typing 3s steps(40, end), blink 1s step-end infinite;
+}
+
+.animate-float {
+	animation: float 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+	background-size: 200% 200%;
+	animation: gradient-shift 4s ease infinite;
+}
+
+.animate-pulse-glow {
+	animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-l-bg-2);
+}
+
+.dark ::-webkit-scrollbar-track {
+	background: var(--color-d-bg-2);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-l-text-3);
+	border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+	background: var(--color-d-text-3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-primary);
 }
