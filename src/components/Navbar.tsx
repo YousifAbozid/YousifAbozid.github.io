@@ -83,7 +83,7 @@ export default function Navbar() {
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary',
+                  'text-sm font-medium transition-colors hover:text-primary cursor-pointer',
                   activeSection === item.href.slice(1)
                     ? 'text-primary'
                     : 'text-l-text-2 dark:text-d-text-2'
