@@ -1,0 +1,34 @@
+name: Push to Production
+
+on:
+  push:
+    branches:
+      - source
+
+jobs:
+  BuildAndDeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.x'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run build && cp README.md ./dist && cp .gitignore ./dist
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          folder: dist # The folder the action should deploy.
+          branch: production # The branch the action should deployed to.
