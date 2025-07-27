@@ -5,6 +5,11 @@ on:
     branches:
       - source
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   BuildAndDeploy:
     runs-on: ubuntu-latest
@@ -28,9 +33,7 @@ jobs:
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           folder: dist # The folder the action should deploy.
           branch: production # The branch the action should deployed to.
