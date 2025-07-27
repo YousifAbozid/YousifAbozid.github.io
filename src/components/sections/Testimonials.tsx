@@ -201,7 +201,7 @@ export default function Testimonials() {
             <p className="text-lg text-l-text-2 dark:text-d-text-2 mb-6">
               Ready to work together and create something amazing?
             </p>
-            <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
+            <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer">
               Start Your Project
             </button>
           </div>
