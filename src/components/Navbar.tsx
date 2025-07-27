@@ -99,7 +99,7 @@ export default function Navbar() {
             <button
               onClick={cycleTheme}
               className={cn(
-                'p-2 rounded-lg transition-colors',
+                'p-2 rounded-lg transition-colors cursor-pointer',
                 'bg-l-bg-2 dark:bg-d-bg-2',
                 'hover:bg-l-bg-3 dark:hover:bg-d-bg-3',
                 'text-l-text-1 dark:text-d-text-1'
