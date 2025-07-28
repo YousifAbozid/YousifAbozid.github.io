@@ -485,42 +485,57 @@ export const projects: Project[] = [
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Sarah Chen',
-    title: 'Product Manager',
-    company: 'TechCorp Solutions',
+    name: 'Shahenda M. Aal',
+    title: 'Head of Marketing',
+    company: 'Tradesocio',
     content:
-      'Yousif consistently delivers high-quality code and innovative solutions. His technical expertise and collaborative approach make him an invaluable team member. He led our migration to microservices architecture flawlessly.',
-    avatar: '/api/placeholder/100/100',
+      "I had the pleasure of meeting & working with Joe during my time at Tradesocio, and I can confidently say he's one of the most supportive and solutions-oriented developers I've come across. Joe is always willing to help—no matter how busy or complex the task. He listens, understands the need behind the request, and offers smart, digital solutions that genuinely make processes easier and more efficient. His ideas often saved us time, reduced manual work, and helped streamline collaboration across teams. What truly sets Joe apart, though, is his spirit. He brings kindness, positivity, and cheerfulness into every interaction, creating a comfortable and collaborative environment that makes working with him not just productive, but genuinely enjoyable. Any team would be lucky to have him—not just for his technical skills, but for the positive energy and thoughtful innovation he brings to the table.",
+    avatar:
+      'https://media.licdn.com/dms/image/v2/D4D03AQFm3HkpBUYCpA/profile-displayphoto-scale_200_200/B4DZfqZAjQH4Ac-/0/1751984114649?e=1756339200&v=beta&t=tFuI1KQhsLPNL14kmuGMqvALaBNYU2Uqdk7ltjaJQ6s',
     rating: 5,
   },
   {
     id: '2',
-    name: 'Michael Rodriguez',
-    title: 'CTO',
-    company: 'StartupXYZ',
+    name: 'Mohamed Samir',
+    title: 'Product-minded Software Engineer',
+    company: 'Salem Ventures',
     content:
-      'Working with Yousif was exceptional. He built our entire frontend from scratch and delivered ahead of schedule. His attention to detail and problem-solving skills helped us launch successfully and scale rapidly.',
-    avatar: '/api/placeholder/100/100',
+      'I worked with Yousif for six months and found him to be a dedicated, skilled, and collaborative colleague. He consistently delivered quality work and was always eager to learn and support the team.',
+    avatar:
+      'https://media.licdn.com/dms/image/v2/C5603AQHxWJAxFTX4hg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1649160758151?e=1756339200&v=beta&t=JylHvayd_Nqnm1ZM2u_cbB5a3DkdVSMp3MocT04rmTg',
     rating: 5,
   },
   {
     id: '3',
-    name: 'Emily Johnson',
-    title: 'Senior Developer',
-    company: 'Digital Agency Pro',
+    name: 'Beshoy Nasry',
+    title: 'Full Stack Engineer',
+    company: 'Salem Ventures',
     content:
-      'Yousif is a mentor and leader who elevates everyone around him. His code reviews are thorough and educational. He introduced modern best practices that improved our entire development workflow.',
-    avatar: '/api/placeholder/100/100',
+      "I had the pleasure of working with Yousif as part of the same MERN stack development team. He's a highly skilled and dedicated developer with a strong problem-solving mindset and great attention to detail. His commitment to delivering quality work on time made a big difference to our team. Wishing you all the best in your future endeavors — you truly deserve it!",
+    avatar:
+      'https://media.licdn.com/dms/image/v2/D4D03AQFUTMxr-v8oUQ/profile-displayphoto-shrink_800_800/B4DZedUGIgHkAc-/0/1750690985502?e=1756339200&v=beta&t=gJh8FoCLNj3-biWFgkc9Yj5KCXyUTby9wtwwHw-_MsM',
     rating: 5,
   },
   {
     id: '4',
-    name: 'David Park',
-    title: 'Designer',
-    company: 'WebDev Studio',
+    name: 'Eman Wagih',
+    title: 'Full Stack Developer',
+    company: 'Salem Ventures',
     content:
-      'Collaborating with Yousif on projects was always a pleasure. He translates designs into pixel-perfect implementations and often suggests improvements that enhance the user experience. Truly talented developer.',
-    avatar: '/api/placeholder/100/100',
+      "I had the pleasure of working with Yousif and was consistently impressed by his innovative thinking, creative approach to problem-solving, and strong work ethic. He brings a forward-thinking mindset to everything he does and isn't afraid to explore new ideas or take initiative. Yousif is not only hardworking but also thoughtful and intentional in the way he approaches challenges. His positive attitude and growth-oriented mindset make him a valuable asset to any team.",
+    avatar:
+      'https://media.licdn.com/dms/image/v2/D4D03AQH5BRiO5fjYjg/profile-displayphoto-crop_800_800/B4DZgPwa7WGQAI-/0/1752611010079?e=1756339200&v=beta&t=_uzkn0aORa79c_r7ogfihut3oZ2v6A6qtukp9SjsDws',
+    rating: 5,
+  },
+  {
+    id: '5',
+    name: 'Tasneem Khaled',
+    title: 'Junior Software Engineer',
+    company: 'Salem Ventures',
+    content:
+      'I have had the pleasure of working with Yousif. He is truly sincere, ambitious, and technically skilled. A great team player, always willing to go the extra mile. I highly recommend him.',
+    avatar:
+      'https://media.licdn.com/dms/image/v2/D4D03AQHbPDvb9UoqZw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721839506528?e=1756339200&v=beta&t=W2ii6clHOlfRs7ypHtxsQPOQelSLlemKtRCYp-QVj7k',
     rating: 5,
   },
 ];

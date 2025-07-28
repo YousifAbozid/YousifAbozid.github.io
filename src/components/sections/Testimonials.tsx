@@ -129,8 +129,21 @@ export default function Testimonials() {
 
                         {/* Author Info */}
                         <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-lg">
-                            {testimonial.name.charAt(0)}
+                          <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-primary flex items-center justify-center text-white font-bold text-lg">
+                            <img
+                              src={testimonial.avatar}
+                              alt={testimonial.name}
+                              className="w-full h-full object-cover"
+                              onError={e => {
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = 'none';
+                                target.nextElementSibling!.textContent =
+                                  testimonial.name.charAt(0);
+                              }}
+                            />
+                            <span className="hidden">
+                              {testimonial.name.charAt(0)}
+                            </span>
                           </div>
                           <div>
                             <div className="font-heading font-semibold text-l-text-1 dark:text-d-text-1">
