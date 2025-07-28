@@ -83,8 +83,8 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    // Submit to Getform
     try {
+      // Submit to Getform
       const response = await fetch('https://getform.io/f/ajjondxa', {
         method: 'POST',
         headers: {
@@ -95,8 +95,6 @@ export default function Contact() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setErrors({});
       } else {
         throw new Error('Failed to send message');
       }
@@ -108,6 +106,14 @@ export default function Contact() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const resetForm = () => {
+    setIsSubmitted(false);
+    setFormData({ name: '', email: '', subject: '', message: '' });
+    setErrors({});
+    setSubmitError(null);
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
@@ -152,37 +158,6 @@ export default function Contact() {
     },
   ];
 
-  if (isSubmitted) {
-    return (
-      <section id="contact" className="py-20 bg-l-bg-2 dark:bg-d-bg-2">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-l-bg-1 dark:bg-d-bg-1 rounded-lg border border-border-l dark:border-border-d p-12">
-              <CheckCircle className="w-16 h-16 text-accent-success mx-auto mb-6" />
-              <h2 className="text-3xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-4">
-                Message Sent Successfully!
-              </h2>
-              <p className="text-lg text-l-text-2 dark:text-d-text-2 mb-6">
-                Thank you for reaching out. I&apos;ll get back to you within 24
-                hours.
-              </p>
-              <button
-                onClick={() => {
-                  setIsSubmitted(false);
-                  setErrors({});
-                  setSubmitError(null);
-                }}
-                className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer"
-              >
-                Send Another Message
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="contact" className="py-20 bg-l-bg-2 dark:bg-d-bg-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,172 +178,195 @@ export default function Contact() {
             {/* Contact Form */}
             <div ref={formRef} data-animate="slide-right">
               <div className="bg-l-bg-1 dark:bg-d-bg-1 rounded-lg border border-border-l dark:border-border-d p-8">
-                <h3 className="text-2xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-6">
-                  Send Message
-                </h3>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name */}
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
+                {isSubmitted ? (
+                  // Success State
+                  <div className="text-center">
+                    <CheckCircle className="w-16 h-16 text-accent-success mx-auto mb-6" />
+                    <h3 className="text-2xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-4">
+                      Message Sent Successfully!
+                    </h3>
+                    <p className="text-lg text-l-text-2 dark:text-d-text-2 mb-6">
+                      Thank you for reaching out. I&apos;ll get back to you
+                      within 24 hours.
+                    </p>
+                    <button
+                      onClick={resetForm}
+                      className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer"
                     >
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className={cn(
-                        'w-full px-4 py-3 rounded-lg border transition-colors',
-                        'bg-l-bg-2 dark:bg-d-bg-2',
-                        'text-l-text-1 dark:text-d-text-1',
-                        'placeholder-l-text-3 dark:placeholder-d-text-3',
-                        errors.name
-                          ? 'border-accent-danger focus:border-accent-danger'
-                          : 'border-border-l dark:border-border-d focus:border-primary'
-                      )}
-                      placeholder="Enter your full name"
-                    />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-accent-danger">
-                        {errors.name}
-                      </p>
-                    )}
+                      Send Another Message
+                    </button>
                   </div>
+                ) : (
+                  // Form State
+                  <>
+                    <h3 className="text-2xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-6">
+                      Send Message
+                    </h3>
 
-                  {/* Email */}
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className={cn(
-                        'w-full px-4 py-3 rounded-lg border transition-colors',
-                        'bg-l-bg-2 dark:bg-d-bg-2',
-                        'text-l-text-1 dark:text-d-text-1',
-                        'placeholder-l-text-3 dark:placeholder-d-text-3',
-                        errors.email
-                          ? 'border-accent-danger focus:border-accent-danger'
-                          : 'border-border-l dark:border-border-d focus:border-primary'
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      {/* Name */}
+                      <div>
+                        <label
+                          htmlFor="name"
+                          className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
+                        >
+                          Your Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className={cn(
+                            'w-full px-4 py-3 rounded-lg border transition-colors',
+                            'bg-l-bg-2 dark:bg-d-bg-2',
+                            'text-l-text-1 dark:text-d-text-1',
+                            'placeholder-l-text-3 dark:placeholder-d-text-3',
+                            errors.name
+                              ? 'border-accent-danger focus:border-accent-danger'
+                              : 'border-border-l dark:border-border-d focus:border-primary'
+                          )}
+                          placeholder="Enter your full name"
+                        />
+                        {errors.name && (
+                          <p className="mt-1 text-sm text-accent-danger">
+                            {errors.name}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Email */}
+                      <div>
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
+                        >
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className={cn(
+                            'w-full px-4 py-3 rounded-lg border transition-colors',
+                            'bg-l-bg-2 dark:bg-d-bg-2',
+                            'text-l-text-1 dark:text-d-text-1',
+                            'placeholder-l-text-3 dark:placeholder-d-text-3',
+                            errors.email
+                              ? 'border-accent-danger focus:border-accent-danger'
+                              : 'border-border-l dark:border-border-d focus:border-primary'
+                          )}
+                          placeholder="Enter your email address"
+                        />
+                        {errors.email && (
+                          <p className="mt-1 text-sm text-accent-danger">
+                            {errors.email}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Subject */}
+                      <div>
+                        <label
+                          htmlFor="subject"
+                          className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
+                        >
+                          Subject *
+                        </label>
+                        <input
+                          type="text"
+                          id="subject"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleInputChange}
+                          className={cn(
+                            'w-full px-4 py-3 rounded-lg border transition-colors',
+                            'bg-l-bg-2 dark:bg-d-bg-2',
+                            'text-l-text-1 dark:text-d-text-1',
+                            'placeholder-l-text-3 dark:placeholder-d-text-3',
+                            errors.subject
+                              ? 'border-accent-danger focus:border-accent-danger'
+                              : 'border-border-l dark:border-border-d focus:border-primary'
+                          )}
+                          placeholder="What's this about?"
+                        />
+                        {errors.subject && (
+                          <p className="mt-1 text-sm text-accent-danger">
+                            {errors.subject}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Message */}
+                      <div>
+                        <label
+                          htmlFor="message"
+                          className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
+                        >
+                          Message *
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows={6}
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          className={cn(
+                            'w-full px-4 py-3 rounded-lg border transition-colors resize-none',
+                            'bg-l-bg-2 dark:bg-d-bg-2',
+                            'text-l-text-1 dark:text-d-text-1',
+                            'placeholder-l-text-3 dark:placeholder-d-text-3',
+                            errors.message
+                              ? 'border-accent-danger focus:border-accent-danger'
+                              : 'border-border-l dark:border-border-d focus:border-primary'
+                          )}
+                          placeholder="Tell me about your project..."
+                        />
+                        {errors.message && (
+                          <p className="mt-1 text-sm text-accent-danger">
+                            {errors.message}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Submit Button */}
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className={cn(
+                          'w-full bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium transition-opacity flex items-center justify-center space-x-2 cursor-pointer',
+                          isSubmitting
+                            ? 'opacity-50 cursor-not-allowed'
+                            : 'hover:opacity-90'
+                        )}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                            <span>Sending...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5" />
+                            <span>Send Message</span>
+                          </>
+                        )}
+                      </button>
+
+                      {/* Error Message */}
+                      {submitError && (
+                        <div className="p-4 bg-accent-danger/10 border border-accent-danger/20 rounded-lg">
+                          <p className="text-accent-danger text-sm">
+                            {submitError}
+                          </p>
+                        </div>
                       )}
-                      placeholder="Enter your email address"
-                    />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-accent-danger">
-                        {errors.email}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Subject */}
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
-                    >
-                      Subject *
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      className={cn(
-                        'w-full px-4 py-3 rounded-lg border transition-colors',
-                        'bg-l-bg-2 dark:bg-d-bg-2',
-                        'text-l-text-1 dark:text-d-text-1',
-                        'placeholder-l-text-3 dark:placeholder-d-text-3',
-                        errors.subject
-                          ? 'border-accent-danger focus:border-accent-danger'
-                          : 'border-border-l dark:border-border-d focus:border-primary'
-                      )}
-                      placeholder="What's this about?"
-                    />
-                    {errors.subject && (
-                      <p className="mt-1 text-sm text-accent-danger">
-                        {errors.subject}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-l-text-1 dark:text-d-text-1 mb-2"
-                    >
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={6}
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      className={cn(
-                        'w-full px-4 py-3 rounded-lg border transition-colors resize-none',
-                        'bg-l-bg-2 dark:bg-d-bg-2',
-                        'text-l-text-1 dark:text-d-text-1',
-                        'placeholder-l-text-3 dark:placeholder-d-text-3',
-                        errors.message
-                          ? 'border-accent-danger focus:border-accent-danger'
-                          : 'border-border-l dark:border-border-d focus:border-primary'
-                      )}
-                      placeholder="Tell me about your project..."
-                    />
-                    {errors.message && (
-                      <p className="mt-1 text-sm text-accent-danger">
-                        {errors.message}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={cn(
-                      'w-full bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium transition-opacity flex items-center justify-center space-x-2 cursor-pointer',
-                      isSubmitting
-                        ? 'opacity-50 cursor-not-allowed'
-                        : 'hover:opacity-90'
-                    )}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                        <span>Sending...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        <span>Send Message</span>
-                      </>
-                    )}
-                  </button>
-
-                  {/* Error Message */}
-                  {submitError && (
-                    <div className="p-4 bg-accent-danger/10 border border-accent-danger/20 rounded-lg">
-                      <p className="text-accent-danger text-sm">
-                        {submitError}
-                      </p>
-                    </div>
-                  )}
-                </form>
+                    </form>
+                  </>
+                )}
               </div>
             </div>
 
