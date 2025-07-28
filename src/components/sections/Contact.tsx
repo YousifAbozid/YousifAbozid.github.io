@@ -30,6 +30,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const titleRef = useScrollAnimation({ delay: 200 });
   const formRef = useScrollAnimation({ delay: 400 });
@@ -80,15 +81,30 @@ export default function Contact() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate form submission
+    // Submit to Getform
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      const response = await fetch('https://getform.io/f/ajjondxa', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setErrors({});
+      } else {
+        throw new Error('Failed to send message');
+      }
     } catch (error) {
-      // Handle error
-      console.error(error);
+      console.error('Error sending message:', error);
+      setSubmitError(
+        'Failed to send message. Please try again or contact me directly via email.'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -153,12 +169,8 @@ export default function Contact() {
               <button
                 onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                  });
+                  setErrors({});
+                  setSubmitError(null);
                 }}
                 className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer"
               >
@@ -347,6 +359,15 @@ export default function Contact() {
                       </>
                     )}
                   </button>
+
+                  {/* Error Message */}
+                  {submitError && (
+                    <div className="p-4 bg-accent-danger/10 border border-accent-danger/20 rounded-lg">
+                      <p className="text-accent-danger text-sm">
+                        {submitError}
+                      </p>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>
