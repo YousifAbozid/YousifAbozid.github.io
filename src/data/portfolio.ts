@@ -446,6 +446,31 @@ export const projects: Project[] = [
   },
   {
     id: '8',
+    title: 'Personal Portfolio Website',
+    description:
+      'Modern portfolio website built with React 19, TypeScript, and Tailwind CSS v4. Showcases professional experience and projects.',
+    longDescription:
+      'This portfolio website serves as a comprehensive showcase of my professional journey and technical expertise. Built using my own React 19 TypeScript template as the foundation, it demonstrates modern web development practices with React 19, TypeScript, Vite, and Tailwind CSS v4. Features include a comprehensive theming system with semantic color variables, dark mode support, responsive design, smooth animations, and scroll-triggered effects. The site effectively presents professional experience, technical skills, project portfolio, and contact information in an engaging and accessible format. It represents the culmination of my frontend development skills and serves as both a portfolio piece and a practical demonstration of modern React development.',
+    image: '/api/placeholder/600/400',
+    technologies: [
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS v4',
+      'Vite',
+      'React Router',
+      'Framer Motion',
+      'Dark Mode',
+      'Responsive Design',
+      'GitHub Actions',
+      'GitHub Pages',
+    ],
+    category: 'frontend',
+    githubUrl: 'https://github.com/YousifAbozid/YousifAbozid.github.io',
+    demoUrl: 'https://yousifabozid.github.io/',
+    featured: true,
+  },
+  {
+    id: '9',
     title: 'TVFlix',
     description:
       'Movie and TV show discovery platform built with vanilla HTML, CSS, and JavaScript.',
