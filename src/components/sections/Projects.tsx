@@ -105,9 +105,9 @@ export default function Projects() {
               >
                 {/* Featured Badge */}
                 {project.featured && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg">
-                      ⭐ Featured
+                  <div className="absolute top-0 left-0 z-10">
+                    <div className="bg-gradient-primary text-white px-3 py-1 rounded-br-lg text-xs font-medium shadow-lg">
+                      Featured
                     </div>
                   </div>
                 )}
@@ -121,36 +121,24 @@ export default function Projects() {
                       : ''
                   )}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex items-center space-x-3">
-                      <div
+                  <div className="flex items-start justify-between pt-4 mb-3">
+                    <div>
+                      <h3 className="text-lg font-heading font-bold text-l-text-1 dark:text-d-text-1">
+                        {project.title}
+                      </h3>
+                      <span
                         className={cn(
-                          'w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold',
-                          project.featured
-                            ? 'bg-gradient-primary shadow-lg'
-                            : 'bg-gradient-primary'
+                          'inline-block px-2 py-1 rounded-full text-xs font-medium mt-1',
+                          project.category === 'frontend' &&
+                            'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+                          project.category === 'backend' &&
+                            'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+                          project.category === 'fullstack' &&
+                            'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
                         )}
                       >
-                        {project.title.charAt(0)}
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-heading font-bold text-l-text-1 dark:text-d-text-1">
-                          {project.title}
-                        </h3>
-                        <span
-                          className={cn(
-                            'inline-block px-2 py-1 rounded-full text-xs font-medium mt-1',
-                            project.category === 'frontend' &&
-                              'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
-                            project.category === 'backend' &&
-                              'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
-                            project.category === 'fullstack' &&
-                              'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
-                          )}
-                        >
-                          {project.category}
-                        </span>
-                      </div>
+                        {project.category}
+                      </span>
                     </div>
 
                     {/* Action Links */}
