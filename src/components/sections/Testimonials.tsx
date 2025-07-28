@@ -84,7 +84,7 @@ export default function Testimonials() {
             {/* Navigation Arrows */}
             <button
               onClick={goToPrevious}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-l-bg-2 dark:bg-d-bg-2 border border-border-l dark:border-border-d hover:bg-l-bg-3 dark:hover:bg-d-bg-3 transition-colors shadow-lg cursor-pointer"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 p-3 rounded-full bg-l-bg-2 dark:bg-d-bg-2 border border-border-l dark:border-border-d hover:bg-l-bg-3 dark:hover:bg-d-bg-3 transition-all duration-200 shadow-lg cursor-pointer hover:scale-105"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5 text-l-text-1 dark:text-d-text-1" />
@@ -92,14 +92,14 @@ export default function Testimonials() {
 
             <button
               onClick={goToNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-l-bg-2 dark:bg-d-bg-2 border border-border-l dark:border-border-d hover:bg-l-bg-3 dark:hover:bg-d-bg-3 transition-colors shadow-lg cursor-pointer"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 p-3 rounded-full bg-l-bg-2 dark:bg-d-bg-2 border border-border-l dark:border-border-d hover:bg-l-bg-3 dark:hover:bg-d-bg-3 transition-all duration-200 shadow-lg cursor-pointer hover:scale-105"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5 text-l-text-1 dark:text-d-text-1" />
             </button>
 
             {/* Testimonial Cards */}
-            <div className="overflow-hidden mx-12">
+            <div className="overflow-hidden px-4 md:px-8">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -107,29 +107,29 @@ export default function Testimonials() {
                 {testimonials.map(testimonial => (
                   <div
                     key={testimonial.id}
-                    className="w-full flex-shrink-0 px-4"
+                    className="w-full flex-shrink-0 px-2 md:px-4"
                   >
-                    <div className="bg-l-bg-2 dark:bg-d-bg-2 rounded-lg border border-border-l dark:border-border-d p-8 relative">
+                    <div className="bg-l-bg-2 dark:bg-d-bg-2 rounded-lg border border-border-l dark:border-border-d p-6 md:p-8 relative min-h-[400px] flex flex-col">
                       {/* Quote Icon */}
-                      <div className="absolute top-6 left-6 text-primary/20">
-                        <Quote className="w-8 h-8" />
+                      <div className="absolute top-4 md:top-6 left-4 md:left-6 text-primary/20">
+                        <Quote className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
 
                       {/* Content */}
-                      <div className="pt-8">
+                      <div className="pt-8 md:pt-8 flex-1 flex flex-col">
                         {/* Rating */}
                         <div className="flex items-center space-x-1 mb-4">
                           {renderStars(testimonial.rating)}
                         </div>
 
                         {/* Testimonial Text */}
-                        <blockquote className="text-lg text-l-text-2 dark:text-d-text-2 leading-relaxed mb-6 italic">
+                        <blockquote className="text-base md:text-lg text-l-text-2 dark:text-d-text-2 leading-relaxed mb-6 italic flex-1">
                           &quot;{testimonial.content}&quot;
                         </blockquote>
 
                         {/* Author Info */}
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-primary flex items-center justify-center text-white font-bold text-lg">
+                        <div className="flex items-center space-x-4 mt-auto">
+                          <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-primary flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
                             <img
                               src={testimonial.avatar}
                               alt={testimonial.name}
@@ -145,11 +145,11 @@ export default function Testimonials() {
                               {testimonial.name.charAt(0)}
                             </span>
                           </div>
-                          <div>
-                            <div className="font-heading font-semibold text-l-text-1 dark:text-d-text-1">
+                          <div className="min-w-0 flex-1">
+                            <div className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 truncate">
                               {testimonial.name}
                             </div>
-                            <div className="text-l-text-3 dark:text-d-text-3 text-sm">
+                            <div className="text-l-text-3 dark:text-d-text-3 text-sm leading-tight">
                               {testimonial.title} at {testimonial.company}
                             </div>
                           </div>
@@ -162,16 +162,16 @@ export default function Testimonials() {
             </div>
 
             {/* Dot Indicators */}
-            <div className="flex justify-center space-x-2 mt-8">
+            <div className="flex justify-center items-center space-x-3 mt-8 pb-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={cn(
-                    'w-3 h-3 rounded-full transition-colors',
+                    'rounded-full transition-all duration-200 cursor-pointer hover:scale-110',
                     index === currentIndex
-                      ? 'bg-primary'
-                      : 'bg-l-bg-3 dark:bg-d-bg-3 hover:bg-primary/50'
+                      ? 'w-4 h-4 bg-primary shadow-lg'
+                      : 'w-3 h-3 bg-l-bg-3 dark:bg-d-bg-3 hover:bg-primary/50'
                   )}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -179,38 +179,8 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Statistics */}
-          <div className="mt-16 pt-8 border-t border-border-l dark:border-border-d">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-heading font-bold text-primary mb-2">
-                  15+
-                </div>
-                <div className="text-l-text-2 dark:text-d-text-2">
-                  Happy Clients
-                </div>
-              </div>
-              <div>
-                <div className="text-3xl font-heading font-bold text-primary mb-2">
-                  4.9/5
-                </div>
-                <div className="text-l-text-2 dark:text-d-text-2">
-                  Average Rating
-                </div>
-              </div>
-              <div>
-                <div className="text-3xl font-heading font-bold text-primary mb-2">
-                  100%
-                </div>
-                <div className="text-l-text-2 dark:text-d-text-2">
-                  Project Completion
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Call to Action */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <p className="text-lg text-l-text-2 dark:text-d-text-2 mb-6">
               Ready to work together and create something amazing?
             </p>
