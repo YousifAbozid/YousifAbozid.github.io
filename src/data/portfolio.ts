@@ -423,6 +423,29 @@ export const projects: Project[] = [
   },
   {
     id: '7',
+    title: 'Brainwave',
+    description:
+      'Modern website with sleek parallax effects and bento box layouts. Mobile-first design with React.js and Tailwind CSS.',
+    longDescription:
+      'Brainwave is a modern website showcasing advanced UI/UX design with sleek parallax effects and bento box layouts. Built with React.js and Tailwind CSS, it demonstrates everything from stylish UI design to mobile-first principles. Features smooth parallax scrolling, scroll-lock functionality, responsive design, and modern web animations. Perfect example of contemporary web design trends and advanced CSS techniques combined with React development skills.',
+    image: '/api/placeholder/600/400',
+    technologies: [
+      'React.js',
+      'Tailwind CSS',
+      'Vite',
+      'React Router',
+      'Parallax Scrolling',
+      'Scroll Lock',
+      'Responsive Design',
+      'UI/UX Design',
+    ],
+    category: 'frontend',
+    githubUrl: 'https://github.com/YousifAbozid/brainwave',
+    demoUrl: 'https://ai-brainwave.vercel.app/',
+    featured: false,
+  },
+  {
+    id: '8',
     title: 'TVFlix',
     description:
       'Movie and TV show discovery platform built with vanilla HTML, CSS, and JavaScript.',
