@@ -62,6 +62,103 @@ export function validateEmail(email: string): boolean {
   return emailRegex.test(email);
 }
 
+// Professional email template generator
+export function createEmailLink(
+  type:
+    | 'general'
+    | 'collaboration'
+    | 'inquiry'
+    | 'project'
+    | 'experience'
+    | 'simple' = 'simple',
+  email: string = 'yousif.abozid@yahoo.com'
+): string {
+  const baseUrl = `mailto:${email}`;
+
+  const templates = {
+    general: {
+      subject: "Let's Connect - Portfolio Inquiry",
+      body: `Hi Yousif,
+
+I came across your portfolio and would love to connect.
+
+Best regards`,
+    },
+    collaboration: {
+      subject: 'Project Collaboration Opportunity',
+      body: `Hi Yousif,
+
+I reviewed your portfolio and would like to discuss a potential collaboration opportunity.
+
+Project Details:
+- 
+
+Looking forward to hearing from you!
+
+Best regards`,
+    },
+    inquiry: {
+      subject: 'Professional Inquiry - Experience Discussion',
+      body: `Hi Yousif,
+
+I'm interested in learning more about your professional experience and background.
+
+I'd like to discuss:
+- 
+
+Looking forward to your response.
+
+Best regards`,
+    },
+    project: {
+      subject: 'New Project Opportunity',
+      body: `Hi Yousif,
+
+I have an exciting project opportunity and would love to discuss it with you.
+
+Project Overview:
+- 
+- 
+- 
+
+Timeline: 
+Budget Range: 
+
+When would be a good time to discuss this further?
+
+Best regards`,
+    },
+    experience: {
+      subject: 'Experience & Background Discussion',
+      body: `Hi Yousif,
+
+I'm impressed by your experience and would like to learn more about your background.
+
+Specifically interested in:
+- 
+
+Looking forward to connecting.
+
+Best regards`,
+    },
+    simple: {
+      subject: '',
+      body: '',
+    },
+  };
+
+  const template = templates[type];
+
+  if (type === 'simple') {
+    return baseUrl;
+  }
+
+  const encodedSubject = encodeURIComponent(template.subject);
+  const encodedBody = encodeURIComponent(template.body);
+
+  return `${baseUrl}?subject=${encodedSubject}&body=${encodedBody}`;
+}
+
 export function isElementInViewport(element: Element): boolean {
   const rect = element.getBoundingClientRect();
   return (
