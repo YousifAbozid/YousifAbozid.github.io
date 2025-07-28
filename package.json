@@ -1,12 +1,13 @@
 {
-  "name": "template-react-ts",
+  "name": "yousif-abozid-portfolio",
   "private": true,
   "version": "1.0.0",
-  "description": "React + TypeScript + Vite + Tailwind CSS + ESLint + Prettier + Husky + Lint-Staged Template",
+  "description": "Personal portfolio website showcasing Yousif Abozid's experience as a Full Stack Software Engineer",
   "type": "module",
+  "homepage": "https://yousifabozid.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YousifAbozid/template-react-ts.git"
+    "url": "https://github.com/YousifAbozid/YousifAbozid.github.io.git"
   },
   "scripts": {
     "dev": "vite",
@@ -21,7 +22,17 @@
     "upgrade": "npx npm-check-updates -u && npm install",
     "prepare": "husky"
   },
-  "keywords": [],
+  "keywords": [
+    "portfolio",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "vite",
+    "full-stack-developer",
+    "software-engineer",
+    "web-development",
+    "yousif-abozid"
+  ],
   "author": "Yousif Abozid",
   "license": "MIT",
   "dependencies": {
