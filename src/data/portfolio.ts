@@ -20,13 +20,12 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  longDescription: string;
-  image: string;
+  longDescription?: string;
   technologies: string[];
   category: 'frontend' | 'backend' | 'fullstack';
   githubUrl?: string;
   demoUrl?: string;
-  featured: boolean;
+  featured?: boolean;
 }
 
 export interface Testimonial {
@@ -275,7 +274,6 @@ export const projects: Project[] = [
       'Powerful GitHub analytics platform transforming profiles into beautiful insights with advanced visualizations.',
     longDescription:
       'DevInsight is a comprehensive GitHub analytics platform that transforms raw GitHub data into meaningful visualizations and actionable insights. Built with React 19, TypeScript, and Tailwind CSS v4, it offers a complete suite of tools including detailed profile analysis with contribution heatmaps, developer personas and personalized insights, customizable dev card generator with 15+ themes, GitHub battles for user comparisons, and advanced features like repository recommendations. The platform provides higher API rate limits, detailed contribution data, and beautiful interactive visualizations for developers, hiring managers, and GitHub enthusiasts.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'React 19',
       'TypeScript',
@@ -300,7 +298,6 @@ export const projects: Project[] = [
       'Modern React 19 starter template with TypeScript, Vite, and Tailwind CSS v4. Production-ready with comprehensive theming.',
     longDescription:
       'A modern, production-ready template for building web applications with React 19, TypeScript, Vite, and Tailwind CSS v4. Features a comprehensive theming system with semantic color variables, dark mode support out of the box, ESLint/Prettier configuration, Husky pre-commit hooks, and optimized builds. Includes organized color categories for light/dark backgrounds, text, accents, borders, and shadows. Perfect for developers who want to start projects with modern tooling and best practices already configured.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'React 19',
       'TypeScript',
@@ -324,7 +321,6 @@ export const projects: Project[] = [
       'AI image SaaS platform with advanced processing capabilities, secure payments, and multiple AI features.',
     longDescription:
       'Mirage Master is a comprehensive AI image SaaS platform that excels in image processing capabilities with secure payment infrastructure and advanced search functionalities. Built with Next.js 14, TypeScript, and MongoDB, it supports multiple AI features including image restoration, recoloring, object removal, generative filling, and background removal. Features secure authentication with Clerk, payment processing via Stripe, cloud storage with Cloudinary, community image showcase, credits system, and responsive UI/UX. Perfect example of modern SaaS architecture with AI integration.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'Next.js 14',
       'TypeScript',
@@ -349,7 +345,6 @@ export const projects: Project[] = [
       'Modern Next.js v15 starter template with TypeScript and Tailwind CSS v4. Production-ready with App Router and theming.',
     longDescription:
       'A modern, production-ready template for building web applications with Next.js v15, TypeScript, and Tailwind CSS v4. Features the latest App Router architecture, comprehensive theming system with semantic color variables, dark mode support out of the box, ESLint/Prettier configuration, and Husky pre-commit hooks. Includes Next.js v15 specific features like Server Components, Server Actions, improved TypeScript support, optimized images, API routes, middleware, and Incremental Static Regeneration. Perfect for developers who want to start Next.js projects with the latest features and best practices already configured.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'Next.js 15',
       'React 19',
@@ -374,7 +369,6 @@ export const projects: Project[] = [
       'Modern Next.js API starter with MongoDB, JWT auth, and Zod validation. Production-ready backend architecture.',
     longDescription:
       'A robust, production-ready template for building scalable RESTful APIs with Next.js. Features comprehensive authentication with JWT, MongoDB integration with Mongoose ORM, rate limiting system, input validation with Zod, centralized error handling, structured logging with Winston, complete Jest test setup, and API documentation. Includes CORS support, ESLint/Prettier configuration, Husky pre-commit hooks, and tiered rate limiting for different user types. Perfect for developers who need a solid backend foundation with modern tooling and best practices.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'Next.js 15',
       'MongoDB',
@@ -401,7 +395,6 @@ export const projects: Project[] = [
       'Modern Express.js starter with MongoDB, JWT auth, and comprehensive security. Production-ready with Swagger docs.',
     longDescription:
       'A fully-featured, production-ready Express.js template with modern development tooling and best practices built-in. Features JWT-based authentication using Passport.js, MongoDB integration with Mongoose ODM, built-in Swagger/OpenAPI documentation, request validation with Express Validator, comprehensive security with CORS, Helmet.js, rate limiting, compression middleware, request logging with Morgan, application logging with Winston, ESLint/Prettier integration, Git hooks with Husky, Jest testing framework with Supertest for API testing, and code coverage reports. Perfect foundation for building scalable REST APIs.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'Express.js',
       'Node.js',
@@ -428,7 +421,6 @@ export const projects: Project[] = [
       'Modern website with sleek parallax effects and bento box layouts. Mobile-first design with React.js and Tailwind CSS.',
     longDescription:
       'Brainwave is a modern website showcasing advanced UI/UX design with sleek parallax effects and bento box layouts. Built with React.js and Tailwind CSS, it demonstrates everything from stylish UI design to mobile-first principles. Features smooth parallax scrolling, scroll-lock functionality, responsive design, and modern web animations. Perfect example of contemporary web design trends and advanced CSS techniques combined with React development skills.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'React.js',
       'Tailwind CSS',
@@ -451,7 +443,6 @@ export const projects: Project[] = [
       'Modern portfolio website built with React 19, TypeScript, and Tailwind CSS v4. Showcases professional experience and projects.',
     longDescription:
       'This portfolio website serves as a comprehensive showcase of my professional journey and technical expertise. Built using my own React 19 TypeScript template as the foundation, it demonstrates modern web development practices with React 19, TypeScript, Vite, and Tailwind CSS v4. Features include a comprehensive theming system with semantic color variables, dark mode support, responsive design, smooth animations, and scroll-triggered effects. The site effectively presents professional experience, technical skills, project portfolio, and contact information in an engaging and accessible format. It represents the culmination of my frontend development skills and serves as both a portfolio piece and a practical demonstration of modern React development.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'React 19',
       'TypeScript',
@@ -476,7 +467,6 @@ export const projects: Project[] = [
       'Movie and TV show discovery platform built with vanilla HTML, CSS, and JavaScript.',
     longDescription:
       'TVFlix is a web application that provides a platform for discovering the latest movies and trending TV shows. Built entirely with vanilla HTML, CSS, and JavaScript, it demonstrates strong foundational web development skills without relying on frameworks. Features a user-friendly interface for browsing available content, searching for films, and exploring trending entertainment. The project showcases clean code architecture, responsive design principles, and effective DOM manipulation using pure JavaScript.',
-    image: '/api/placeholder/600/400',
     technologies: [
       'HTML5',
       'CSS3',
