@@ -1,7 +1,7 @@
 import { Code, Server, Zap, Shield } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { personalInfo, services } from '../../data/portfolio';
-import { cn } from '../../lib/utils';
+import { cn, createEmailLink } from '../../lib/utils';
 
 const iconMap = {
   Code,
@@ -65,7 +65,7 @@ export default function About() {
                     Email
                   </h4>
                   <a
-                    href={`mailto:${personalInfo.email}`}
+                    href={createEmailLink('general')}
                     className="text-primary hover:underline"
                   >
                     {personalInfo.email}

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Quote, Mail } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { testimonials } from '../../data/portfolio';
-import { cn } from '../../lib/utils';
+import { cn, createEmailLink } from '../../lib/utils';
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -201,9 +201,13 @@ export default function Testimonials() {
             <p className="text-lg text-l-text-2 dark:text-d-text-2 mb-6">
               Ready to work together and create something amazing?
             </p>
-            <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer">
+            <a
+              href={createEmailLink('collaboration')}
+              className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer inline-flex items-center"
+            >
+              <Mail className="w-5 h-5 mr-2" />
               Start Your Project
-            </button>
+            </a>
           </div>
         </div>
       </div>

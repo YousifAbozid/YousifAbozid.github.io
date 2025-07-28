@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { personalInfo } from '../../data/portfolio';
-import { cn } from '../../lib/utils';
+import { cn, createEmailLink } from '../../lib/utils';
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('');
@@ -97,15 +97,22 @@ export default function Hero() {
               data-animate="slide-right"
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity animate-pulse-glow cursor-pointer">
-                <Mail className="inline-block w-5 h-5 mr-2" />
+              <a
+                href={createEmailLink('general')}
+                className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity animate-pulse-glow cursor-pointer inline-flex items-center justify-center"
+              >
+                <Mail className="w-5 h-5 mr-2" />
                 Get In Touch
-              </button>
+              </a>
 
-              <button className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors cursor-pointer">
-                <Download className="inline-block w-5 h-5 mr-2" />
-                Download CV
-              </button>
+              <a
+                href="/Yousif_Abozid_Resume.pdf"
+                download="Yousif_Abozid_Resume.pdf"
+                className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors cursor-pointer inline-flex items-center justify-center"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </a>
             </div>
 
             {/* Social Links */}
@@ -121,7 +128,11 @@ export default function Hero() {
                   href: personalInfo.social.linkedin,
                   label: 'LinkedIn',
                 },
-                { icon: Mail, href: personalInfo.social.email, label: 'Email' },
+                {
+                  icon: Mail,
+                  href: createEmailLink('general'),
+                  label: 'Email',
+                },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}

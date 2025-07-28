@@ -1,11 +1,11 @@
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Mail } from 'lucide-react';
 import {
   useScrollAnimation,
   useStaggeredAnimation,
 } from '../../hooks/useScrollAnimation';
 import { experiences } from '../../data/portfolio';
 import { formatDate } from '../../lib/utils';
-import { cn } from '../../lib/utils';
+import { cn, createEmailLink } from '../../lib/utils';
 
 export default function Experience() {
   const titleRef = useScrollAnimation({ delay: 200 });
@@ -143,9 +143,23 @@ export default function Experience() {
             <p className="text-lg text-l-text-2 dark:text-d-text-2 mb-6">
               Want to know more about my experience?
             </p>
-            <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer">
-              Download Full Resume
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/Yousif_Abozid_Resume.pdf"
+                download="Yousif_Abozid_Resume.pdf"
+                className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer inline-flex items-center justify-center"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Download Full Resume
+              </a>
+              <a
+                href={createEmailLink('experience')}
+                className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors cursor-pointer inline-flex items-center justify-center"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Discuss Experience
+              </a>
+            </div>
           </div>
         </div>
       </div>

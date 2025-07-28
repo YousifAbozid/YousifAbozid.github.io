@@ -1,16 +1,9 @@
 import { useState } from 'react';
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  Github,
-  Linkedin,
-  Twitter,
-} from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { personalInfo } from '../../data/portfolio';
+import { createEmailLink } from '../../lib/utils';
 import { cn } from '../../lib/utils';
 
 interface FormData {
@@ -106,7 +99,7 @@ export default function Contact() {
       icon: Mail,
       label: 'Email',
       value: personalInfo.email,
-      href: `mailto:${personalInfo.email}`,
+      href: createEmailLink('inquiry'),
     },
     {
       icon: Phone,

@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
-import { smoothScrollTo, cn } from '../lib/utils';
+import { smoothScrollTo, cn, createEmailLink } from '../lib/utils';
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
@@ -66,7 +66,7 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href={personalInfo.social.email}
+                href={createEmailLink('general')}
                 className="p-3 rounded-lg bg-l-bg-2 dark:bg-d-bg-2 hover:bg-l-bg-3 dark:hover:bg-d-bg-3 text-l-text-2 dark:text-d-text-2 hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -121,7 +121,7 @@ export default function Footer() {
                   Email
                 </div>
                 <a
-                  href={`mailto:${personalInfo.email}`}
+                  href={createEmailLink('general')}
                   className="text-l-text-2 dark:text-d-text-2 hover:text-primary transition-colors"
                 >
                   {personalInfo.email}

@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Mail } from 'lucide-react';
 import {
   useScrollAnimation,
   useStaggeredAnimation,
 } from '../../hooks/useScrollAnimation';
 import { projects } from '../../data/portfolio';
-import { cn } from '../../lib/utils';
+import { cn, createEmailLink } from '../../lib/utils';
 
 type ProjectFilter = 'all' | 'frontend' | 'backend' | 'fullstack';
 
@@ -249,9 +249,13 @@ export default function Projects() {
             <p className="text-lg text-l-text-2 dark:text-d-text-2 mb-6">
               Interested in working together on a project?
             </p>
-            <button className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer">
+            <a
+              href={createEmailLink('project')}
+              className="bg-gradient-primary text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity cursor-pointer inline-flex items-center"
+            >
+              <Mail className="w-5 h-5 mr-2" />
               Let&apos;s Collaborate
-            </button>
+            </a>
           </div>
         </div>
       </div>
