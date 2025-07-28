@@ -369,6 +369,33 @@ export const projects: Project[] = [
   },
   {
     id: '5',
+    title: 'Next.js Backend API Template',
+    description:
+      'Modern Next.js API starter with MongoDB, JWT auth, and Zod validation. Production-ready backend architecture.',
+    longDescription:
+      'A robust, production-ready template for building scalable RESTful APIs with Next.js. Features comprehensive authentication with JWT, MongoDB integration with Mongoose ORM, rate limiting system, input validation with Zod, centralized error handling, structured logging with Winston, complete Jest test setup, and API documentation. Includes CORS support, ESLint/Prettier configuration, Husky pre-commit hooks, and tiered rate limiting for different user types. Perfect for developers who need a solid backend foundation with modern tooling and best practices.',
+    image: '/api/placeholder/600/400',
+    technologies: [
+      'Next.js 15',
+      'MongoDB',
+      'Mongoose',
+      'JWT',
+      'Zod',
+      'Winston',
+      'Jest',
+      'ESLint',
+      'Prettier',
+      'Husky',
+      'Rate Limiting',
+      'API Development',
+    ],
+    category: 'backend',
+    githubUrl: 'https://github.com/YousifAbozid/template-nextjs-backend',
+    demoUrl: 'https://template-nextjs-backend.vercel.app/',
+    featured: false,
+  },
+  {
+    id: '6',
     title: 'TVFlix',
     description:
       'Movie and TV show discovery platform built with vanilla HTML, CSS, and JavaScript.',
