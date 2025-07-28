@@ -369,30 +369,23 @@ export const projects: Project[] = [
   },
   {
     id: '5',
-    title: 'Portfolio Website',
+    title: 'TVFlix',
     description:
-      'Responsive portfolio website with dark mode and smooth animations.',
+      'Movie and TV show discovery platform built with vanilla HTML, CSS, and JavaScript.',
     longDescription:
-      'A modern portfolio website built with React, TypeScript, and Tailwind CSS. Features dark mode toggle, smooth scroll animations, contact form, and fully responsive design. Optimized for performance and accessibility.',
+      'TVFlix is a web application that provides a platform for discovering the latest movies and trending TV shows. Built entirely with vanilla HTML, CSS, and JavaScript, it demonstrates strong foundational web development skills without relying on frameworks. Features a user-friendly interface for browsing available content, searching for films, and exploring trending entertainment. The project showcases clean code architecture, responsive design principles, and effective DOM manipulation using pure JavaScript.',
     image: '/api/placeholder/600/400',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    technologies: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'Responsive Design',
+      'DOM Manipulation',
+      'Web APIs',
+    ],
     category: 'frontend',
-    githubUrl: 'https://github.com/YousifAbozid/portfolio',
-    demoUrl: 'https://yousifabozid.github.io',
-    featured: false,
-  },
-  {
-    id: '6',
-    title: 'Real-time Chat App',
-    description:
-      'Modern chat application with file sharing and group conversations.',
-    longDescription:
-      'A real-time chat application with private messaging, group chats, file sharing, and emoji reactions. Built with React, Socket.io, and Node.js. Features message encryption, user presence indicators, and mobile-responsive design.',
-    image: '/api/placeholder/600/400',
-    technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'CloudFront'],
-    category: 'fullstack',
-    githubUrl: 'https://github.com/YousifAbozid/chat-app',
-    demoUrl: 'https://chat-demo.example.com',
+    githubUrl: 'https://github.com/YousifAbozid/Tvflix',
+    demoUrl: 'https://yousifabozid.github.io/Tvflix/',
     featured: false,
   },
 ];
