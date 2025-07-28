@@ -396,6 +396,33 @@ export const projects: Project[] = [
   },
   {
     id: '6',
+    title: 'Express.js Production Template',
+    description:
+      'Modern Express.js starter with MongoDB, JWT auth, and comprehensive security. Production-ready with Swagger docs.',
+    longDescription:
+      'A fully-featured, production-ready Express.js template with modern development tooling and best practices built-in. Features JWT-based authentication using Passport.js, MongoDB integration with Mongoose ODM, built-in Swagger/OpenAPI documentation, request validation with Express Validator, comprehensive security with CORS, Helmet.js, rate limiting, compression middleware, request logging with Morgan, application logging with Winston, ESLint/Prettier integration, Git hooks with Husky, Jest testing framework with Supertest for API testing, and code coverage reports. Perfect foundation for building scalable REST APIs.',
+    image: '/api/placeholder/600/400',
+    technologies: [
+      'Express.js',
+      'Node.js',
+      'MongoDB',
+      'Mongoose',
+      'JWT',
+      'Passport.js',
+      'Swagger',
+      'Jest',
+      'Winston',
+      'Helmet.js',
+      'ESLint',
+      'Prettier',
+    ],
+    category: 'backend',
+    githubUrl: 'https://github.com/YousifAbozid/template-expressjs',
+    demoUrl: 'https://mammoth-stacy-octopus-labs-467290b1.koyeb.app/',
+    featured: false,
+  },
+  {
+    id: '7',
     title: 'TVFlix',
     description:
       'Movie and TV show discovery platform built with vanilla HTML, CSS, and JavaScript.',
