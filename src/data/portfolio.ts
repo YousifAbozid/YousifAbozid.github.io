@@ -496,6 +496,18 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: '2',
+    name: 'Ahmad Salama',
+    title:
+      'Digital Solutions Development | Fintech Innovation | Partnerships | Operations',
+    company: 'TradeSocio',
+    content:
+      'I can confidently say that Yousif is a highly committed and disciplined professional. While not under my direct supervision, however he always shows reliability and approaches his responsibilities with dedication. All the best mate.',
+    avatar:
+      'https://media.licdn.com/dms/image/v2/D4D03AQHBE34gtzcpTg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725282810809?e=1756944000&v=beta&t=NOLWOmnnpFNUGynLcunH2aaUpygb-oNpkbo1M4W_ZfU',
+    rating: 5,
+  },
+  {
+    id: '3',
     name: 'Mohamed Samir',
     title: 'Product-minded Software Engineer',
     company: 'Salem Ventures',
@@ -506,7 +518,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '3',
+    id: '4',
     name: 'Beshoy Nasry',
     title: 'Full Stack Engineer',
     company: 'Salem Ventures',
@@ -517,7 +529,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '4',
+    id: '5',
     name: 'Eman Wagih',
     title: 'Full Stack Developer',
     company: 'Salem Ventures',
@@ -528,7 +540,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '5',
+    id: '6',
     name: 'Tasneem Khaled',
     title: 'Junior Software Engineer',
     company: 'Salem Ventures',
