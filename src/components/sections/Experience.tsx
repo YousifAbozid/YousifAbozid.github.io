@@ -1,4 +1,12 @@
-import { Calendar, MapPin, ExternalLink, Mail } from 'lucide-react';
+import {
+  Calendar,
+  MapPin,
+  ExternalLink,
+  Mail,
+  ChevronDown,
+  ChevronUp,
+} from 'lucide-react';
+import { useState } from 'react';
 import {
   useScrollAnimation,
   useStaggeredAnimation,
@@ -9,6 +17,12 @@ import { cn, createEmailLink } from '../../lib/utils';
 
 export default function Experience() {
   const titleRef = useScrollAnimation({ delay: 200 });
+  const [expandedAchievements, setExpandedAchievements] = useState<Set<string>>(
+    new Set()
+  );
+  const [expandedTechnologies, setExpandedTechnologies] = useState<Set<string>>(
+    new Set()
+  );
 
   useStaggeredAnimation('[data-experience-item]', 200);
 
@@ -16,6 +30,26 @@ export default function Experience() {
     const start = formatDate(startDate);
     const end = endDate ? formatDate(endDate) : 'Present';
     return `${start} - ${end}`;
+  };
+
+  const toggleAchievements = (expId: string) => {
+    const newExpanded = new Set(expandedAchievements);
+    if (newExpanded.has(expId)) {
+      newExpanded.delete(expId);
+    } else {
+      newExpanded.add(expId);
+    }
+    setExpandedAchievements(newExpanded);
+  };
+
+  const toggleTechnologies = (expId: string) => {
+    const newExpanded = new Set(expandedTechnologies);
+    if (newExpanded.has(expId)) {
+      newExpanded.delete(expId);
+    } else {
+      newExpanded.add(expId);
+    }
+    setExpandedTechnologies(newExpanded);
   };
 
   return (
@@ -56,80 +90,143 @@ export default function Experience() {
                   {/* Content */}
                   <div
                     className={cn(
-                      'flex-1 ml-12 md:ml-0 max-w-none md:max-w-2xl lg:max-w-3xl',
-                      index % 2 === 0
-                        ? 'md:pr-12 lg:pr-16'
-                        : 'md:pl-12 lg:pl-16'
+                      'flex-1 ml-12 md:ml-0 max-w-none md:max-w-2xl lg:max-w-4xl',
+                      index % 2 === 0 ? 'md:pr-8 lg:pr-12' : 'md:pl-8 lg:pl-12'
                     )}
                   >
-                    <div className="bg-l-bg-1 dark:bg-d-bg-1 p-8 md:p-10 rounded-lg border border-border-l dark:border-border-d shadow-lg hover:shadow-xl transition-shadow">
-                      {/* Header */}
-                      <div className="mb-6">
-                        <h3 className="text-xl md:text-2xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-3">
-                          {experience.title}
-                        </h3>
-
-                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                          <div className="flex items-center text-primary font-medium mb-2 lg:mb-0">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            {experience.company}
+                    <div className="bg-l-bg-1 dark:bg-d-bg-1 p-6 md:p-8 rounded-lg border border-border-l dark:border-border-d shadow-lg hover:shadow-xl transition-shadow">
+                      {/* Header - More Compact */}
+                      <div className="mb-5">
+                        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-3">
+                          <div className="flex-1">
+                            <h3 className="text-lg md:text-xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-2">
+                              {experience.title}
+                            </h3>
+                            <div className="flex items-center text-primary font-medium mb-2">
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              {experience.company}
+                            </div>
                           </div>
 
-                          <div className="flex items-center text-l-text-3 dark:text-d-text-3 text-sm">
-                            <MapPin className="w-4 h-4 mr-1" />
-                            {experience.location}
+                          {/* Date and Location - Compact */}
+                          <div className="lg:text-right lg:ml-4">
+                            <div className="flex items-center lg:justify-end text-l-text-3 dark:text-d-text-3 text-sm mb-1">
+                              <Calendar className="w-4 h-4 mr-1" />
+                              {formatDateRange(
+                                experience.startDate,
+                                experience.endDate
+                              )}
+                            </div>
+                            <div className="flex items-center lg:justify-end text-l-text-3 dark:text-d-text-3 text-sm">
+                              <MapPin className="w-4 h-4 mr-1" />
+                              {experience.location}
+                            </div>
                           </div>
                         </div>
 
-                        <div className="flex items-center text-l-text-3 dark:text-d-text-3 text-sm mb-4">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {formatDateRange(
-                            experience.startDate,
-                            experience.endDate
-                          )}
-                        </div>
-
-                        <p className="text-l-text-2 dark:text-d-text-2 leading-relaxed text-base">
+                        <p className="text-l-text-2 dark:text-d-text-2 leading-relaxed text-sm">
                           {experience.description}
                         </p>
                       </div>
 
-                      {/* Achievements */}
-                      <div className="mb-6">
-                        <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-4">
-                          Key Achievements:
-                        </h4>
-                        <ul className="space-y-3">
-                          {experience.achievements.map(
-                            (achievement, achievementIndex) => (
+                      {/* Main Content - Side by Side Layout */}
+                      <div className="grid lg:grid-cols-2 gap-6">
+                        {/* Achievements */}
+                        <div>
+                          <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-3 text-sm">
+                            Key Achievements:
+                          </h4>
+                          <ul className="space-y-2">
+                            {(expandedAchievements.has(experience.id)
+                              ? experience.achievements
+                              : experience.achievements.slice(0, 4)
+                            ).map((achievement, achievementIndex) => (
                               <li
                                 key={achievementIndex}
-                                className="flex items-start text-l-text-2 dark:text-d-text-2 leading-relaxed"
+                                className="flex items-start text-l-text-2 dark:text-d-text-2 leading-relaxed text-sm"
                               >
-                                <span className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0"></span>
                                 {achievement}
                               </li>
-                            )
-                          )}
-                        </ul>
-                      </div>
+                            ))}
+                            {experience.achievements.length > 4 && (
+                              <li>
+                                <button
+                                  onClick={() =>
+                                    toggleAchievements(experience.id)
+                                  }
+                                  className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors"
+                                >
+                                  {expandedAchievements.has(experience.id) ? (
+                                    <>
+                                      <ChevronUp className="w-3 h-3 mr-1" />
+                                      Show Less
+                                    </>
+                                  ) : (
+                                    <>
+                                      <ChevronDown className="w-3 h-3 mr-1" />
+                                      Show {experience.achievements.length -
+                                        4}{' '}
+                                      More
+                                    </>
+                                  )}
+                                </button>
+                              </li>
+                            )}
+                          </ul>
+                        </div>
 
-                      {/* Technologies */}
-                      <div>
-                        <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-4">
-                          Technologies Used:
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {experience.technologies.map(tech => (
-                            <span
-                              key={tech}
-                              className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20"
+                        {/* Technologies */}
+                        <div>
+                          <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-3 text-sm">
+                            Technologies Used:
+                          </h4>
+                          <div className="flex flex-wrap gap-1.5">
+                            {(expandedTechnologies.has(experience.id)
+                              ? experience.technologies
+                              : experience.technologies.slice(0, 8)
+                            ).map(tech => (
+                              <span
+                                key={tech}
+                                className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium border border-primary/20"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                          {experience.technologies.length > 8 && (
+                            <button
+                              onClick={() => toggleTechnologies(experience.id)}
+                              className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors"
                             >
-                              {tech}
-                            </span>
-                          ))}
+                              {expandedTechnologies.has(experience.id) ? (
+                                <>
+                                  <ChevronUp className="w-3 h-3 mr-1" />
+                                  Show Less
+                                </>
+                              ) : (
+                                <>
+                                  <ChevronDown className="w-3 h-3 mr-1" />
+                                  Show {experience.technologies.length - 8} More
+                                </>
+                              )}
+                            </button>
+                          )}
                         </div>
                       </div>
+
+                      {/* Certificates/Badges Section - Placeholder for future */}
+                      {/* This will be used for education section */}
+                      {/* 
+                      <div className="mt-4 pt-4 border-t border-border-l dark:border-border-d">
+                        <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-3 text-sm">
+                          Certificates & Achievements:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          // Certificate badges will go here
+                        </div>
+                      </div>
+                      */}
                     </div>
                   </div>
 
