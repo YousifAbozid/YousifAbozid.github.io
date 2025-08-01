@@ -72,23 +72,41 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div
-            className="font-heading text-xl md:text-2xl font-bold text-gradient cursor-pointer"
+            className="font-heading text-base md:text-lg xl:text-xl font-bold text-gradient cursor-pointer flex-shrink-0"
             onClick={() => handleNavClick('#home')}
           >
             &lt;Yousif /&gt;
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-6 2xl:space-x-8">
             {navigation.map(item => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary cursor-pointer',
+                  'text-xs 2xl:text-sm font-medium transition-colors hover:text-primary cursor-pointer whitespace-nowrap',
                   activeSection === item.href.slice(1)
                     ? 'text-primary'
                     : 'text-l-text-2 dark:text-d-text-2'
+                )}
+              >
+                {item.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Medium Screen Navigation - Compact */}
+          <div className="hidden lg:flex xl:hidden items-center space-x-3">
+            {navigation.map(item => (
+              <button
+                key={item.name}
+                onClick={() => handleNavClick(item.href)}
+                className={cn(
+                  'text-xs font-medium transition-colors hover:text-primary cursor-pointer whitespace-nowrap px-2 py-1 rounded-md',
+                  activeSection === item.href.slice(1)
+                    ? 'text-primary bg-primary/10'
+                    : 'text-l-text-2 dark:text-d-text-2 hover:bg-l-bg-2 dark:hover:bg-d-bg-2'
                 )}
               >
                 {item.name}
@@ -115,7 +133,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={cn(
-                'md:hidden p-2 rounded-lg transition-colors',
+                'lg:hidden p-2 rounded-lg transition-colors cursor-pointer',
                 'bg-l-bg-2 dark:bg-d-bg-2',
                 'hover:bg-l-bg-3 dark:hover:bg-d-bg-3',
                 'text-l-text-1 dark:text-d-text-1'
@@ -134,7 +152,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <div
           className={cn(
-            'md:hidden transition-all duration-300 overflow-hidden',
+            'lg:hidden transition-all duration-300 overflow-hidden',
             isOpen ? 'max-h-96 pb-4' : 'max-h-0'
           )}
         >
@@ -144,7 +162,7 @@ export default function Navbar() {
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
                 className={cn(
-                  'block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors',
+                  'block w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer',
                   activeSection === item.href.slice(1)
                     ? 'text-primary bg-primary/10'
                     : 'text-l-text-2 dark:text-d-text-2 hover:text-primary hover:bg-l-bg-2 dark:hover:bg-d-bg-2'

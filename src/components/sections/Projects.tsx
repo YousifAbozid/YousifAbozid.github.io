@@ -91,7 +91,7 @@ export default function Projects() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {filteredProjects.map(project => (
               <div
                 key={project.id}

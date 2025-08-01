@@ -174,7 +174,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
             <div ref={formRef} data-animate="slide-right">
               <div className="bg-l-bg-1 dark:bg-d-bg-1 rounded-lg border border-border-l dark:border-border-d p-8">

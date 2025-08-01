@@ -87,7 +87,7 @@ export default function Certificates() {
           </div>
 
           {/* Stats Overview */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-8 lg:mb-12">
             <div className="text-center p-4 bg-l-bg-1 dark:bg-d-bg-1 rounded-lg border border-border-l dark:border-border-d">
               <div className="text-2xl font-heading font-bold text-primary mb-1">
                 {stats.totalCerts}
@@ -123,7 +123,7 @@ export default function Certificates() {
           </div>
 
           {/* Certificates Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {certificates.map((certificate, index) => (
               <div
                 key={`${certificate.institution}-${certificate.title}-${index}`}

@@ -130,7 +130,7 @@ export default function Experience() {
                       </div>
 
                       {/* Main Content - Side by Side Layout */}
-                      <div className="grid lg:grid-cols-2 gap-6">
+                      <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                         {/* Achievements */}
                         <div>
                           <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-3 text-sm">

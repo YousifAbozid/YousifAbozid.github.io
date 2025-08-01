@@ -27,7 +27,7 @@ export default function About() {
             <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 lg:mb-20">
             {/* Personal Info */}
             <div
               ref={contentRef}
@@ -45,7 +45,7 @@ export default function About() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-2 gap-6 pt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 pt-6">
                 <div>
                   <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-2">
                     Location
@@ -82,7 +82,7 @@ export default function About() {
 
             {/* Stats or Image */}
             <div data-animate="slide-left" className="relative">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                 <div className="bg-l-bg-2 dark:bg-d-bg-2 p-6 rounded-lg border border-border-l dark:border-border-d">
                   <div className="text-3xl font-heading font-bold text-primary mb-2">
                     50+

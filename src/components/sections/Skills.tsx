@@ -80,7 +80,7 @@ export default function Skills() {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {filteredSkills.map((skill, index) => (
               <div
                 key={skill.name}

@@ -34,7 +34,7 @@ export default function Footer() {
     <footer className="bg-l-bg-1 dark:bg-d-bg-1 border-t border-border-l dark:border-border-d">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="font-heading text-2xl font-bold text-gradient mb-4">
