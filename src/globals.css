@@ -108,11 +108,15 @@
 
 	html {
 		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
+		/* Account for fixed navbar */
 	}
 
 	body {
 		font-family: var(--font-family-body);
 		overflow-x: hidden;
+		scrollbar-gutter: stable;
+		/* Prevent layout shift when scrollbar appears */
 	}
 
 	/* Heading font */
@@ -205,6 +209,32 @@
 
 	.gap-responsive {
 		gap: clamp(1rem, 3vw, 1.5rem);
+	}
+
+	/* Scroll utilities */
+	.scroll-smooth {
+		scroll-behavior: smooth;
+	}
+
+	.scroll-auto {
+		scroll-behavior: auto;
+	}
+
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+
+	.scrollbar-thin {
+		scrollbar-width: thin;
+	}
+
+	.scrollbar-none {
+		scrollbar-width: none;
 	}
 
 	/* Scroll animations */
@@ -331,26 +361,53 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 10px;
+	height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--color-l-bg-2);
+	background: transparent;
+	border-radius: 8px;
 }
 
 .dark ::-webkit-scrollbar-track {
-	background: var(--color-d-bg-2);
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--color-l-text-3);
-	border-radius: 4px;
+	background: linear-gradient(135deg, var(--color-l-text-3), var(--color-l-text-2));
+	border-radius: 8px;
+	transition: all 0.3s ease;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-	background: var(--color-d-text-3);
+	background: linear-gradient(135deg, var(--color-d-text-3), var(--color-d-text-2));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--color-primary);
+	background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+	transform: scale(1.05);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+}
+
+/* Scrollbar corner */
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+.dark ::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+/* Firefox scrollbar */
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-l-text-3) transparent;
+}
+
+.dark html {
+	scrollbar-color: var(--color-d-text-3) transparent;
 }
