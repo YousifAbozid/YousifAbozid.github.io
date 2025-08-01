@@ -21,14 +21,14 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 bg-l-bg-2 dark:bg-d-bg-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div ref={titleRef} data-animate="fade" className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-4">
               Professional Experience
             </h2>
             <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
-            <p className="text-lg text-l-text-2 dark:text-d-text-2 mt-6 max-w-2xl mx-auto">
+            <p className="text-lg text-l-text-2 dark:text-d-text-2 mt-6 max-w-3xl mx-auto">
               My journey as a software engineer, building scalable applications
               and leading development teams.
             </p>
@@ -56,19 +56,21 @@ export default function Experience() {
                   {/* Content */}
                   <div
                     className={cn(
-                      'flex-1 ml-12 md:ml-0',
-                      index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'
+                      'flex-1 ml-12 md:ml-0 max-w-none md:max-w-2xl lg:max-w-3xl',
+                      index % 2 === 0
+                        ? 'md:pr-12 lg:pr-16'
+                        : 'md:pl-12 lg:pl-16'
                     )}
                   >
-                    <div className="bg-l-bg-1 dark:bg-d-bg-1 p-6 md:p-8 rounded-lg border border-border-l dark:border-border-d shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="bg-l-bg-1 dark:bg-d-bg-1 p-8 md:p-10 rounded-lg border border-border-l dark:border-border-d shadow-lg hover:shadow-xl transition-shadow">
                       {/* Header */}
                       <div className="mb-6">
-                        <h3 className="text-xl md:text-2xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-2">
+                        <h3 className="text-xl md:text-2xl font-heading font-bold text-l-text-1 dark:text-d-text-1 mb-3">
                           {experience.title}
                         </h3>
 
-                        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                          <div className="flex items-center text-primary font-medium mb-2 md:mb-0">
+                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                          <div className="flex items-center text-primary font-medium mb-2 lg:mb-0">
                             <ExternalLink className="w-4 h-4 mr-2" />
                             {experience.company}
                           </div>
@@ -87,22 +89,22 @@ export default function Experience() {
                           )}
                         </div>
 
-                        <p className="text-l-text-2 dark:text-d-text-2 leading-relaxed">
+                        <p className="text-l-text-2 dark:text-d-text-2 leading-relaxed text-base">
                           {experience.description}
                         </p>
                       </div>
 
                       {/* Achievements */}
                       <div className="mb-6">
-                        <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-3">
+                        <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-4">
                           Key Achievements:
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                           {experience.achievements.map(
                             (achievement, achievementIndex) => (
                               <li
                                 key={achievementIndex}
-                                className="flex items-start text-l-text-2 dark:text-d-text-2"
+                                className="flex items-start text-l-text-2 dark:text-d-text-2 leading-relaxed"
                               >
                                 <span className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
                                 {achievement}
@@ -114,7 +116,7 @@ export default function Experience() {
 
                       {/* Technologies */}
                       <div>
-                        <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-3">
+                        <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-4">
                           Technologies Used:
                         </h4>
                         <div className="flex flex-wrap gap-2">
