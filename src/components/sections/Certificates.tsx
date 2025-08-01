@@ -201,20 +201,21 @@ export default function Certificates() {
           {/* Image Modal */}
           {selectedImage && (
             <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
               onClick={() => setSelectedImage(null)}
             >
-              <div className="relative max-w-4xl max-h-[90vh] p-4">
+              <div className="relative w-full h-full max-w-5xl max-h-[95vh] flex items-center justify-center">
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute -top-2 -right-2 z-10 bg-white dark:bg-d-bg-1 text-l-text-1 dark:text-d-text-1 rounded-full p-2 shadow-lg hover:bg-l-bg-2 dark:hover:bg-d-bg-2 transition-colors"
+                  className="absolute top-4 right-4 z-10 bg-white dark:bg-d-bg-1 text-l-text-1 dark:text-d-text-1 rounded-full p-2 shadow-lg hover:bg-l-bg-2 dark:hover:bg-d-bg-2 transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
                 <img
                   src={selectedImage}
                   alt="Certificate"
-                  className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                  className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-2xl"
+                  style={{ minHeight: '200px', minWidth: '300px' }}
                 />
               </div>
             </div>
