@@ -10,6 +10,26 @@ export interface Experience {
   technologies: string[];
 }
 
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  location?: string;
+  startDate: Date;
+  endDate?: Date;
+  grade?: string;
+  description: string;
+  achievements: string[];
+  skills: string[];
+  certificates?: {
+    title: string;
+    description?: string;
+    badgeColor?: string;
+    imageUrl?: string;
+  }[];
+  featured?: boolean;
+}
+
 export interface Skill {
   name: string;
   level: number; // 1-100
@@ -576,5 +596,342 @@ export const services: Service[] = [
     title: 'Quality Assurance',
     description:
       'Implementing comprehensive testing strategies, code reviews, and CI/CD pipelines. Ensuring code quality, security, and maintainability.',
+  },
+];
+
+export const education: Education[] = [
+  {
+    id: '1',
+    degree: 'Software Engineering Program',
+    institution:
+      'African Leadership Experience (ALX Africa & Holberton School)',
+    location: 'Westlands, Nairobi, Kenya (Remote)',
+    startDate: new Date('2023-02-01'),
+    endDate: new Date('2024-06-30'),
+    description:
+      'Completed an intensive 12-month software engineering program, one of the most prestigious and challenging scholarships in the tech industry. This elite program focused on comprehensive full-stack development with hands-on project experience and peer-to-peer learning.',
+    achievements: [
+      'Graduated with Front End Specialization from one of the most selective tech programs globally',
+      'Participated in Peer Learning Days (PLD) and provided mentorship to fellow cohort members',
+      'Reviewed peer projects and contributed to collaborative learning community groups',
+      'Built comprehensive portfolio projects demonstrating full-stack development capabilities',
+      'Achieved elite status as part of the small percentage who successfully completed the rigorous program',
+    ],
+    skills: [
+      'SSL Certificates',
+      'Networking',
+      'Low Level Programming',
+      'DevOps',
+      'Linux',
+      'MySQL',
+      'Git',
+      'Web Servers',
+      'Firewalls',
+      'Web Development',
+      'Shell Scripting',
+      'Object-Oriented Programming (OOP)',
+      'Algorithms',
+      'Nginx',
+      'Load Balancing',
+      'Bash',
+      'Data Structures',
+      'Software Development',
+      'SQL',
+      'Problem Solving',
+      'Secure Shell (SSH)',
+      'System Monitoring',
+      'Emacs',
+      'Python',
+      'C',
+      'JavaScript',
+      'Vi',
+      'System Administration',
+    ],
+    certificates: [
+      {
+        title: 'ALX SE Program Completion Certificate',
+        description:
+          'Graduation certificate from ALX Software Engineering Program powered by Holberton School',
+        badgeColor: 'primary',
+        imageUrl: '/certificates/ALX-SE-Program-Completion-Certificate.png',
+      },
+    ],
+    featured: true,
+  },
+  {
+    id: '2',
+    degree: 'Bertelsmann Next Generation Tech Booster Scholarship',
+    institution: 'Udacity',
+    startDate: new Date('2023-12-01'),
+    endDate: new Date('2024-02-28'),
+    description:
+      'Completed an intensive 2-month AI Programming with Python challenge. This competitive scholarship program was designed to identify top talent for advanced AI and machine learning education.',
+    achievements: [
+      'Successfully completed the challenge phase of the prestigious Bertelsmann scholarship program',
+      'Gained foundational knowledge in artificial intelligence and machine learning concepts',
+      'Demonstrated excellence in Python programming for AI applications',
+      'Earned recognition through completion and recipient badges',
+    ],
+    skills: ['Artificial Intelligence (AI)', 'Linear Algebra', 'Python'],
+    certificates: [
+      {
+        title: 'Challenge Completion Badge',
+        description:
+          'Awarded for successfully completing the 2-month challenge',
+        badgeColor: 'green',
+        imageUrl: '/certificates/Challenge-Completion-Badge.jpg',
+      },
+      {
+        title: 'Challenge Recipient Badge',
+        description: 'Awarded for being selected for the scholarship program',
+        badgeColor: 'blue',
+        imageUrl: '/certificates/Challenge-Recipient-Badge.png',
+      },
+    ],
+    featured: true,
+  },
+  {
+    id: '3',
+    degree: 'Founder Academy',
+    institution: 'ALX Ventures',
+    startDate: new Date('2023-02-01'),
+    endDate: new Date('2023-05-31'),
+    description:
+      'Completed comprehensive entrepreneurship program focused on building startups from conception to market. Gained fundamental knowledge in business development, product strategy, and customer acquisition.',
+    achievements: [
+      'Mastered the entrepreneurial mindset and startup methodology',
+      'Learned end-to-end product development from idea to customer sales',
+      'Gained practical experience in business strategy and market analysis',
+      'Developed skills in customer validation and product-market fit',
+    ],
+    skills: [
+      'Entrepreneurship',
+      'Business Strategy',
+      'Product Development',
+      'Market Analysis',
+    ],
+    certificates: [
+      {
+        title: 'Founder Academy Completion Certificate',
+        description:
+          'Certificate of completion for the entrepreneurship program',
+        badgeColor: 'purple',
+        imageUrl: '/certificates/Founder-Academy-Completion-Certificate.jpg',
+      },
+    ],
+  },
+  {
+    id: '4',
+    degree: 'Advanced Full-Stack Web Development Nanodegree',
+    institution: 'Udacity (Sponsored by MCIT)',
+    startDate: new Date('2023-01-01'),
+    endDate: new Date('2023-02-28'),
+    description:
+      'Advanced full-stack development program focusing on modern web technologies and industry best practices. Sponsored by the Ministry of Communications and Information Technology, preparing students for professional software development roles.',
+    achievements: [
+      'Earned Top Graduate Badge for exceptional performance among peers',
+      'Mastered advanced full-stack development concepts and practices',
+      'Gained expertise in modern CI/CD practices and deployment strategies',
+      'Developed proficiency in test-driven development and quality assurance',
+    ],
+    skills: [
+      'API Development',
+      'Node.js',
+      'Test-Driven Development',
+      'Linux',
+      'Jasmine Framework',
+      'TypeScript',
+      'Shell Scripting',
+      'Express.js',
+      'Agile Methodologies',
+      'Continuous Integration and Continuous Delivery (CI/CD)',
+      'CircleCI',
+      'Bash',
+      'SQL',
+      'Amazon Web Services (AWS)',
+      'PostgreSQL',
+    ],
+    certificates: [
+      {
+        title: 'Top Graduate Badge',
+        description: 'Awarded for excellence among peers in the program',
+        badgeColor: 'gold',
+        imageUrl: '/certificates/Top-Graduate-Badge.jpg',
+      },
+      {
+        title: 'Advanced Full-Stack Web Development Completion Certificate',
+        description:
+          'Certificate of completion for the advanced nanodegree program',
+        badgeColor: 'primary',
+        imageUrl:
+          '/certificates/Advanced-Full-Stack-Web-Development-Completion-Certificate.jpg',
+      },
+    ],
+    featured: true,
+  },
+  {
+    id: '5',
+    degree: 'Full Stack Software Engineer',
+    institution: 'University of Helsinki',
+    startDate: new Date('2020-09-01'),
+    endDate: new Date('2020-12-31'),
+    grade: '8 ECTS with grade 5',
+    description:
+      'Completed the renowned Full Stack Open MOOC 2020, considered one of the best comprehensive web development courses globally. This intensive program provided deep expertise in modern full-stack development with hands-on projects.',
+    achievements: [
+      'Completed the prestigious Full Stack Open MOOC with highest grade (5/5)',
+      'Gained comprehensive expertise in the MERN stack and modern web development',
+      'Developed multiple production-grade full-stack applications',
+      'Mastered advanced concepts including microservices, testing, and CI/CD',
+      'Became part of one of the most supportive and skilled developer communities',
+    ],
+    skills: [
+      'Bootstrap',
+      'API Development',
+      'Jest',
+      'REST APIs',
+      'Node.js',
+      'Heroku',
+      'Full-Stack Development',
+      'Github Actions',
+      'Material-UI',
+      'Web Development',
+      'Cypress.io',
+      'Netlify',
+      'Express.js',
+      'CSS',
+      'MERN Stack',
+      'CI/CD',
+      'Webpack',
+      'ESLint',
+      'styled-components',
+      'End-to-end Testing',
+      'MongoDB',
+      'Software Development',
+      'React.js',
+      'Computer Science',
+      'Redux.js',
+      'Integration Testing',
+      'GraphQL',
+      'bcrypt',
+      'Unit Testing',
+      'JSON Web Token (JWT)',
+    ],
+    certificates: [
+      {
+        title: 'Full Stack Open MOOC Completion Certificate',
+        description:
+          'Certificate of completion for the comprehensive full-stack program',
+        badgeColor: 'primary',
+        imageUrl:
+          '/certificates/Full-Stack-Open-MOOC-Completion-Certificate.png',
+      },
+      {
+        title: 'Full Stack Open CI/CD Part Completion Certificate',
+        description: 'Specialized certificate for CI/CD module completion',
+        badgeColor: 'green',
+        imageUrl:
+          '/certificates/Full-Stack-Open-CI-CD-Part-Completion-Certificate.png',
+      },
+    ],
+    featured: true,
+  },
+  {
+    id: '6',
+    degree: 'Elements of AI',
+    institution: 'University of Helsinki',
+    startDate: new Date('2020-12-01'),
+    endDate: new Date('2021-01-31'),
+    grade: '2 ECTS',
+    description:
+      'Foundational course in artificial intelligence concepts and applications. This comprehensive introduction to AI provided insights into machine learning, neural networks, and the potential of AI technologies.',
+    achievements: [
+      'Gained comprehensive understanding of AI fundamentals and applications',
+      'Explored the potential and limitations of artificial intelligence',
+      'Developed appreciation for ethical considerations in AI development',
+    ],
+    skills: [
+      'Artificial Intelligence (AI)',
+      'Machine Learning Concepts',
+      'AI Ethics',
+    ],
+    certificates: [
+      {
+        title: 'Elements of AI Completion Certificate',
+        description: 'Certificate of completion for the AI fundamentals course',
+        badgeColor: 'blue',
+        imageUrl: '/certificates/Elements-of-AI-Completion-Certificate.png',
+      },
+    ],
+  },
+  {
+    id: '7',
+    degree: 'Bachelor of Laws (LLB)',
+    institution: 'Zagazig University',
+    location: 'Zagazig, Egypt',
+    startDate: new Date('2018-09-01'),
+    endDate: new Date('2022-07-31'),
+    grade: 'Good',
+    description:
+      'Completed comprehensive legal education covering various aspects of law, legal theory, and jurisprudence. This diverse academic background provides unique analytical and critical thinking skills that complement technical expertise.',
+    achievements: [
+      'Developed strong analytical and critical thinking skills',
+      'Gained expertise in legal research and documentation',
+      'Mastered complex problem-solving and argumentation techniques',
+      'Built foundation in regulatory compliance and legal frameworks',
+    ],
+    skills: [
+      'Legal Research',
+      'Critical Thinking',
+      'Analytical Skills',
+      'Legal Writing',
+      'Regulatory Compliance',
+    ],
+    certificates: [
+      {
+        title: 'Bachelor of Laws (LLB) Graduation Certificate',
+        description:
+          'Graduation certificate from Faculty of Law - Zagazig University',
+        badgeColor: 'primary',
+        // imageUrl: '/certificates/bachelor-of-laws-degree.svg',
+      },
+    ],
+  },
+  {
+    id: '8',
+    degree: 'English Diploma',
+    institution: 'Edmore University (American Culture Center)',
+    startDate: new Date('2017-11-01'),
+    endDate: new Date('2018-03-31'),
+    grade: '97%',
+    description:
+      'Intensive English language program focusing on advanced communication skills, cultural understanding, and professional English usage. Achieved exceptional performance with 97% grade.',
+    achievements: [
+      'Achieved outstanding 97% grade demonstrating English language mastery',
+      'Developed proficiency in both American and British English accents and conventions',
+      'Gained advanced translation skills between Arabic and English',
+      'Participated actively in discussions, role-playing, and practical communication exercises',
+    ],
+    skills: [
+      'English as a Second Language (ESL)',
+      'Professional Communication',
+      'Translation',
+      'Cross-cultural Communication',
+    ],
+    certificates: [
+      {
+        title: 'English Diploma Completion Certificate',
+        description: 'Certificate with 97% grade from American Culture Center',
+        badgeColor: 'gold',
+        imageUrl:
+          '/certificates/English-Diploma-Final-Exam-Completion-Certificate.jpg',
+      },
+      {
+        title: 'English Diploma Final Exam Completion Certificate',
+        description: 'Certificate for final exam completion',
+        badgeColor: 'green',
+        imageUrl: '/certificates/English-Diploma-Completion-Certificate.jpg',
+      },
+    ],
   },
 ];
