@@ -70,6 +70,7 @@ export function createEmailLink(
     | 'inquiry'
     | 'project'
     | 'experience'
+    | 'education'
     | 'simple' = 'simple',
   email: string = 'yousif.abozid@yahoo.com'
 ): string {
@@ -138,6 +139,19 @@ Specifically interested in:
 - 
 
 Looking forward to connecting.
+
+Best regards`,
+    },
+    education: {
+      subject: 'Education & Certifications Discussion',
+      body: `Hi Yousif,
+
+I'm interested in learning more about your educational background and certifications.
+
+Would love to discuss:
+- 
+
+Looking forward to hearing from you.
 
 Best regards`,
     },
