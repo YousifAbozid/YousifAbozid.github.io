@@ -155,7 +155,7 @@ export default function Experience() {
                                   onClick={() =>
                                     toggleAchievements(experience.id)
                                   }
-                                  className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors"
+                                  className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors cursor-pointer"
                                 >
                                   {expandedAchievements.has(experience.id) ? (
                                     <>
@@ -197,7 +197,7 @@ export default function Experience() {
                           {experience.technologies.length > 8 && (
                             <button
                               onClick={() => toggleTechnologies(experience.id)}
-                              className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors"
+                              className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors cursor-pointer"
                             >
                               {expandedTechnologies.has(experience.id) ? (
                                 <>

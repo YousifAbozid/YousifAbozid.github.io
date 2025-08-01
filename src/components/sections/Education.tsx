@@ -196,7 +196,7 @@ export default function Education() {
                               <li>
                                 <button
                                   onClick={() => toggleAchievements(edu.id)}
-                                  className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors"
+                                  className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors cursor-pointer"
                                 >
                                   {expandedAchievements.has(edu.id) ? (
                                     <>
@@ -236,7 +236,7 @@ export default function Education() {
                           {edu.skills.length > 8 && (
                             <button
                               onClick={() => toggleSkills(edu.id)}
-                              className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors"
+                              className="flex items-center text-primary hover:text-primary-dark text-xs font-medium mt-2 transition-colors cursor-pointer"
                             >
                               {expandedSkills.has(edu.id) ? (
                                 <>
