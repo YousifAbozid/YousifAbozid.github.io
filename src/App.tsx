@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
+import Education from './components/sections/Education';
+import Certificates from './components/sections/Certificates';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
 import Testimonials from './components/sections/Testimonials';
@@ -50,6 +52,8 @@ function App() {
           <Hero />
           <About />
           <Experience />
+          <Education />
+          <Certificates />
           <Skills />
           <Projects />
           <Testimonials />
