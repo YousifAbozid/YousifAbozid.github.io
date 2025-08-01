@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website showcasing my experience as a Full Stack Software Engineer. Built with React 19, TypeScript, Vite, and Tailwind CSS v4, featuring a comprehensive theming system with dark mode support and smooth animations.
 
+![Portfolio Screenshot](public/Full-App-Screenshot.png)
+
 🌐 **Live Demo**: [yousifabozid.github.io](https://yousifabozid.github.io)
 
 ## 🚀 About Me
@@ -27,16 +29,22 @@ I'm a passionate Full Stack Software Engineer with 4+ years of experience creati
 - **System Theme Detection**: Automatically detects user's system preference
 - **Performance Optimized**: Fast loading with optimized builds
 - **SEO Friendly**: Proper meta tags and semantic HTML structure
+- **Image Galleries**: Certificate image viewing with modal dialogs
+- **Timeline Components**: Interactive education and experience timelines
+- **Progress Indicators**: Visual skill level representations
+- **Expandable Content**: Collapsible sections for achievements and skills
 
 ### 📄 Content Sections
 
 - **Hero Section**: Dynamic introduction with typing animation
 - **About**: Personal background and professional journey
 - **Experience**: Detailed work history with achievements and technologies
-- **Skills**: Categorized skill set with proficiency levels
-- **Projects**: Portfolio of notable projects and contributions
-- **Testimonials**: Professional recommendations and feedback
-- **Contact**: Multiple ways to get in touch
+- **Education**: Comprehensive education timeline with institutions, achievements, and certificates
+- **Certificates**: Dedicated showcase of certifications, badges, and achievements with image gallery
+- **Skills**: Categorized skill set with proficiency levels and visual progress indicators
+- **Projects**: Portfolio of notable projects and contributions with detailed descriptions
+- **Testimonials**: Professional recommendations and feedback from colleagues
+- **Contact**: Multiple ways to get in touch with contact form
 - **Footer**: Additional links and information
 
 ## 🛠️ Technologies Used
@@ -127,14 +135,29 @@ npm run preview  # Preview the production build
 YousifAbozid.github.io/
 ├── public/                     # Static assets
 │   ├── favicon.png
-│   └── Yousif_Abozid_Resume.pdf
+│   ├── Full-App-Screenshot.png
+│   ├── Yousif_Abozid_Resume.pdf
+│   └── certificates/           # Certificate images
+│       ├── Advanced-Full-Stack-Web-Development-Completion-Certificate.jpg
+│       ├── ALX-SE-Program-Completion-Certificate.png
+│       ├── Challenge-Completion-Badge.jpg
+│       ├── Challenge-Recipient-Badge.png
+│       ├── Elements-of-AI-Completion-Certificate.png
+│       ├── English-Diploma-Completion-Certificate.jpg
+│       ├── English-Diploma-Final-Exam-Completion-Certificate.jpg
+│       ├── Founder-Academy-Completion-Certificate.jpg
+│       ├── Full-Stack-Open-CI-CD-Part-Completion-Certificate.png
+│       ├── Full-Stack-Open-MOOC-Completion-Certificate.png
+│       └── Top-Graduate-Badge.jpg
 ├── src/
 │   ├── components/             # Reusable UI components
 │   │   ├── Footer.tsx
 │   │   ├── Navbar.tsx
 │   │   └── sections/           # Page sections
 │   │       ├── About.tsx
+│   │       ├── Certificates.tsx
 │   │       ├── Contact.tsx
+│   │       ├── Education.tsx
 │   │       ├── Experience.tsx
 │   │       ├── Hero.tsx
 │   │       ├── Projects.tsx
