@@ -893,7 +893,8 @@ export const education: Education[] = [
         description:
           'Graduation certificate from Faculty of Law - Zagazig University',
         badgeColor: 'primary',
-        // imageUrl: '/certificates/bachelor-of-laws-degree.svg',
+        imageUrl:
+          '/certificates/Bachelor-of-Laws-(LLB)-Graduation-Certificate.jpeg',
       },
     ],
   },
