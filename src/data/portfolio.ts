@@ -523,7 +523,7 @@ export const testimonials: Testimonial[] = [
     content:
       'I can confidently say that Yousif is a highly committed and disciplined professional. While not under my direct supervision, however he always shows reliability and approaches his responsibilities with dedication. All the best mate.',
     avatar:
-      'https://media.licdn.com/dms/image/v2/D4D03AQHBE34gtzcpTg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725282810809?e=1756944000&v=beta&t=NOLWOmnnpFNUGynLcunH2aaUpygb-oNpkbo1M4W_ZfU',
+      'https://media.licdn.com/dms/image/v2/D4D03AQFfsloDgrovGw/profile-displayphoto-crop_800_800/B4DZhvKI3JH4AI-/0/1754211589109?e=1759363200&v=beta&t=owSRg5pogo8LWMdbrXeG9z_QRzv0RNs-zFfT76qVIx0',
     rating: 5,
   },
   {
