@@ -110,6 +110,7 @@
 		scroll-behavior: smooth;
 		scroll-padding-top: 5rem;
 		/* Account for fixed navbar */
+		overflow-x: hidden;
 	}
 
 	body {
@@ -117,6 +118,8 @@
 		overflow-x: hidden;
 		scrollbar-gutter: stable;
 		/* Prevent layout shift when scrollbar appears */
+		width: 100%;
+		max-width: 100vw;
 	}
 
 	/* Heading font */

@@ -62,13 +62,13 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full',
         isScrolled
           ? 'bg-l-bg-1/80 dark:bg-d-bg-1/80 backdrop-blur-md border-b border-border-l dark:border-border-d shadow-lg'
           : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div
@@ -152,7 +152,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <div
           className={cn(
-            'lg:hidden transition-all duration-300 overflow-hidden',
+            'lg:hidden transition-all duration-300 overflow-hidden w-full',
             isOpen ? 'max-h-96 pb-4' : 'max-h-0'
           )}
         >
