@@ -107,7 +107,7 @@ export default function Testimonials() {
                 {testimonials.map(testimonial => (
                   <div
                     key={testimonial.id}
-                    className="w-full flex-shrink-0 px-2 md:px-4"
+                    className="w-full shrink-0 px-2 md:px-4"
                   >
                     <div className="bg-l-bg-2 dark:bg-d-bg-2 rounded-lg border border-border-l dark:border-border-d p-6 md:p-8 relative min-h-[400px] flex flex-col">
                       {/* Quote Icon */}
@@ -129,7 +129,7 @@ export default function Testimonials() {
 
                         {/* Author Info */}
                         <div className="flex items-center space-x-4 mt-auto">
-                          <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-primary flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-primary flex items-center justify-center text-white font-bold text-lg shrink-0">
                             <img
                               src={testimonial.avatar}
                               alt={testimonial.name}

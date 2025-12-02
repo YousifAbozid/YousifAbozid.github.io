@@ -315,14 +315,20 @@ export const projects: Project[] = [
     id: '2',
     title: 'React 19 TypeScript Template',
     description:
-      'Modern React 19 starter template with TypeScript, Vite, and Tailwind CSS v4. Production-ready with comprehensive theming.',
+      'Modern React 19 starter template with TypeScript, Vite, and Tailwind CSS v4. Features comprehensive theming system with semantic colors, dark mode support, React Query, React Router, React Hook Form + Zod validation, ESLint/Prettier configuration, and Husky pre-commit hooks. Ready for production with optimized builds.',
     longDescription:
-      'A modern, production-ready template for building web applications with React 19, TypeScript, Vite, and Tailwind CSS v4. Features a comprehensive theming system with semantic color variables, dark mode support out of the box, ESLint/Prettier configuration, Husky pre-commit hooks, and optimized builds. Includes organized color categories for light/dark backgrounds, text, accents, borders, and shadows. Perfect for developers who want to start projects with modern tooling and best practices already configured.',
+      'A modern, production-ready template for building scalable web applications with React 19, TypeScript, Vite, and Tailwind CSS v4. This comprehensive starter kit follows best practices with a feature-based architecture designed for maintainability and growth. Includes React Router for navigation, React Query for server state management, React Hook Form + Zod for form validation, Framer Motion for animations, and Lucide React icons. Features smart development tooling with ESLint + Prettier caching, Husky pre-commit hooks with auto-fix capabilities, TypeScript incremental compilation, and bundle analysis. The template provides comprehensive dark/light mode theming with semantic color variables, error boundaries, toast notifications, and organized project structure with barrel exports and path mapping. Perfect for developers who want production-ready configurations and modern tooling out of the box.',
     technologies: [
       'React 19',
       'TypeScript',
       'Vite',
       'Tailwind CSS v4',
+      'React Router',
+      'React Query',
+      'React Hook Form',
+      'Zod',
+      'Framer Motion',
+      'Lucide React',
       'ESLint',
       'Prettier',
       'Husky',
@@ -380,7 +386,7 @@ export const projects: Project[] = [
     category: 'fullstack',
     githubUrl: 'https://github.com/YousifAbozid/template-nextjs-ts',
     demoUrl: 'https://template-nextjs-ts.vercel.app/',
-    featured: true,
+    featured: false,
   },
   {
     id: '5',
@@ -410,29 +416,31 @@ export const projects: Project[] = [
   },
   {
     id: '6',
-    title: 'Express.js Production Template',
+    title: 'Express.js TypeScript OpenAPI Template',
     description:
-      'A modern, production-ready Express.js template with TypeScript, decorator-based OpenAPI/Swagger documentation, comprehensive validation and developer tooling (ESLint/Prettier/Husky). Ready for production deployment with optimized architecture',
+      '✨ A modern, production-ready Express.js template with TypeScript, decorator-based OpenAPI/Swagger documentation, comprehensive validation and developer tooling (ESLint/Prettier/Husky). Ready for production deployment with optimized architecture 🚀',
     longDescription:
-      'A fully-featured, production-ready Express.js template with modern development tooling and best practices built-in. Features JWT-based authentication using Passport.js, MongoDB integration with Mongoose ODM, built-in Swagger/OpenAPI documentation, request validation with Express Validator, comprehensive security with CORS, Helmet.js, rate limiting, compression middleware, request logging with Morgan, application logging with Winston, ESLint/Prettier integration, Git hooks with Husky, Jest testing framework with Supertest for API testing, and code coverage reports. Perfect foundation for building scalable REST APIs.',
+      'A fully-featured, production-ready Express.js template with modern development tooling and best practices built-in. Features decorator-based architecture with automatic OpenAPI 3.0/Swagger documentation generation, TypeScript with ES modules support, comprehensive request/response validation using class-validator and class-transformer, JWT Bearer authentication configuration, MongoDB integration with Mongoose ODM, advanced security middleware including Helmet.js, CORS, HPP protection, and rate limiting, compression middleware for performance, session management with express-session, hot reload development with tsx, automatic type generation from OpenAPI specs, ESLint/Prettier integration with pre-commit hooks via Husky and lint-staged, and comprehensive build tooling with TypeScript compilation and alias resolution. Perfect foundation for building scalable, type-safe REST APIs with automatic documentation.',
     technologies: [
       'Express.js',
+      'TypeScript',
       'Node.js',
       'MongoDB',
       'Mongoose',
-      'JWT',
-      'Passport.js',
+      'OpenAPI 3.0',
       'Swagger',
-      'Jest',
-      'Winston',
+      'JWT',
+      'Class Validator',
       'Helmet.js',
+      'Rate Limiting',
       'ESLint',
       'Prettier',
+      'Husky',
     ],
     category: 'backend',
     githubUrl: 'https://github.com/YousifAbozid/template-express-ts',
     demoUrl: 'https://template-express-ts.koyeb.app/',
-    featured: false,
+    featured: true,
   },
   {
     id: '7',
@@ -510,8 +518,7 @@ export const testimonials: Testimonial[] = [
     company: 'Tradesocio',
     content:
       "I had the pleasure of meeting & working with Joe during my time at Tradesocio, and I can confidently say he's one of the most supportive and solutions-oriented developers I've come across. Joe is always willing to help—no matter how busy or complex the task. He listens, understands the need behind the request, and offers smart, digital solutions that genuinely make processes easier and more efficient. His ideas often saved us time, reduced manual work, and helped streamline collaboration across teams. What truly sets Joe apart, though, is his spirit. He brings kindness, positivity, and cheerfulness into every interaction, creating a comfortable and collaborative environment that makes working with him not just productive, but genuinely enjoyable. Any team would be lucky to have him—not just for his technical skills, but for the positive energy and thoughtful innovation he brings to the table.",
-    avatar:
-      'https://media.licdn.com/dms/image/v2/D4D03AQFm3HkpBUYCpA/profile-displayphoto-scale_200_200/B4DZfqZAjQH4Ac-/0/1751984114649?e=1756339200&v=beta&t=tFuI1KQhsLPNL14kmuGMqvALaBNYU2Uqdk7ltjaJQ6s',
+    avatar: '/images/Shahenda M. Aal.png',
     rating: 5,
   },
   {
@@ -522,8 +529,7 @@ export const testimonials: Testimonial[] = [
     company: 'TradeSocio',
     content:
       'I can confidently say that Yousif is a highly committed and disciplined professional. While not under my direct supervision, however he always shows reliability and approaches his responsibilities with dedication. All the best mate.',
-    avatar:
-      'https://media.licdn.com/dms/image/v2/D4D03AQFfsloDgrovGw/profile-displayphoto-crop_800_800/B4DZhvKI3JH4AI-/0/1754211589109?e=1759363200&v=beta&t=owSRg5pogo8LWMdbrXeG9z_QRzv0RNs-zFfT76qVIx0',
+    avatar: '/images/Ahmad Salama.png',
     rating: 5,
   },
   {
@@ -533,8 +539,7 @@ export const testimonials: Testimonial[] = [
     company: 'Salem Ventures',
     content:
       'I worked with Yousif for six months and found him to be a dedicated, skilled, and collaborative colleague. He consistently delivered quality work and was always eager to learn and support the team.',
-    avatar:
-      'https://media.licdn.com/dms/image/v2/C5603AQHxWJAxFTX4hg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1649160758151?e=1756339200&v=beta&t=JylHvayd_Nqnm1ZM2u_cbB5a3DkdVSMp3MocT04rmTg',
+    avatar: '/images/Mohamed Samir.png',
     rating: 5,
   },
   {
@@ -544,8 +549,7 @@ export const testimonials: Testimonial[] = [
     company: 'Salem Ventures',
     content:
       "I had the pleasure of working with Yousif as part of the same MERN stack development team. He's a highly skilled and dedicated developer with a strong problem-solving mindset and great attention to detail. His commitment to delivering quality work on time made a big difference to our team. Wishing you all the best in your future endeavors — you truly deserve it!",
-    avatar:
-      'https://media.licdn.com/dms/image/v2/D4D03AQFUTMxr-v8oUQ/profile-displayphoto-shrink_800_800/B4DZedUGIgHkAc-/0/1750690985502?e=1756339200&v=beta&t=gJh8FoCLNj3-biWFgkc9Yj5KCXyUTby9wtwwHw-_MsM',
+    avatar: '/images/Beshoy Nasry.png',
     rating: 5,
   },
   {
@@ -555,8 +559,7 @@ export const testimonials: Testimonial[] = [
     company: 'Salem Ventures',
     content:
       "I had the pleasure of working with Yousif and was consistently impressed by his innovative thinking, creative approach to problem-solving, and strong work ethic. He brings a forward-thinking mindset to everything he does and isn't afraid to explore new ideas or take initiative. Yousif is not only hardworking but also thoughtful and intentional in the way he approaches challenges. His positive attitude and growth-oriented mindset make him a valuable asset to any team.",
-    avatar:
-      'https://media.licdn.com/dms/image/v2/D4D03AQH5BRiO5fjYjg/profile-displayphoto-crop_800_800/B4DZgPwa7WGQAI-/0/1752611010079?e=1756339200&v=beta&t=_uzkn0aORa79c_r7ogfihut3oZ2v6A6qtukp9SjsDws',
+    avatar: '/images/Eman Wagih.png',
     rating: 5,
   },
   {
@@ -566,8 +569,7 @@ export const testimonials: Testimonial[] = [
     company: 'Salem Ventures',
     content:
       'I have had the pleasure of working with Yousif. He is truly sincere, ambitious, and technically skilled. A great team player, always willing to go the extra mile. I highly recommend him.',
-    avatar:
-      'https://media.licdn.com/dms/image/v2/D4D03AQHbPDvb9UoqZw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721839506528?e=1756339200&v=beta&t=W2ii6clHOlfRs7ypHtxsQPOQelSLlemKtRCYp-QVj7k',
+    avatar: '/images/Tasneem Khaled.png',
     rating: 5,
   },
 ];
