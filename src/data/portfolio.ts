@@ -412,7 +412,7 @@ export const projects: Project[] = [
     id: '6',
     title: 'Express.js Production Template',
     description:
-      'Modern Express.js starter with MongoDB, JWT auth, and comprehensive security. Production-ready with Swagger docs.',
+      'A modern, production-ready Express.js template with TypeScript, decorator-based OpenAPI/Swagger documentation, comprehensive validation and developer tooling (ESLint/Prettier/Husky). Ready for production deployment with optimized architecture',
     longDescription:
       'A fully-featured, production-ready Express.js template with modern development tooling and best practices built-in. Features JWT-based authentication using Passport.js, MongoDB integration with Mongoose ODM, built-in Swagger/OpenAPI documentation, request validation with Express Validator, comprehensive security with CORS, Helmet.js, rate limiting, compression middleware, request logging with Morgan, application logging with Winston, ESLint/Prettier integration, Git hooks with Husky, Jest testing framework with Supertest for API testing, and code coverage reports. Perfect foundation for building scalable REST APIs.',
     technologies: [
@@ -430,8 +430,8 @@ export const projects: Project[] = [
       'Prettier',
     ],
     category: 'backend',
-    githubUrl: 'https://github.com/YousifAbozid/template-expressjs',
-    demoUrl: 'https://mammoth-stacy-octopus-labs-467290b1.koyeb.app/',
+    githubUrl: 'https://github.com/YousifAbozid/template-express-ts',
+    demoUrl: 'https://template-express-ts.koyeb.app/',
     featured: false,
   },
   {
