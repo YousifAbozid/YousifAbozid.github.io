@@ -70,7 +70,7 @@ export const personalInfo = {
   title: 'Full Stack Software Engineer',
   subtitle: 'Building scalable web applications with modern technologies',
   bio: [
-    'Passionate Full Stack Software Engineer with 4+ years of experience creating robust, scalable applications. Specialized in React, TypeScript, Node.js, and cloud technologies.',
+    `Passionate Full Stack Software Engineer with ${new Date().getFullYear() - 2021}+ years of experience creating robust, scalable applications. Specialized in React, TypeScript, Node.js, and cloud technologies.`,
     'I thrive on solving complex problems and delivering high-quality solutions that exceed expectations. My approach combines technical expertise with user-centered design thinking.',
     "When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or mentoring fellow developers in the community.",
   ],
@@ -88,10 +88,56 @@ export const personalInfo = {
 export const experiences: Experience[] = [
   {
     id: '1',
+    title: 'Senior Frontend Developer',
+    company: 'Equivator',
+    location: 'Riyadh, Saudi Arabia (Remote)',
+    startDate: new Date('2025-09-01'),
+    endDate: new Date('2025-12-04'),
+    description:
+      'Led the entire frontend development of BuildMate, a construction management platform connecting material and equipment suppliers with developers, contractors, and project owners.',
+    achievements: [
+      'Owned the architecture and implementation of two full-scale applications: Partner App for suppliers/contractors and Admin App for internal operations',
+      'Designed scalable monorepo structure using Turborepo + PNPM with shared UI packages',
+      'Implemented type-safe API integrations powered by automated OpenAPI clients',
+      'Delivered core business modules including material and equipment inquiries, quotation flows, supplier management, and project lifecycle tools',
+      'Built robust notifications system used across both applications',
+      'Collaborated remotely with distributed team across Egypt, Syria, Turkey, and the UAE',
+      'Worked closely with UI/UX designers, backend engineers, and QA teams to deliver fast, intuitive, and reliable web applications',
+      'Shaped product usability, performance, and consistency from component architecture to deployment workflows',
+      'Established deployment workflows across multiple environments (dev, staging, demo, production)',
+      'Successfully delivered production-ready platform that bridges construction suppliers and developers',
+      'Significantly improved procurement, communication, and operations across the construction ecosystem',
+    ],
+    technologies: [
+      'React.js',
+      'TypeScript',
+      'Vite',
+      'Turborepo',
+      'PNPM',
+      'TanStack Router',
+      'React Query',
+      'JavaScript',
+      'Tailwind CSS',
+      'REST APIs',
+      'JWT',
+      'ESLint',
+      'Prettier',
+      'CI/CD',
+      'OpenAPI',
+      'Monorepo Architecture',
+      'Remote Collaboration',
+      'Agile Methodologies',
+      'Construction Tech',
+      'Web Development',
+    ],
+  },
+  {
+    id: '2',
     title: 'Full Stack Software Engineer',
     company: 'Salem Ventures / TradeSocio',
     location: 'Zahraa El Maadi, Cairo, Egypt (On-site)',
     startDate: new Date('2024-07-01'),
+    endDate: new Date('2025-07-31'),
     description:
       'Leading frontend development for fintech trading platforms, working directly with executive leadership on mission-critical financial applications.',
     achievements: [
@@ -125,7 +171,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: '2',
+    id: '3',
     title: 'Software Engineer',
     company: 'Mohandes Life Insurance',
     location: 'Dokki, Giza, Egypt (On-site)',
@@ -156,7 +202,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: '3',
+    id: '4',
     title: 'Software Engineer',
     company: 'African Leadership Experience',
     location: 'Westlands, Nairobi, Kenya (Remote)',
@@ -196,7 +242,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: '4',
+    id: '5',
     title: 'Software Engineer Intern',
     company: 'Gig Bud',
     location: 'Zagazig, Sharqia, Egypt (On-site)',
@@ -235,47 +281,107 @@ export const experiences: Experience[] = [
 ];
 
 export const skills: Skill[] = [
-  // Frontend
-  { name: 'JavaScript', level: 95, category: 'frontend' },
-  { name: 'React.js', level: 95, category: 'frontend' },
-  { name: 'Redux', level: 90, category: 'frontend' },
-  { name: 'React Query', level: 85, category: 'frontend' },
-  { name: 'Next.js', level: 90, category: 'frontend' },
-  { name: 'TypeScript', level: 85, category: 'frontend' },
+  // Frontend Languages & Core
   { name: 'HTML5', level: 95, category: 'frontend' },
-  { name: 'CSS3', level: 90, category: 'frontend' },
-  { name: 'Tailwind CSS', level: 95, category: 'frontend' },
-  { name: 'Material-UI', level: 90, category: 'frontend' },
-  { name: 'Capacitor', level: 85, category: 'frontend' },
+  { name: 'CSS3', level: 95, category: 'frontend' },
+  { name: 'JavaScript', level: 95, category: 'frontend' },
+  { name: 'TypeScript', level: 90, category: 'frontend' },
 
-  // Backend
+  // Frontend Frameworks & Libraries
+  { name: 'React.js', level: 95, category: 'frontend' },
+  { name: 'React 19', level: 95, category: 'frontend' },
+  { name: 'Next.js', level: 90, category: 'frontend' },
+  { name: 'Vite', level: 90, category: 'frontend' },
+  { name: 'Redux', level: 90, category: 'frontend' },
+  { name: 'Context API', level: 90, category: 'frontend' },
+
+  // UI Libraries & Styling
+  { name: 'Tailwind CSS', level: 95, category: 'frontend' },
+  { name: 'Tailwind CSS v4', level: 95, category: 'frontend' },
+  { name: 'Material-UI', level: 90, category: 'frontend' },
+  { name: 'Bootstrap', level: 85, category: 'frontend' },
+  { name: 'Shadcn/UI', level: 85, category: 'frontend' },
+  { name: 'Styled Components', level: 80, category: 'frontend' },
+
+  // State Management & Data Fetching
+  { name: 'TanStack Query', level: 90, category: 'frontend' },
+  { name: 'React Query', level: 90, category: 'frontend' },
+  { name: 'TanStack Router', level: 85, category: 'frontend' },
+  { name: 'React Router', level: 90, category: 'frontend' },
+  { name: 'Apollo Client', level: 75, category: 'frontend' },
+
+  // Mobile & Cross-Platform
+  { name: 'Capacitor', level: 85, category: 'frontend' },
+  { name: 'React Hook Form', level: 85, category: 'frontend' },
+  { name: 'Zod', level: 80, category: 'frontend' },
+  { name: 'Framer Motion', level: 80, category: 'frontend' },
+  { name: 'Lucide React', level: 85, category: 'frontend' },
+
+  // Backend Languages & Runtime
   { name: 'Node.js', level: 90, category: 'backend' },
-  { name: 'Express.js', level: 90, category: 'backend' },
-  { name: 'REST APIs', level: 95, category: 'backend' },
-  { name: 'MongoDB', level: 85, category: 'backend' },
-  { name: 'PostgreSQL', level: 80, category: 'backend' },
-  { name: 'JWT', level: 90, category: 'backend' },
-  { name: 'bcrypt', level: 85, category: 'backend' },
-  { name: 'GraphQL', level: 75, category: 'backend' },
   { name: 'Python', level: 70, category: 'backend' },
   { name: 'C', level: 65, category: 'backend' },
+  { name: 'SQL', level: 85, category: 'backend' },
+  { name: 'Bash', level: 85, category: 'backend' },
 
-  // DevOps & Tools
+  // Backend Frameworks & Libraries
+  { name: 'Express.js', level: 90, category: 'backend' },
+  { name: 'Mongoose', level: 85, category: 'backend' },
+
+  // APIs & Authentication
+  { name: 'REST APIs', level: 95, category: 'backend' },
+  { name: 'OpenAPI', level: 85, category: 'backend' },
+  { name: 'Swagger', level: 85, category: 'backend' },
+  { name: 'GraphQL', level: 75, category: 'backend' },
+  { name: 'JWT', level: 90, category: 'backend' },
+  { name: 'Clerk Auth', level: 80, category: 'backend' },
+  { name: 'bcrypt', level: 85, category: 'backend' },
+  { name: 'CORS', level: 85, category: 'backend' },
+  { name: 'Webhooks', level: 80, category: 'backend' },
+  { name: 'Axios', level: 90, category: 'backend' },
+  { name: 'Fetch API', level: 95, category: 'backend' },
+
+  // Databases
+  { name: 'MongoDB', level: 85, category: 'backend' },
+  { name: 'PostgreSQL', level: 80, category: 'backend' },
+
+  // DevOps & Version Control
   { name: 'Git', level: 95, category: 'devops' },
   { name: 'GitHub', level: 95, category: 'devops' },
-  { name: 'GitHub Actions', level: 80, category: 'devops' },
+  { name: 'GitHub Actions', level: 85, category: 'devops' },
   { name: 'Azure DevOps', level: 75, category: 'devops' },
-  { name: 'ESLint', level: 85, category: 'devops' },
-  { name: 'Prettier', level: 85, category: 'devops' },
+  { name: 'CI/CD', level: 85, category: 'devops' },
+  { name: 'CircleCI', level: 70, category: 'devops' },
+
+  // Testing
+  { name: 'Jest', level: 80, category: 'devops' },
+  { name: 'Jasmine', level: 75, category: 'devops' },
+  { name: 'Cypress', level: 80, category: 'devops' },
+  { name: 'Playwright', level: 75, category: 'devops' },
+
+  // Code Quality & Tools
+  { name: 'ESLint', level: 90, category: 'devops' },
+  { name: 'Prettier', level: 90, category: 'devops' },
   { name: 'Husky', level: 85, category: 'devops' },
-  { name: 'CI/CD', level: 80, category: 'devops' },
+  { name: 'Turborepo', level: 85, category: 'devops' },
+  { name: 'PNPM', level: 85, category: 'devops' },
+
+  // Cloud & Deployment
   { name: 'AWS', level: 70, category: 'devops' },
-  { name: 'Linux', level: 75, category: 'devops' },
-  { name: 'Bash', level: 85, category: 'devops' },
-  { name: 'Shell Scripting', level: 85, category: 'devops' },
+  { name: 'Netlify', level: 80, category: 'devops' },
+  { name: 'Vercel', level: 85, category: 'devops' },
+  { name: 'Heroku', level: 75, category: 'devops' },
   { name: 'Docker', level: 65, category: 'devops' },
 
-  // Soft Skills
+  // Operating Systems & Shell
+  { name: 'Linux', level: 80, category: 'devops' },
+  { name: 'Shell Scripting', level: 85, category: 'devops' },
+
+  // Third-Party Services
+  { name: 'Stripe', level: 80, category: 'devops' },
+  { name: 'Cloudinary', level: 80, category: 'devops' },
+
+  // Soft Skills & Methodologies
   { name: 'Problem Solving', level: 95, category: 'soft' },
   { name: 'Team Leadership', level: 90, category: 'soft' },
   { name: 'Communication', level: 90, category: 'soft' },
@@ -284,6 +390,9 @@ export const skills: Skill[] = [
   { name: 'Code Review', level: 90, category: 'soft' },
   { name: 'Time Management', level: 90, category: 'soft' },
   { name: 'Attention to Detail', level: 85, category: 'soft' },
+  { name: 'Remote Collaboration', level: 90, category: 'soft' },
+  { name: 'Teamwork', level: 95, category: 'soft' },
+  { name: 'Agile Methodologies', level: 85, category: 'soft' },
 ];
 
 export const projects: Project[] = [
@@ -386,7 +495,7 @@ export const projects: Project[] = [
     category: 'fullstack',
     githubUrl: 'https://github.com/YousifAbozid/template-nextjs-ts',
     demoUrl: 'https://template-nextjs-ts.vercel.app/',
-    featured: false,
+    featured: true,
   },
   {
     id: '5',
@@ -412,7 +521,7 @@ export const projects: Project[] = [
     category: 'backend',
     githubUrl: 'https://github.com/YousifAbozid/template-nextjs-backend',
     demoUrl: 'https://template-nextjs-backend.vercel.app/',
-    featured: false,
+    featured: true,
   },
   {
     id: '6',

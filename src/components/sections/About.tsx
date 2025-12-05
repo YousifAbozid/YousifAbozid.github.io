@@ -58,7 +58,9 @@ export default function About() {
                   <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-2">
                     Experience
                   </h4>
-                  <p className="text-l-text-2 dark:text-d-text-2">4+ Years</p>
+                  <p className="text-l-text-2 dark:text-d-text-2">
+                    {new Date().getFullYear() - 2021}+ Years
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-l-text-1 dark:text-d-text-1 mb-2">
@@ -101,7 +103,7 @@ export default function About() {
                 </div>
                 <div className="bg-l-bg-2 dark:bg-d-bg-2 p-6 rounded-lg border border-border-l dark:border-border-d">
                   <div className="text-3xl font-heading font-bold text-primary mb-2">
-                    4+
+                    {new Date().getFullYear() - 2021}+
                   </div>
                   <div className="text-l-text-2 dark:text-d-text-2">
                     Years Experience
