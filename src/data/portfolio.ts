@@ -622,6 +622,16 @@ export const projects: Project[] = [
 export const testimonials: Testimonial[] = [
   {
     id: '1',
+    name: 'Muhammad Sulaiman',
+    title: 'Technical Project Manager',
+    company: 'Equivator',
+    content:
+      'I had the opportunity to manage Yousif and was consistently impressed by his enthusiasm and ability to quickly grasp new concepts. He is a young professional with strong curiosity, kindness, and a forward-thinking mindset. Yousif effectively used AI and modern technologies in his work, showing solid technical intuition and high potential for growth. He quickly understood business needs, adapted well to new requirements, and was always timely and available. Once requirements were clear, he implemented new features efficiently. Overall, Yousif has the curiosity, adaptability, and potential to grow into an excellent professional. I look forward to seeing his future achievements.',
+    avatar: '/images/Muhammad Sulaiman.png',
+    rating: 5,
+  },
+  {
+    id: '2',
     name: 'Shahenda M. Aal',
     title: 'Head of Marketing',
     company: 'Tradesocio',
@@ -631,7 +641,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '2',
+    id: '3',
     name: 'Ahmad Salama',
     title:
       'Digital Solutions Development | Fintech Innovation | Partnerships | Operations',
@@ -642,7 +652,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '3',
+    id: '4',
     name: 'Mohamed Samir',
     title: 'Product-minded Software Engineer',
     company: 'Salem Ventures',
@@ -652,7 +662,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '4',
+    id: '5',
     name: 'Beshoy Nasry',
     title: 'Full Stack Engineer',
     company: 'Salem Ventures',
@@ -662,7 +672,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '5',
+    id: '6',
     name: 'Eman Wagih',
     title: 'Full Stack Developer',
     company: 'Salem Ventures',
@@ -672,7 +682,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '6',
+    id: '7',
     name: 'Tasneem Khaled',
     title: 'Junior Software Engineer',
     company: 'Salem Ventures',
