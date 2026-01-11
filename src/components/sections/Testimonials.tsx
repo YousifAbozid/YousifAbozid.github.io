@@ -11,6 +11,26 @@ export default function Testimonials() {
   const titleRef = useScrollAnimation({ delay: 200 });
   const carouselRef = useScrollAnimation({ delay: 400 });
 
+  // Preload images for current and adjacent slides
+  useEffect(() => {
+    const preloadImage = (src: string) => {
+      const img = new Image();
+      img.src = src;
+    };
+
+    // Preload current slide
+    preloadImage(testimonials[currentIndex].avatar);
+
+    // Preload next slide
+    const nextIndex = (currentIndex + 1) % testimonials.length;
+    preloadImage(testimonials[nextIndex].avatar);
+
+    // Preload previous slide
+    const prevIndex =
+      (currentIndex - 1 + testimonials.length) % testimonials.length;
+    preloadImage(testimonials[prevIndex].avatar);
+  }, [currentIndex]);
+
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -109,7 +129,7 @@ export default function Testimonials() {
                     key={testimonial.id}
                     className="w-full shrink-0 px-2 md:px-4"
                   >
-                    <div className="bg-l-bg-2 dark:bg-d-bg-2 rounded-lg border border-border-l dark:border-border-d p-6 md:p-8 relative min-h-[400px] flex flex-col">
+                    <div className="bg-l-bg-2 dark:bg-d-bg-2 rounded-lg border border-border-l dark:border-border-d p-6 md:p-8 relative min-h-100 flex flex-col">
                       {/* Quote Icon */}
                       <div className="absolute top-4 md:top-6 left-4 md:left-6 text-primary/20">
                         <Quote className="w-6 h-6 md:w-8 md:h-8" />
@@ -133,6 +153,7 @@ export default function Testimonials() {
                             <img
                               src={testimonial.avatar}
                               alt={testimonial.name}
+                              loading="lazy"
                               className="w-full h-full object-cover"
                               onError={e => {
                                 const target = e.target as HTMLImageElement;

@@ -1,11 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-type Theme = 'light' | 'dark' | 'system';
+type Theme = 'light' | 'dark';
 
 interface ThemeContextType {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  resolvedTheme: 'light' | 'dark';
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -24,41 +23,10 @@ export function ThemeProvider({
     return stored || defaultTheme;
   });
 
-  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light');
-
   useEffect(() => {
     const root = window.document.documentElement;
-
-    const updateTheme = () => {
-      let newResolvedTheme: 'light' | 'dark';
-
-      if (theme === 'system') {
-        newResolvedTheme = window.matchMedia('(prefers-color-scheme: dark)')
-          .matches
-          ? 'dark'
-          : 'light';
-      } else {
-        newResolvedTheme = theme;
-      }
-
-      setResolvedTheme(newResolvedTheme);
-
-      root.classList.remove('light', 'dark');
-      root.classList.add(newResolvedTheme);
-    };
-
-    updateTheme();
-
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      if (theme === 'system') {
-        updateTheme();
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    root.classList.remove('light', 'dark');
+    root.classList.add(theme);
   }, [theme]);
 
   useEffect(() => {
@@ -68,7 +36,6 @@ export function ThemeProvider({
   const value = {
     theme,
     setTheme,
-    resolvedTheme,
   };
 
   return (

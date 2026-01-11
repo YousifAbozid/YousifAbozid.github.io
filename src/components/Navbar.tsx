@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Monitor } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeProvider';
 import { cn, smoothScrollTo } from '../lib/utils';
 
@@ -51,12 +51,10 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
-  const ThemeIcon = theme === 'dark' ? Sun : theme === 'light' ? Moon : Monitor;
+  const ThemeIcon = theme === 'dark' ? Sun : Moon;
 
-  const cycleTheme = () => {
-    if (theme === 'light') setTheme('dark');
-    else if (theme === 'dark') setTheme('system');
-    else setTheme('light');
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   return (
@@ -72,7 +70,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div
-            className="font-heading text-base md:text-lg xl:text-xl font-bold text-gradient cursor-pointer flex-shrink-0"
+            className="font-heading text-base md:text-lg xl:text-xl font-bold text-gradient cursor-pointer shrink-0"
             onClick={() => handleNavClick('#home')}
           >
             &lt;Yousif /&gt;
@@ -117,7 +115,7 @@ export default function Navbar() {
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <button
-              onClick={cycleTheme}
+              onClick={toggleTheme}
               className={cn(
                 'p-2 rounded-lg transition-colors cursor-pointer',
                 'bg-l-bg-2 dark:bg-d-bg-2',

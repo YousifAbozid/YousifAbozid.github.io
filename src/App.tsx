@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider defaultTheme="system">
+    <ThemeProvider>
       <div className="min-h-screen bg-l-bg-1 dark:bg-d-bg-1 text-l-text-1 dark:text-d-text-1 overflow-x-hidden">
         <Navbar />
         <main>
