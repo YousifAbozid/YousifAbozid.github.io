@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react';
+import { Mail, Heart, ArrowUp } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolio';
 import { smoothScrollTo, cn, createEmailLink } from '../lib/utils';
 
@@ -54,7 +55,7 @@ export default function Footer() {
                 className="p-3 rounded-lg bg-l-bg-2 dark:bg-d-bg-2 hover:bg-l-bg-3 dark:hover:bg-d-bg-3 text-l-text-2 dark:text-d-text-2 hover:text-primary transition-colors"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5" />
+                <FaGithub className="w-5 h-5" />
               </a>
               <a
                 href={personalInfo.social.linkedin}
@@ -63,7 +64,7 @@ export default function Footer() {
                 className="p-3 rounded-lg bg-l-bg-2 dark:bg-d-bg-2 hover:bg-l-bg-3 dark:hover:bg-d-bg-3 text-l-text-2 dark:text-d-text-2 hover:text-blue-600 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <FaLinkedin className="w-5 h-5" />
               </a>
               <a
                 href={createEmailLink('general')}

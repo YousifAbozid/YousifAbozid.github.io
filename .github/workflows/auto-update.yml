@@ -1,112 +1,112 @@
-name: 🔄 Auto Dependency Updater
-
-on:
-  schedule:
-    - cron: '0 0 * * 0' # Every Sunday at 12:00 AM UTC
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pull-requests: write
-
-jobs:
-  update-dependencies:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: 📦 Install npm-check-updates
-        run: npm install -g npm-check-updates
-
-      - name: 🔄 Upgrade dependencies
-        run: |
-          set -e
-          ncu -u
-
-      - name: 📥 Clean install upgraded deps
-        run: |
-          set -e
-          rm -rf node_modules package-lock.json
-          npm install
-
-      - name: 🧪 Run lint (if exists)
-        run: |
-          if npm run | grep -q "lint"; then
-            npm run lint
-          else
-            echo "No lint script found, skipping..."
-          fi
-
-      - name: 🏗 Run build (if exists)
-        run: |
-          if npm run | grep -q "build"; then
-            npm run build
-          else
-            echo "No build script found, skipping..."
-          fi
-
-      - name: 🧪 Run tests (if exists)
-        run: |
-          if npm run | grep -q "test"; then
-            npm test -- --watchAll=false
-          else
-            echo "No test script found, skipping..."
-          fi
-
-      - name: 📝 Check for changes
-        id: changes
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: 🌿 Create branch
-        if: steps.changes.outputs.has_changes == 'true'
-        run: |
-          BRANCH_NAME="chore/dependency-updates-$(date +'%Y-%m-%d')"
-          git checkout -b $BRANCH_NAME
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-
-      - name: 💾 Commit changes
-        if: steps.changes.outputs.has_changes == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "chore: 🔄 auto dependency upgrades"
-
-      - name: 🚀 Push branch
-        if: steps.changes.outputs.has_changes == 'true'
-        run: |
-          git push origin $BRANCH_NAME
-
-      - name: 🔁 Create Pull Request
-        if: steps.changes.outputs.has_changes == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.BRANCH_NAME }}
-          title: 'chore: 🔄 auto dependency upgrades'
-          body: |
-            🤖 This PR was automatically generated.
-
-            It includes dependency updates verified by:
-            - npm install
-            - lint
-            - build
-            - tests
-
-            Please review before merging.
-          base: source
+# name: 🔄 Auto Dependency Updater
+#
+# on:
+#   schedule:
+#     - cron: '0 0 * * 0' # Every Sunday at 12:00 AM UTC
+#   workflow_dispatch:
+#
+# permissions:
+#   contents: write
+#   pull-requests: write
+#
+# jobs:
+#   update-dependencies:
+#     runs-on: ubuntu-latest
+#
+#     steps:
+#       - name: 📥 Checkout repository
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#
+#       - name: 🟢 Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+#           cache: npm
+#
+#       - name: 📦 Install npm-check-updates
+#         run: npm install -g npm-check-updates
+#
+#       - name: 🔄 Upgrade dependencies
+#         run: |
+#           set -e
+#           ncu -u
+#
+#       - name: 📥 Clean install upgraded deps
+#         run: |
+#           set -e
+#           rm -rf node_modules package-lock.json
+#           npm install
+#
+#       - name: 🧪 Run lint (if exists)
+#         run: |
+#           if npm run | grep -q "lint"; then
+#             npm run lint
+#           else
+#             echo "No lint script found, skipping..."
+#           fi
+#
+#       - name: 🏗 Run build (if exists)
+#         run: |
+#           if npm run | grep -q "build"; then
+#             npm run build
+#           else
+#             echo "No build script found, skipping..."
+#           fi
+#
+#       - name: 🧪 Run tests (if exists)
+#         run: |
+#           if npm run | grep -q "test"; then
+#             npm test -- --watchAll=false
+#           else
+#             echo "No test script found, skipping..."
+#           fi
+#
+#       - name: 📝 Check for changes
+#         id: changes
+#         run: |
+#           if [ -n "$(git status --porcelain)" ]; then
+#             echo "has_changes=true" >> $GITHUB_OUTPUT
+#           else
+#             echo "has_changes=false" >> $GITHUB_OUTPUT
+#           fi
+#
+#       - name: 🌿 Create branch
+#         if: steps.changes.outputs.has_changes == 'true'
+#         run: |
+#           BRANCH_NAME="chore/dependency-updates-$(date +'%Y-%m-%d')"
+#           git checkout -b $BRANCH_NAME
+#           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+#
+#       - name: 💾 Commit changes
+#         if: steps.changes.outputs.has_changes == 'true'
+#         run: |
+#           git config user.name "github-actions[bot]"
+#           git config user.email "github-actions[bot]@users.noreply.github.com"
+#           git add .
+#           git commit -m "chore: 🔄 auto dependency upgrades"
+#
+#       - name: 🚀 Push branch
+#         if: steps.changes.outputs.has_changes == 'true'
+#         run: |
+#           git push origin $BRANCH_NAME
+#
+#       - name: 🔁 Create Pull Request
+#         if: steps.changes.outputs.has_changes == 'true'
+#         uses: peter-evans/create-pull-request@v6
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           branch: ${{ env.BRANCH_NAME }}
+#           title: 'chore: 🔄 auto dependency upgrades'
+#           body: |
+#             🤖 This PR was automatically generated.
+#
+#             It includes dependency updates verified by:
+#             - npm install
+#             - lint
+#             - build
+#             - tests
+#
+#             Please review before merging.
+#           base: source

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Github, ExternalLink, Mail } from 'lucide-react';
+import { ExternalLink, Mail } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 import {
   useScrollAnimation,
   useStaggeredAnimation,
@@ -117,7 +118,7 @@ export default function Projects() {
                   className={cn(
                     'relative p-6 border-b border-border-l dark:border-border-d',
                     project.featured
-                      ? 'bg-gradient-to-br from-primary/10 to-primary-light/10'
+                      ? 'bg-linear-to-br from-primary/10 to-primary-light/10'
                       : ''
                   )}
                 >
@@ -162,7 +163,7 @@ export default function Projects() {
                           className="p-2 bg-l-text-3/10 dark:bg-d-text-3/10 rounded-lg text-l-text-2 dark:text-d-text-2 hover:bg-primary/10 hover:text-primary transition-colors"
                           aria-label="View source code"
                         >
-                          <Github className="w-4 h-4" />
+                          <FaGithub className="w-4 h-4" />
                         </a>
                       )}
                     </div>
@@ -234,7 +235,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="flex items-center space-x-1 px-3 py-2 border border-border-l dark:border-border-d text-l-text-2 dark:text-d-text-2 rounded-lg hover:border-primary hover:text-primary transition-colors text-xs font-medium"
                       >
-                        <Github className="w-3 h-3" />
+                        <FaGithub className="w-3 h-3" />
                         <span>Code</span>
                       </a>
                     )}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ArrowDown, Mail, Download } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { personalInfo } from '../../data/portfolio';
 import { cn, createEmailLink } from '../../lib/utils';
@@ -119,12 +120,12 @@ export default function Hero() {
             <div className="flex space-x-6 pt-4">
               {[
                 {
-                  icon: Github,
+                  icon: FaGithub,
                   href: personalInfo.social.github,
                   label: 'GitHub',
                 },
                 {
-                  icon: Linkedin,
+                  icon: FaLinkedin,
                   href: personalInfo.social.linkedin,
                   label: 'LinkedIn',
                 },

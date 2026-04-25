@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { personalInfo } from '../../data/portfolio';
 import { createEmailLink } from '../../lib/utils';
@@ -139,19 +139,19 @@ export default function Contact() {
 
   const socialLinks = [
     {
-      icon: Github,
+      icon: FaGithub,
       label: 'GitHub',
       href: personalInfo.social.github,
       color: 'hover:text-gray-900 dark:hover:text-gray-100',
     },
     {
-      icon: Linkedin,
+      icon: FaLinkedin,
       label: 'LinkedIn',
       href: personalInfo.social.linkedin,
       color: 'hover:text-blue-600',
     },
     {
-      icon: Twitter,
+      icon: FaTwitter,
       label: 'Twitter',
       href: personalInfo.social.twitter,
       color: 'hover:text-blue-400',
@@ -386,7 +386,7 @@ export default function Contact() {
                         key={item.label}
                         className="flex items-center space-x-4"
                       >
-                        <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <div className="shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                           <Icon className="w-6 h-6 text-primary" />
                         </div>
                         <div>

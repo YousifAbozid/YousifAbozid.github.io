@@ -6,3 +6,4 @@ coverage/
 public/
 package-lock.json
 yarn.lock
+.github/
