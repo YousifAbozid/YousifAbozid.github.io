@@ -723,6 +723,51 @@ export const services: Service[] = [
 export const education: Education[] = [
   {
     id: '1',
+    degree: 'AI and Data Literacy',
+    institution: 'IBM SkillsBuild',
+    location: 'Online',
+    startDate: new Date('2026-09-12'),
+    endDate: new Date('2026-09-13'),
+    description:
+      'Earned IBM SkillsBuild digital badges demonstrating foundational knowledge in artificial intelligence and data literacy, with a focus on practical understanding of AI workflows and data-informed decision-making.',
+    achievements: [
+      'Completed IBM AI literacy learning path focused on responsible and practical AI understanding',
+      'Developed stronger awareness of how AI systems are built, used, and evaluated in real-world contexts',
+      'Strengthened data literacy for interpreting, evaluating, and using data effectively in decision-making',
+      'Earned professional digital badges recognized through IBM SkillsBuild',
+    ],
+    skills: [
+      'AI Literacy',
+      'Artificial Intelligence (AI)',
+      'Generative AI Use',
+      'AI Ethics',
+      'Responsible AI',
+      'Data Literacy',
+      'Data Visualization',
+      'Decision Making',
+      'Problem Solving',
+      'Critical Thinking',
+    ],
+    certificates: [
+      {
+        title: 'IBM AI Literacy Badge',
+        description:
+          'Awarded for completing IBM SkillsBuild AI literacy learning content',
+        badgeColor: 'green',
+        imageUrl: '/certificates/AI_Literacy_Badge.jpg',
+      },
+      {
+        title: 'IBM Data Literacy Badge',
+        description:
+          'Awarded for completing IBM SkillsBuild data literacy learning content',
+        badgeColor: 'green',
+        imageUrl: '/certificates/Data_Literacy_Badge.jpg',
+      },
+    ],
+    featured: false,
+  },
+  {
+    id: '2',
     degree: 'Software Engineering Program',
     institution:
       'African Leadership Experience (ALX Africa & Holberton School)',
@@ -780,7 +825,7 @@ export const education: Education[] = [
     featured: true,
   },
   {
-    id: '2',
+    id: '3',
     degree: 'Bertelsmann Next Generation Tech Booster Scholarship',
     institution: 'Udacity',
     startDate: new Date('2023-12-01'),
@@ -812,7 +857,7 @@ export const education: Education[] = [
     featured: true,
   },
   {
-    id: '3',
+    id: '4',
     degree: 'Founder Academy',
     institution: 'ALX Ventures',
     startDate: new Date('2023-02-01'),
@@ -842,7 +887,7 @@ export const education: Education[] = [
     ],
   },
   {
-    id: '4',
+    id: '5',
     degree: 'Advanced Full-Stack Web Development Nanodegree',
     institution: 'Udacity (Sponsored by MCIT)',
     startDate: new Date('2023-01-01'),
@@ -891,7 +936,7 @@ export const education: Education[] = [
     featured: true,
   },
   {
-    id: '5',
+    id: '6',
     degree: 'Full Stack Software Engineer',
     institution: 'University of Helsinki',
     startDate: new Date('2020-09-01'),
@@ -958,7 +1003,7 @@ export const education: Education[] = [
     featured: true,
   },
   {
-    id: '6',
+    id: '7',
     degree: 'Elements of AI',
     institution: 'University of Helsinki',
     startDate: new Date('2020-12-01'),
@@ -986,7 +1031,7 @@ export const education: Education[] = [
     ],
   },
   {
-    id: '7',
+    id: '8',
     degree: 'Bachelor of Laws (LLB)',
     institution: 'Zagazig University',
     location: 'Zagazig, Egypt',
@@ -1020,7 +1065,7 @@ export const education: Education[] = [
     ],
   },
   {
-    id: '8',
+    id: '9',
     degree: 'English Diploma',
     institution: 'Edmore University (American Culture Center)',
     startDate: new Date('2017-11-01'),
