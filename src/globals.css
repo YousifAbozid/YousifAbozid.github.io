@@ -38,7 +38,7 @@
 	--color-d-bg-1: #0d1117;
 	/* Primary background */
 	--color-d-bg-2: #161b22;
-	/* Secondary background */
+	/* Dark mode background */
 	--color-d-bg-3: #21262d;
 	/* Tertiary background */
 	--color-d-bg-hover: #30363d;
@@ -413,4 +413,25 @@ html {
 
 .dark html {
 	scrollbar-color: var(--color-d-text-3) transparent;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-l-bg-1);
+  color: var(--color-l-text-1);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.dark .skip-link {
+  background: var(--color-d-bg-1);
+  color: var(--color-d-text-1);
+}
+
+.skip-link:focus {
+  top: 0;
 }

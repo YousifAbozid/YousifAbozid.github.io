@@ -131,12 +131,13 @@ export default function Certificates() {
                 className="group bg-l-bg-1 dark:bg-d-bg-1 rounded-lg border border-border-l dark:border-border-d overflow-hidden hover:shadow-xl transition-all duration-300 hover:shadow-primary/10"
               >
                 {/* Certificate Image Placeholder */}
-                <div className="relative h-48 bg-gradient-to-br from-l-bg-3 to-l-bg-2 dark:from-d-bg-3 dark:to-d-bg-2 flex items-center justify-center border-b border-border-l dark:border-border-d">
+                <div className="relative h-48 bg-linear-to-br from-l-bg-3 to-l-bg-2 dark:from-d-bg-3 dark:to-d-bg-2 flex items-center justify-center border-b border-border-l dark:border-border-d">
                   {certificate.imageUrl ? (
                     <img
                       src={certificate.imageUrl}
                       alt={certificate.title}
                       className="w-full h-full object-cover cursor-pointer"
+                      loading="lazy"
                       onClick={() => setSelectedImage(certificate.imageUrl!)}
                     />
                   ) : (
@@ -208,6 +209,7 @@ export default function Certificates() {
                 <button
                   onClick={() => setSelectedImage(null)}
                   className="absolute top-4 right-4 z-10 bg-white dark:bg-d-bg-1 text-l-text-1 dark:text-d-text-1 rounded-full p-2 shadow-lg hover:bg-l-bg-2 dark:hover:bg-d-bg-2 transition-colors cursor-pointer"
+                  aria-label="Close"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -215,6 +217,7 @@ export default function Certificates() {
                   src={selectedImage}
                   alt="Certificate"
                   className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-2xl"
+                  loading="lazy"
                   style={{ minHeight: '200px', minWidth: '300px' }}
                 />
               </div>
