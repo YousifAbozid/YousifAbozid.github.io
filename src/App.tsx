@@ -1,16 +1,17 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { ThemeProvider } from './contexts/ThemeProvider';
 import Navbar from './components/Navbar';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
 import Education from './components/sections/Education';
-import Certificates from './components/sections/Certificates';
-import Skills from './components/sections/Skills';
-import Projects from './components/sections/Projects';
-import Testimonials from './components/sections/Testimonials';
-import Contact from './components/sections/Contact';
-import Footer from './components/Footer';
+
+const Certificates = lazy(() => import('./components/sections/Certificates'));
+const Skills = lazy(() => import('./components/sections/Skills'));
+const Projects = lazy(() => import('./components/sections/Projects'));
+const Testimonials = lazy(() => import('./components/sections/Testimonials'));
+const Contact = lazy(() => import('./components/sections/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   useEffect(() => {
@@ -53,13 +54,25 @@ function App() {
           <About />
           <Experience />
           <Education />
-          <Certificates />
-          <Skills />
-          <Projects />
-          <Testimonials />
-          <Contact />
+          <Suspense fallback={<div className="h-100">Loading...</div>}>
+            <Certificates />
+          </Suspense>
+          <Suspense fallback={<div className="h-50">Loading...</div>}>
+            <Skills />
+          </Suspense>
+          <Suspense fallback={<div className="h-50">Loading...</div>}>
+            <Projects />
+          </Suspense>
+          <Suspense fallback={<div className="h-100">Loading...</div>}>
+            <Testimonials />
+          </Suspense>
+          <Suspense fallback={<div className="h-50">Loading...</div>}>
+            <Contact />
+          </Suspense>
+          <Suspense fallback={<div className="h-25">Loading...</div>}>
+            <Footer />
+          </Suspense>
         </main>
-        <Footer />
       </div>
     </ThemeProvider>
   );

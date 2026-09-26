@@ -16,11 +16,24 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({
   children,
-  defaultTheme = 'dark',
+  defaultTheme = 'light',
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     const stored = localStorage.getItem('theme') as Theme;
-    return stored || defaultTheme;
+    if (stored) {
+      return stored;
+    }
+
+    // Check system preference if no stored theme
+    if (typeof window !== 'undefined') {
+      const systemPreference = window.matchMedia('(prefers-color-scheme: dark)')
+        .matches
+        ? 'dark'
+        : 'light';
+      return systemPreference;
+    }
+
+    return defaultTheme;
   });
 
   useEffect(() => {
